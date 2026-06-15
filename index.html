@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Eating Simplified | Transform Your Lifestyle</title>
+    <style>
+        :root {
+            --primary: #606C38;
+            --secondary: #283618;
+            --accent: #D4A373;
+            --light: #FEFAE0;
+            --cream: #FAEDCD;
+            --dark: #2D3436;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark);
+            background: #FDFCF0;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--light);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(rgba(254, 250, 224, 0.8), rgba(254, 250, 224, 0.8)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3') center/cover;
+            border-radius: 0 0 50px 50px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .subheadline {
+            font-size: 1.4rem;
+            color: var(--primary);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(212, 163, 115, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 163, 115, 0.4);
+        }
+
+        .section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .footer a {
+            color: var(--light);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .guides-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .guide-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+        }
+
+        .guide-tag:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo">Healthy Eating Co.</a>
+        <nav>
+            <a href="#guides" style="color: var(--primary); font-weight: bold; text-decoration: none;">Explore Guides</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Stop Stressing About Your Plate.</h1>
+        <p class="subheadline">Discover the simplest way to fuel your body, boost your energy, and finally feel your best without the "diet" drama.</p>
+        <a href="/21-day-clean-eating-challenge.html" class="cta-btn">Start Your 21-Day Challenge</a>
+    </section>
+
+    <section class="section">
+        <h2 style="text-align: center; font-family: 'Georgia', serif; font-size: 2.5rem; color: var(--secondary);">Why Clean Eating?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Unstoppable Energy</h3>
+                <p>Say goodbye to the 3 PM slump and hello to consistent, natural energy that lasts all day.</p>
+            </div>
+            <div class="card">
+                <h3>Stress-Free Cooking</h3>
+                <p>Simple recipes and 15-minute meals designed for busy people who hate spending hours in the kitchen.</p>
+            </div>
+            <div class="card">
+                <h3>Real Food, Real Results</h3>
+                <p>No supplements, no starvation. Just delicious, whole foods that make your body thrive.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="guides" style="background: var(--cream); border-radius: 50px; margin: 0 20px;">
+        <h2 style="text-align: center; font-family: 'Georgia', serif; font-size: 2rem; color: var(--secondary);">Our Specialized Guides</h2>
+        <div class="guides-list">
+            <a href="/lazy-cooks-guide.html" class="guide-tag">Lazy Cook's Guide</a>
+            <a href="/get-your-energy-back.html" class="guide-tag">Energy Reset</a>
+            <a href="/clean-eating-beginners-75-recipes.html" class="guide-tag">75 Beginner Recipes</a>
+            <a href="/no-fuss-healthy-eating.html" class="guide-tag">No-Fuss Plan</a>
+            <a href="/summer-2026-glow-up.html" class="guide-tag">Summer Glow Up</a>
+            <a href="/feel-your-best-summer.html" class="guide-tag">Feel Your Best</a>
+            <a href="/eat-better-stress-less.html" class="guide-tag">Stress-Less Eating</a>
+        </div>
+        <p style="text-align: center; margin-top: 20px; opacity: 0.7;">And 40+ more resources to help you succeed.</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Healthy Eating Co. All rights reserved.</p>
+        <div style="margin-top: 20px;">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
