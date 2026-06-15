@@ -3,207 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Eating Simplified | Transform Your Lifestyle</title>
+    <title>The Clean Eating Revolution | 75+ Recipes for a Healthier You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #606C38;
-            --secondary: #283618;
-            --accent: #D4A373;
-            --light: #FEFAE0;
-            --cream: #FAEDCD;
-            --dark: #2D3436;
+            --primary: #2d4a22;
+            --accent: #d4a373;
+            --bg: #faf9f6;
+            --text: #1a1a1a;
+            --white: #ffffff;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark);
-            background: #FDFCF0;
-            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        header {
-            background: var(--light);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .logo {
-            font-family: 'Georgia', serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
+        /* Hero Section */
         .hero {
-            padding: 100px 5%;
+            padding: 100px 0 60px;
             text-align: center;
-            background: linear-gradient(rgba(254, 250, 224, 0.8), rgba(254, 250, 224, 0.8)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3') center/cover;
-            border-radius: 0 0 50px 50px;
+            background: radial-gradient(circle at top, #f0f4ee 0%, var(--bg) 70%);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e9edc9;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
         }
 
         h1 {
-            font-family: 'Georgia', serif;
-            font-size: 3.5rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
             line-height: 1.1;
-        }
-
-        .subheadline {
-            font-size: 1.4rem;
+            margin-bottom: 30px;
             color: var(--primary);
-            max-width: 800px;
-            margin: 0 auto 40px;
-            opacity: 0.9;
         }
 
-        .cta-btn {
-            display: inline-block;
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #4a4a4a;
+        }
+
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .main-cta {
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 22px 50px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 20px 40px rgba(45, 74, 34, 0.2);
+        }
+
+        .main-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(45, 74, 34, 0.3);
+            background-color: #3d632e;
+        }
+
+        .guarantee-text {
+            font-size: 0.9rem;
+            color: #888;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Image Grid */
+        .feature-image {
+            margin: 60px 0;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 80px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 100px 0;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .content-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .check {
             background: var(--accent);
             color: white;
-            text-decoration: none;
-            padding: 20px 40px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 20px rgba(212, 163, 115, 0.3);
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(212, 163, 115, 0.4);
-        }
-
-        .section {
-            padding: 80px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            text-align: center;
-            border: 1px solid #eee;
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .footer {
-            background: var(--secondary);
-            color: white;
-            padding: 60px 5%;
-            text-align: center;
-        }
-
-        .footer a {
-            color: var(--light);
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .guides-list {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .guide-tag {
-            background: rgba(255,255,255,0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
+            flex-shrink: 0;
             font-size: 0.8rem;
-            transition: background 0.3s;
         }
 
-        .guide-tag:hover {
-            background: rgba(255,255,255,0.2);
+        /* Final CTA */
+        .final-cta {
+            background: var(--primary);
+            padding: 100px 0;
+            text-align: center;
+            color: var(--white);
+            border-radius: 50px 50px 0 0;
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .white-cta {
+            background-color: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            padding: 22px 50px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .white-cta:hover {
+            transform: scale(1.05);
+            background-color: var(--bg);
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .hero { padding: 60px 5%; }
+            .split { grid-template-columns: 1fr; gap: 40px; }
+            h1 { font-size: 3rem; }
+            .final-cta h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="/" class="logo">Healthy Eating Co.</a>
-        <nav>
-            <a href="#guides" style="color: var(--primary); font-weight: bold; text-decoration: none;">Explore Guides</a>
-        </nav>
-    </header>
-
     <section class="hero">
-        <h1>Stop Stressing About Your Plate.</h1>
-        <p class="subheadline">Discover the simplest way to fuel your body, boost your energy, and finally feel your best without the "diet" drama.</p>
-        <a href="/21-day-clean-eating-challenge.html" class="cta-btn">Start Your 21-Day Challenge</a>
-    </section>
+        <div class="container">
+            <span class="badge">The 2026 Ultimate Guide</span>
+            <h1>Clean Eating, <br><em>Simplified.</em></h1>
+            <p>Get instant access to 75+ chef-curated recipes designed to torch fat, skyrocket your energy, and make you love what's on your plate.</p>
+            
+            <div class="cta-container">
+                <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="main-cta">Yes! Give Me Instant Access</a>
+                <div class="guarantee-text">
+                    <span>🛡️ Secure Checkout</span>
+                    <span>✨ Lifetime Updates</span>
+                </div>
+            </div>
 
-    <section class="section">
-        <h2 style="text-align: center; font-family: 'Georgia', serif; font-size: 2.5rem; color: var(--secondary);">Why Clean Eating?</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Unstoppable Energy</h3>
-                <p>Say goodbye to the 3 PM slump and hello to consistent, natural energy that lasts all day.</p>
-            </div>
-            <div class="card">
-                <h3>Stress-Free Cooking</h3>
-                <p>Simple recipes and 15-minute meals designed for busy people who hate spending hours in the kitchen.</p>
-            </div>
-            <div class="card">
-                <h3>Real Food, Real Results</h3>
-                <p>No supplements, no starvation. Just delicious, whole foods that make your body thrive.</p>
+            <div class="feature-image">
+                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&q=80&w=1200" alt="Healthy Food">
             </div>
         </div>
     </section>
 
-    <section class="section" id="guides" style="background: var(--cream); border-radius: 50px; margin: 0 20px;">
-        <h2 style="text-align: center; font-family: 'Georgia', serif; font-size: 2rem; color: var(--secondary);">Our Specialized Guides</h2>
-        <div class="guides-list">
-            <a href="/lazy-cooks-guide.html" class="guide-tag">Lazy Cook's Guide</a>
-            <a href="/get-your-energy-back.html" class="guide-tag">Energy Reset</a>
-            <a href="/clean-eating-beginners-75-recipes.html" class="guide-tag">75 Beginner Recipes</a>
-            <a href="/no-fuss-healthy-eating.html" class="guide-tag">No-Fuss Plan</a>
-            <a href="/summer-2026-glow-up.html" class="guide-tag">Summer Glow Up</a>
-            <a href="/feel-your-best-summer.html" class="guide-tag">Feel Your Best</a>
-            <a href="/eat-better-stress-less.html" class="guide-tag">Stress-Less Eating</a>
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="stat-item">
+                    <h3>75+</h3>
+                    <p>Delicious Recipes</p>
+                </div>
+                <div class="stat-item">
+                    <h3>21 Days</h3>
+                    <p>Total Transformation</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15 Min</h3>
+                    <p>Avg. Prep Time</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10k+</h3>
+                    <p>Happy Clean Eaters</p>
+                </div>
+            </div>
         </div>
-        <p style="text-align: center; margin-top: 20px; opacity: 0.7;">And 40+ more resources to help you succeed.</p>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2026 Healthy Eating Co. All rights reserved.</p>
-        <div style="margin-top: 20px;">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact</a>
+    <section class="content-section">
+        <div class="container">
+            <div class="split">
+                <div class="content-text">
+                    <h2>Everything you need <br>to succeed.</h2>
+                    <div class="benefit-item">
+                        <div class="check">✓</div>
+                        <p><strong>Step-by-Step Meal Plans:</strong> No more "what's for dinner" stress.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="check">✓</div>
+                        <p><strong>Quick & Easy Prep:</strong> Most meals ready in under 20 minutes.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="check">✓</div>
+                        <p><strong>Grocery Lists Included:</strong> Save time and money at the store.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="check">✓</div>
+                        <p><strong>Bonus Detox Guide:</strong> Flush toxins and reset your system fast.</p>
+                    </div>
+                </div>
+                <div class="content-image">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600" style="width: 100%; border-radius: 20px;" alt="Healthy Bowl">
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to transform your life?</h2>
+            <p style="margin-bottom: 40px; font-size: 1.2rem; opacity: 0.9;">Join thousands of others who have simplified their health with our 21-Day Clean Eating System.</p>
+            <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="white-cta">Get the Complete System Now</a>
+            <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">One-time payment. No subscriptions. Instant Digital Download.</p>
+        </div>
+    </section>
 
 </body>
 </html>
