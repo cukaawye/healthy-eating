@@ -1,13 +1,13 @@
 import os
 import random
 
-# Load Cloudinary Links
-with open("cloudinary_links.txt", "r") as f:
-    image_pool = [line.strip() for line in f if line.strip()]
+# Load GitHub/jsDelivr Links
+github_links_path = "github_image_links.txt"
+if not os.path.exists(github_links_path):
+    github_links_path = "landing_pages/github_image_links.txt"
 
-# Remove known blurry or duplicate indices from pool if necessary
-# Based on user feedback, 3 and 4 are identical, 5 and 6 are identical.
-# I'll handle this in the selection logic to ensure they aren't on the same page.
+with open(github_links_path, "r") as f:
+    image_pool = [line.strip() for line in f if line.strip()]
 
 checkout_link = "https://oliviaselfcare.gumroad.com/l/recepies?wanted=true"
 
@@ -234,36 +234,11 @@ template = """<!-- SYSTEME.IO COMPATIBLE SNIPPET - VARIATION {id} -->
 
 os.makedirs("landing_pages", exist_ok=True)
 
-# Image map to indices for duplicate check
-# Links are 0-indexed in image_pool
-# 3 and 4 are identical, 5 and 6 are identical.
-# Actually let's just use the links themselves.
-link_to_id = {link: i+1 for i, link in enumerate(image_pool)}
-
 for i in range(1, 11):
     # Select 3 unique images
-    selected_images = []
-    temp_pool = list(image_pool)
-    random.shuffle(temp_pool)
-    
-    for link in temp_pool:
-        idx = link_to_id[link]
-        # Check for user-defined duplicates on same page
-        forbidden = []
-        if idx == 3: forbidden.append(4)
-        if idx == 4: forbidden.append(3)
-        if idx == 5: forbidden.append(6)
-        if idx == 6: forbidden.append(5)
-        
-        # Check if any forbidden index is already in selected_images
-        already_selected_ids = [link_to_id[l] for l in selected_images]
-        if not any(f in already_selected_ids for f in forbidden):
-            selected_images.append(link)
-        
-        if len(selected_images) == 3:
-            break
+    selected_images = random.sample(image_pool, 3)
             
-    headline = headlines[i-1] # Use unique headlines for first 10
+    headline = headlines[i-1]
     
     content = template.format(
         id=i,
@@ -277,4 +252,4 @@ for i in range(1, 11):
     with open(f"landing_pages/variation_{i}.html", "w", encoding="utf-8") as f:
         f.write(content)
 
-print("Generated first 10 variations in 'landing_pages' folder.")
+print("Generated first 10 variations in 'landing_pages' folder using high-quality images.")

@@ -1,8 +1,12 @@
 import os
 import random
 
-# Load Cloudinary Links
-with open("cloudinary_links.txt", "r") as f:
+# Load GitHub/jsDelivr Links
+github_links_path = "github_image_links.txt"
+if not os.path.exists(github_links_path):
+    github_links_path = "landing_pages/github_image_links.txt"
+
+with open(github_links_path, "r") as f:
     image_pool = [line.strip() for line in f if line.strip()]
 
 checkout_link = "https://oliviaselfcare.gumroad.com/l/recepies?wanted=true"
@@ -31,7 +35,6 @@ headlines_base = [
     "Feel Your Best This Summer: The Lazy Cook's Clean Eating Plan"
 ]
 
-# Shuffle headlines to create more variety across 50 pages
 all_headlines = headlines_base * 3
 random.shuffle(all_headlines)
 
@@ -244,30 +247,9 @@ template = """<!-- SYSTEME.IO COMPATIBLE SNIPPET - VARIATION {id} -->
 
 os.makedirs("landing_pages", exist_ok=True)
 
-# Image map to indices for duplicate check
-link_to_id = {link: i+1 for i, link in enumerate(image_pool)}
-
 for i in range(1, 51):
-    # Select 3 unique images
-    selected_images = []
-    temp_pool = list(image_pool)
-    random.shuffle(temp_pool)
-    
-    for link in temp_pool:
-        idx = link_to_id[link]
-        # Check for user-defined duplicates on same page (3/4 and 5/6)
-        forbidden = []
-        if idx == 3: forbidden.append(4)
-        if idx == 4: forbidden.append(3)
-        if idx == 5: forbidden.append(6)
-        if idx == 6: forbidden.append(5)
-        
-        already_selected_ids = [link_to_id[l] for l in selected_images]
-        if not any(f in already_selected_ids for f in forbidden):
-            selected_images.append(link)
-        
-        if len(selected_images) == 3:
-            break
+    # Select 3 unique images from the high-quality pool
+    selected_images = random.sample(image_pool, 3)
             
     headline = all_headlines[i-1]
     
@@ -283,4 +265,4 @@ for i in range(1, 51):
     with open(f"landing_pages/variation_{i}.html", "w", encoding="utf-8") as f:
         f.write(content)
 
-print("Successfully generated all 50 unique variations in the 'landing_pages' folder.")
+print(f"Successfully generated 50 variations using {len(image_pool)} high-quality images.")
