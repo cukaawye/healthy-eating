@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Quality Audit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Verdana, sans-serif;
+            background: #FDFCF0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #FDFCF0;
+            border: 1px solid #eee;
+        }
+        h1 {
+            font-family: 'Georgia', serif;
+            color: #606C38;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #606C38;
+            opacity: 0.8;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .image-card {
+            border-bottom: 2px solid #E9EDC9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .image-label {
+            font-family: 'Georgia', serif;
+            font-size: 1.4em;
+            color: #606C38;
+            margin-bottom: 20px;
+        }
+        .hero-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 20px;
+            display: block;
+            margin: 0 auto;
+            border: 10px solid #FEFAE0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .info {
+            margin-top: 12px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #606C38;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.9em;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            z-index: 100;
+        }
+        .controls button {
+            background: #D4A373;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .controls button:hover {
+            opacity: 0.9;
+        }
+        .controls .badge {
+            background: #CCD5AE;
+            color: #606C38;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.85em;
+        }
+        .bad-image {
+            outline: 4px solid #e74c3c;
+            border-radius: 24px;
+        }
+        .good-image {
+            outline: 4px solid #27ae60;
+            border-radius: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Quality Audit</h1>
+        <p class="subtitle">Each image displayed exactly as it appears on sales pages (600px wide, same styling). Click an image to mark it as BAD.</p>
+
+        <div id="gallery"></div>
+    </div>
+
+    <div class="controls">
+        <span><span id="badCount">0</span> bad / <span id="totalCount">10</span></span>
+        <span class="badge">click image to toggle bad</span>
+        <button onclick="showReport()">Show Report</button>
+    </div>
+
+    <script>
+        const baseUrl = 'https://cdn.jsdelivr.net/gh/cukaawye/healthy-eating@high-quality-images/assets/images/';
+        const images = [];
+        for (let i = 1; i <= 10; i++) {
+            images.push({ id: i, name: `food_${i}.webp`, url: `${baseUrl}food_${i}.webp`, bad: false });
+        }
+
+        const gallery = document.getElementById('gallery');
+        images.forEach(img => {
+            const card = document.createElement('div');
+            card.className = 'image-card';
+
+            const label = document.createElement('div');
+            label.className = 'image-label';
+            label.textContent = `food_${img.id}`;
+
+            const imgEl = document.createElement('img');
+            imgEl.className = 'hero-img';
+            imgEl.src = img.url;
+            imgEl.alt = img.name;
+
+            const info = document.createElement('div');
+            info.className = 'info';
+            info.textContent = 'Click to mark as BAD';
+
+            card.appendChild(label);
+            card.appendChild(imgEl);
+            card.appendChild(info);
+            gallery.appendChild(card);
+
+            imgEl.addEventListener('click', () => {
+                img.bad = !img.bad;
+                if (img.bad) {
+                    imgEl.classList.add('bad-image');
+                    imgEl.classList.remove('good-image');
+                    info.textContent = 'MARKED AS BAD';
+                    info.style.color = '#e74c3c';
+                    info.style.fontWeight = 'bold';
+                } else {
+                    imgEl.classList.remove('bad-image');
+                    imgEl.classList.remove('good-image');
+                    info.textContent = 'Click to mark as BAD';
+                    info.style.color = '#888';
+                    info.style.fontWeight = 'normal';
+                }
+                updateCounts();
+            });
+        });
+
+        function updateCounts() {
+            const bad = images.filter(i => i.bad).length;
+            document.getElementById('badCount').textContent = bad;
+        }
+
+        function showReport() {
+            const bad = images.filter(i => i.bad);
+            const good = images.filter(i => !i.bad);
+            let msg = '=== IMAGE QUALITY REPORT ===\n\n';
+            msg += `Total: ${images.length}\n`;
+            msg += `Bad: ${bad.length}\n`;
+            msg += `Good: ${good.length}\n\n`;
+
+            if (bad.length > 0) {
+                msg += '--- BAD IMAGES (replace these) ---\n';
+                bad.forEach(i => msg += `  food_${i.id}.webp\n`);
+                msg += '\n';
+            }
+
+            if (good.length > 0) {
+                msg += '--- GOOD IMAGES (keep these) ---\n';
+                good.forEach(i => msg += `  food_${i.id}.webp\n`);
+            }
+
+            msg += '\nShare these names with the developer to replace the bad ones.';
+            alert(msg);
+        }
+
+        // Resize images to simulate sales page on load
+        window.addEventListener('load', updateCounts);
+    </script>
+</body>
+</html>
