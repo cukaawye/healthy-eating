@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Clean Eating Revolution | 75+ Recipes for a Healthier You</title>
+    <title>Clean Eating for Beginners: 75 Recipes & 21-Day Meal Plan for Healthy Living</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #2d4a22;
+            --primary-light: #3d632e;
             --accent: #d4a373;
+            --accent-dark: #c08a5c;
             --bg: #faf9f6;
+            --bg-alt: #f0f4ee;
             --text: #1a1a1a;
+            --text-light: #555;
             --white: #ffffff;
+            --cream: #FEFAE0;
+            --border: #e9edc9;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,19 +28,23 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* Hero Section */
+        .container-wide {
+            max-width: 1100px;
+        }
+
+        /* ===== HERO ===== */
         .hero {
-            padding: 100px 0 60px;
+            padding: 80px 0 50px;
             text-align: center;
             background: radial-gradient(circle at top, #f0f4ee 0%, var(--bg) 70%);
         }
@@ -43,198 +53,281 @@
             display: inline-block;
             background: #e9edc9;
             color: var(--primary);
-            padding: 8px 16px;
+            padding: 8px 20px;
             border-radius: 100px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-bottom: 24px;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            line-height: 1.1;
-            margin-bottom: 30px;
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            line-height: 1.15;
+            margin-bottom: 20px;
             color: var(--primary);
         }
 
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            color: #4a4a4a;
+        .hero-sub {
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: var(--text-light);
         }
 
-        .cta-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
+        .hero-benefits {
+            list-style: none;
+            text-align: left;
+            display: inline-block;
+            max-width: 500px;
+            margin: 0 auto 35px;
+        }
+        .hero-benefits li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+        }
+        .hero-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.1em;
         }
 
-        .main-cta {
-            background-color: var(--primary);
-            color: var(--white);
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white) !important;
             text-decoration: none;
-            padding: 22px 50px;
-            border-radius: 12px;
+            padding: 20px 44px;
+            border-radius: 50px;
             font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 20px 40px rgba(45, 74, 34, 0.2);
+            font-size: 1.15rem;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(212, 163, 115, 0.35);
+        }
+        .cta-btn:hover {
+            background: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212, 163, 115, 0.45);
+        }
+        .cta-btn.green {
+            background: var(--primary);
+            box-shadow: 0 8px 25px rgba(45, 74, 34, 0.3);
+        }
+        .cta-btn.green:hover {
+            background: var(--primary-light);
+            box-shadow: 0 12px 35px rgba(45, 74, 34, 0.4);
+        }
+        .cta-btn.white-cta {
+            background: var(--white);
+            color: var(--primary) !important;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .cta-btn.white-cta:hover {
+            background: var(--bg);
         }
 
-        .main-cta:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 60px rgba(45, 74, 34, 0.3);
-            background-color: #3d632e;
-        }
-
-        .guarantee-text {
-            font-size: 0.9rem;
-            color: #888;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Image Grid */
-        .feature-image {
-            margin: 60px 0;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.1);
-        }
-
-        .feature-image img {
+        .hero-img {
             width: 100%;
-            height: auto;
+            max-width: 600px;
+            border-radius: 20px;
             display: block;
+            margin: 40px auto;
+            border: 10px solid var(--cream);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        /* Social Proof */
-        .social-proof {
-            padding: 80px 0;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 70px 0;
             text-align: center;
         }
-
-        .proof-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+        .section.alt {
+            background: var(--cream);
+            border-radius: 40px;
+            margin: 20px 24px;
         }
-
-        .stat-item h3 {
+        .section h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
             color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
-
-        /* Content Section */
-        .content-section {
-            padding: 100px 0;
-        }
-
-        .split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .content-text h2 {
+        .section h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 24px;
+            font-size: 1.4rem;
             color: var(--primary);
+            margin: 30px 0 20px;
+        }
+        .section p {
+            max-width: 650px;
+            margin: 0 auto 20px;
+            color: var(--text-light);
+            font-size: 1.05rem;
         }
 
-        .benefit-item {
-            display: flex;
-            gap: 15px;
+        .benefit-list {
+            text-align: left;
+            display: inline-block;
+            max-width: 500px;
+            margin: 20px 0;
+            list-style: none;
+            padding: 0;
+        }
+        .benefit-list li {
+            margin-bottom: 12px;
+            padding-left: 35px;
+            position: relative;
+        }
+        .benefit-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* ===== BONUS ===== */
+        .bonus-section {
+            background: var(--bg-alt);
+            padding: 70px 40px;
+            border-radius: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .bonus-badge {
+            background: var(--accent);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .urgency {
+            color: var(--accent-dark);
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin: 20px 0;
+        }
+
+        /* ===== GUARANTEE ===== */
+        .guarantee-box {
+            background: var(--white);
+            padding: 50px 40px;
+            border-radius: 30px;
+            margin: 50px 0;
+            border: 2px solid var(--border);
+            text-align: left;
+        }
+        .guarantee-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-align: center;
             margin-bottom: 20px;
         }
-
-        .check {
-            background: var(--accent);
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 0.8rem;
-        }
-
-        /* Final CTA */
-        .final-cta {
-            background: var(--primary);
-            padding: 100px 0;
+        .guarantee-box h3 {
             text-align: center;
-            color: var(--white);
-            border-radius: 50px 50px 0 0;
-        }
-
-        .final-cta h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 30px;
-        }
-
-        .white-cta {
-            background-color: var(--white);
             color: var(--primary);
-            text-decoration: none;
-            padding: 22px 50px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+        .guarantee-box p {
+            margin-bottom: 16px;
+            color: var(--text-light);
+        }
+        .guarantee-box .cta-btn {
             display: inline-block;
-            transition: all 0.3s;
+            margin: 20px auto 0;
         }
 
-        .white-cta:hover {
-            transform: scale(1.05);
-            background-color: var(--bg);
+        /* ===== SOCIAL PROOF ===== */
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .stat-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+        .stat-item p {
+            font-size: 0.9rem;
         }
 
+        /* ===== PRICE ===== */
+        .price {
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            display: block;
+            margin: 20px 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-light);
+            opacity: 0.6;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .split { grid-template-columns: 1fr; gap: 40px; }
-            h1 { font-size: 3rem; }
-            .final-cta h2 { font-size: 2.2rem; }
+            .hero { padding: 60px 0 30px; }
+            .section { padding: 50px 0; }
+            .section.alt { margin: 20px 12px; padding: 40px 20px; }
+            .bonus-section { padding: 40px 24px; }
+            .guarantee-box { padding: 30px 20px; }
+            .proof-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="container">
-            <span class="badge">The 2026 Ultimate Guide</span>
-            <h1>Clean Eating, <br><em>Simplified.</em></h1>
-            <p>Get instant access to 75+ chef-curated recipes designed to torch fat, skyrocket your energy, and make you love what's on your plate.</p>
-            
-            <div class="cta-container">
-                <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="main-cta">Yes! Give Me Instant Access</a>
-                <div class="guarantee-text">
-                    <span>🛡️ Secure Checkout</span>
-                    <span>✨ Lifetime Updates</span>
-                </div>
-            </div>
+            <span class="badge">2026's Bestselling Clean Eating Guide</span>
+            <h1>Healthy Eating, Finally Simplified:<br>75 Recipes for a New You</h1>
+            <p class="hero-sub">Stop overcomplicating your diet. This proven system makes clean eating effortless, delicious, and sustainable — starting today.</p>
 
-            <div class="feature-image">
-                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&q=80&w=1200" alt="Healthy Food">
+            <ul class="hero-benefits">
+                <li>Master the art of clean eating without feeling deprived</li>
+                <li>Create delicious, nutritious meals in 20 minutes or less</li>
+                <li>Achieve your weight loss goals and keep the weight off</li>
+                <li>Boost your energy levels and crush afternoon slumps</li>
+                <li>Improve your digestion, skin, and overall health</li>
+            </ul>
+
+            <div style="margin-bottom: 10px;">
+                <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="cta-btn">Get Instant Access Now</a>
             </div>
+            <p style="font-size: 0.85rem; color: #999; margin-top: 12px;">One-time payment. No subscriptions. Instant digital download.</p>
+
+            <img src="https://cdn.jsdelivr.net/gh/cukaawye/healthy-eating@high-quality-images/assets/images/food_6.webp" class="hero-img" alt="Healthy Lifestyle">
         </div>
     </section>
 
-    <section class="social-proof">
+    <!-- ===== SOCIAL PROOF ===== -->
+    <section class="section" style="padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
         <div class="container">
             <div class="proof-grid">
                 <div class="stat-item">
@@ -243,7 +336,7 @@
                 </div>
                 <div class="stat-item">
                     <h3>21 Days</h3>
-                    <p>Total Transformation</p>
+                    <p>Transformation Plan</p>
                 </div>
                 <div class="stat-item">
                     <h3>15 Min</h3>
@@ -251,49 +344,118 @@
                 </div>
                 <div class="stat-item">
                     <h3>10k+</h3>
-                    <p>Happy Clean Eaters</p>
+                    <p>Happy Customers</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="content-section">
+    <!-- ===== INTRODUCING ===== -->
+    <section class="section">
         <div class="container">
-            <div class="split">
-                <div class="content-text">
-                    <h2>Everything you need <br>to succeed.</h2>
-                    <div class="benefit-item">
-                        <div class="check">✓</div>
-                        <p><strong>Step-by-Step Meal Plans:</strong> No more "what's for dinner" stress.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="check">✓</div>
-                        <p><strong>Quick & Easy Prep:</strong> Most meals ready in under 20 minutes.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="check">✓</div>
-                        <p><strong>Grocery Lists Included:</strong> Save time and money at the store.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="check">✓</div>
-                        <p><strong>Bonus Detox Guide:</strong> Flush toxins and reset your system fast.</p>
-                    </div>
-                </div>
-                <div class="content-image">
-                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600" style="width: 100%; border-radius: 20px;" alt="Healthy Bowl">
+            <h2>Introducing Clean Eating for Beginners</h2>
+            <p>We've simplified clean eating into easy-to-follow steps, <strong>75 delicious recipes</strong>, and a practical <strong>21-day meal plan</strong> that fits into your busy life.</p>
+            <p><strong>This isn't just a cookbook; it's your personalized roadmap to a healthier, happier you.</strong></p>
+
+            <img src="https://cdn.jsdelivr.net/gh/cukaawye/healthy-eating@high-quality-images/assets/images/food_1.webp" class="hero-img" alt="Recipe Preview">
+
+            <h3>In this book you will discover the power of clean eating to:</h3>
+            <ul class="benefit-list">
+                <li>Boost your energy levels naturally — no more caffeine crashes</li>
+                <li>Improve your digestion and gut health</li>
+                <li>Enhance your skin, hair, and overall glow</li>
+                <li>Lose weight effortlessly without counting calories</li>
+                <li>Eliminate cravings and emotional eating</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== WHAT YOU'LL LEARN ===== -->
+    <section class="section alt">
+        <div class="container">
+            <p>Our proven 21-day meal plan will guide you step-by-step, making it easy to incorporate delicious, nutritious meals into your daily routine. <strong>With 75 mouth-watering recipes, you'll never get bored.</strong></p>
+
+            <img src="https://cdn.jsdelivr.net/gh/cukaawye/healthy-eating@high-quality-images/assets/images/food_10.webp" class="hero-img" alt="Meal Plan">
+
+            <h2>Here's everything you'll learn:</h2>
+            <ul class="benefit-list">
+                <li>The science behind clean eating and why it works</li>
+                <li>How to shop for healthy, affordable ingredients without breaking the bank</li>
+                <li>Simple meal prep tips to save hours of time and energy each week</li>
+                <li>Delicious recipes for breakfast, lunch, dinner, snacks, and even desserts</li>
+                <li>How to overcome common obstacles and stay on track for good</li>
+                <li>The truth about "healthy" foods that are actually sabotaging your progress</li>
+            </ul>
+
+            <div style="margin-top: 30px;">
+                <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="cta-btn green">Yes! I Want This System</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BONUS ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="bonus-section">
+                <span class="bonus-badge">Limited Time Bonus</span>
+                <h2>But wait, there's more!</h2>
+                <p>Order your copy <strong>right now</strong>, and you'll receive a <strong>FREE 1-on-1 consultation with a certified health and wellness coach</strong>.</p>
+                <p>They'll provide personalized advice tailored to your body, your goals, and your lifestyle. This alone is worth more than the price of the book.</p>
+                <p>Don't miss out on this incredible opportunity to transform your life with expert guidance.</p>
+                <p class="urgency">⚠️ THIS BONUS DISAPPEARS AFTER THE NEXT 20 PEOPLE JOIN. ACT NOW!</p>
+                <p>Your 2026 journey to health starts here.</p>
+                <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="cta-btn">Get Access Now + Claim My Free Bonus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CLOSING ===== -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <p style="font-size: 1.1rem;">All of this — and so much more — is yours when you download your copy of <strong>"Clean Eating for Beginners: 75 Recipes and 21-Day Meal Plan for Healthy Living."</strong></p>
+
+            <span class="price">Just $7.99</span>
+            <p style="font-size: 0.9rem; color: #888;">That's less than a takeout coffee a day for a complete health transformation.</p>
+
+            <img src="https://cdn.jsdelivr.net/gh/cukaawye/healthy-eating@high-quality-images/assets/images/food_5.webp" class="hero-img" alt="Healthy Meal">
+
+            <div style="margin-top: 30px;">
+                <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="cta-btn">Yes! Give Me Instant Access</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GUARANTEE ===== -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>Still not convinced?</h2>
+                <h3>🌟 My Double-Double Guarantee 🌟</h3>
+                <p><strong>GUARANTEE #1:</strong> If for any reason this book isn't the best $7.99 you've ever spent, just send me an email and I'll gladly refund every penny. No questions asked.</p>
+                <p><strong>GUARANTEE #2:</strong> If you actually USE the information in this system — follow the meal plans, cook the recipes — and your results aren't amazing, I'll refund you anyway. And you can keep the program for free as my gift.</p>
+                <p><em>All I ask is your best honest effort.</em></p>
+                <div style="text-align: center;">
+                    <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="cta-btn green">Try It Risk-Free Today</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="final-cta">
-        <div class="container">
-            <h2>Ready to transform your life?</h2>
-            <p style="margin-bottom: 40px; font-size: 1.2rem; opacity: 0.9;">Join thousands of others who have simplified their health with our 21-Day Clean Eating System.</p>
-            <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="white-cta">Get the Complete System Now</a>
-            <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">One-time payment. No subscriptions. Instant Digital Download.</p>
+    <!-- ===== FINAL CTA ===== -->
+    <section class="section" style="background: var(--primary); border-radius: 50px 50px 0 0; margin-top: 40px;">
+        <div class="container" style="color: var(--white);">
+            <h2 style="color: var(--white);">Ready to transform your life?</h2>
+            <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 600px;">Join thousands of others who have simplified their health with our 21-Day Clean Eating System. Your transformation starts now.</p>
+            <div style="margin-top: 35px;">
+                <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="cta-btn white-cta">Get the Complete System Now</a>
+            </div>
+            <p style="margin-top: 25px; font-size: 0.8rem; opacity: 0.6;">One-time payment. No subscriptions. Instant Digital Download.</p>
         </div>
     </section>
+
+    <div class="footer">
+        <p>&copy; 2026 Clean Eating Simplified. All rights reserved.</p>
+    </div>
 
 </body>
 </html>
