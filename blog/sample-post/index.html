@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Blog Post | glowfrominside.site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d4a22;
+            --primary-light: #3d632e;
+            --accent: #d4a373;
+            --accent-dark: #c08a5c;
+            --bg: #faf9f6;
+            --bg-alt: #f0f4ee;
+            --text: #1a1a1a;
+            --text-light: #555;
+            --white: #ffffff;
+            --cream: #FEFAE0;
+            --border: #e9edc9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .post-header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .post-header .meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .post-header .meta span {
+            margin: 0 8px;
+        }
+
+        .post-header .meta .dot {
+            color: var(--accent);
+        }
+
+        .post-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .post-header .excerpt {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .featured-image {
+            width: 100%;
+            border-radius: 16px;
+            margin: 0 0 40px;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+        }
+
+        .featured-image-placeholder {
+            width: 100%;
+            border-radius: 16px;
+            margin: 0 0 40px;
+            aspect-ratio: 16/9;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .post-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 48px 0 16px;
+        }
+
+        .post-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary-light);
+            margin: 32px 0 12px;
+        }
+
+        .post-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .post-content ul, .post-content ol {
+            margin: 0 0 20px 24px;
+        }
+
+        .post-content li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent);
+            padding: 16px 24px;
+            margin: 32px 0;
+            background: var(--cream);
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .post-content img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 32px 0;
+            border: 1px solid var(--border);
+        }
+
+        .post-content .highlight-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .post-content .highlight-box h3 {
+            margin-top: 0;
+        }
+
+        .cta-box {
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--white) !important;
+        }
+
+        .cta-box p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .share-section {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .share-section p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .share-section a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .post-header { padding: 40px 0 24px; }
+            .cta-box { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="/" class="logo">Glow From Inside</a>
+        <div>
+            <a href="/">Home</a>
+            <a href="/blog/" style="margin-left: 24px; color: var(--primary); font-weight: 600;">Blog</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+
+    <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+
+    <article>
+        <div class="post-header">
+            <div class="meta">
+                <span>June 29, 2026</span>
+                <span class="dot">&#183;</span>
+                <span>5 min read</span>
+                <span class="dot">&#183;</span>
+                <span>Self Care</span>
+            </div>
+            <h1>10 Simple Self-Care Practices for a Healthier, Happier You</h1>
+            <p class="excerpt">Small daily habits that make a big difference in your mental and physical wellbeing.</p>
+        </div>
+
+        <div class="featured-image-placeholder">
+            [Featured Image: Self-care essentials]
+        </div>
+
+        <div class="post-content">
+
+            <p>In our fast-paced world, self-care often takes a backseat to work, family, and other responsibilities. But taking time for yourself isn't selfish — it's essential. Here are 10 simple practices you can start today.</p>
+
+            <h2>1. Start Your Morning with Intention</h2>
+            <p>Instead of reaching for your phone first thing, take five minutes to breathe deeply, set an intention for the day, or simply enjoy your coffee in silence. This small shift can dramatically improve your mindset.</p>
+
+            <h2>2. Move Your Body Daily</h2>
+            <p>You don't need an intense workout. A 20-minute walk, gentle stretching, or dancing in your kitchen counts. The key is consistency over intensity.</p>
+
+            <blockquote>
+                "Self-care is not a waste of time. Self-care is what allows you to show up as the best version of yourself."
+            </blockquote>
+
+            <h2>3. Nourish with Whole Foods</h2>
+            <p>What you eat directly impacts how you feel. Focus on whole, unprocessed foods — vegetables, fruits, lean proteins, and healthy fats. Your body and mind will thank you.</p>
+
+            <div class="highlight-box">
+                <h3>Quick Win: The 5-Minute Reset</h3>
+                <p>Feeling overwhelmed? Step away from your desk, close your eyes, and take 10 slow, deep breaths. Inhale for 4 counts, hold for 4, exhale for 6. This activates your parasympathetic nervous system and calms your stress response.</p>
+            </div>
+
+            <h2>4. Set Boundaries with Technology</h2>
+            <p>Create phone-free zones in your day. No screens during meals, the first hour after waking, or the last hour before bed. You'll be amazed at how much more present you feel.</p>
+
+            <h2>5. Prioritize Sleep</h2>
+            <p>Aim for 7-9 hours of quality sleep. Create a calming bedtime routine — dim lights, herbal tea, reading (not scrolling). Sleep is the foundation of all other health habits.</p>
+
+            <h2>6. Connect with Loved Ones</h2>
+            <p>Meaningful connection is a core human need. Call a friend, have a real conversation, or spend quality time with family. Put your phone away and truly listen.</p>
+
+            <div class="cta-box">
+                <h3>Ready to Transform Your Health?</h3>
+                <p>Get our complete guide with 75 clean eating recipes and a 21-day meal plan.</p>
+                <a href="https://oliviaselfcare.gumroad.com/l/recepies?wanted=true" class="cta-btn">Get the Guide</a>
+            </div>
+
+            <h2>7. Practice Gratitude</h2>
+            <p>Each evening, write down three things you're grateful for. This rewires your brain to focus on the positive and builds resilience against stress.</p>
+
+            <h2>8. Spend Time in Nature</h2>
+            <p>Even 10 minutes outside can lower cortisol levels and improve your mood. Walk barefoot on grass, sit in a park, or tend to a plant.</p>
+
+            <h2>9. Learn to Say No</h2>
+            <p>Every yes to something is a no to something else. Protect your energy by declining commitments that don't align with your priorities.</p>
+
+            <h2>10. Celebrate Small Wins</h2>
+            <p>Acknowledge your progress, no matter how small. Did you drink enough water today? Great. Did you go for a walk? Amazing. Celebrate it.</p>
+
+        </div>
+    </article>
+
+    <div class="share-section">
+        <p>Share this post</p>
+        <a href="#">Pinterest</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Copy Link</a>
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Glow From Inside. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

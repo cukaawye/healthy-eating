@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | glowfrominside.site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d4a22;
+            --primary-light: #3d632e;
+            --accent: #d4a373;
+            --accent-dark: #c08a5c;
+            --bg: #faf9f6;
+            --bg-alt: #f0f4ee;
+            --text: #1a1a1a;
+            --text-light: #555;
+            --white: #ffffff;
+            --cream: #FEFAE0;
+            --border: #e9edc9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-wide {
+            max-width: 1000px;
+        }
+
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .page-header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            padding-bottom: 60px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 4px 20px rgba(45, 74, 34, 0.08);
+        }
+
+        .blog-card .card-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: var(--bg-alt);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .blog-card .card-body {
+            padding: 24px 28px 28px;
+        }
+
+        .blog-card .meta {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .blog-card h2 a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-card h2 a:hover {
+            color: var(--accent);
+        }
+
+        .blog-card .excerpt {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .blog-card .read-more {
+            color: var(--accent-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+
+        .blog-card .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 80px 0;
+            color: var(--text-light);
+        }
+
+        .empty-state h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 600px) {
+            .page-header { padding: 40px 0 24px; }
+            .blog-card .card-body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="/" class="logo">Glow From Inside</a>
+        <div>
+            <a href="/">Home</a>
+            <a href="/blog/" style="margin-left: 24px; color: var(--primary); font-weight: 600;">Blog</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="container">
+        <h1>Blog</h1>
+        <p>Tips, recipes, and inspiration for your wellness journey</p>
+    </div>
+</div>
+
+<div class="container container-wide">
+
+    <div class="blog-grid">
+
+        <div class="blog-card">
+            <div class="card-image">[Featured Image: Self-care essentials]</div>
+            <div class="card-body">
+                <div class="meta">June 29, 2026 &middot; Self Care</div>
+                <h2><a href="/blog/sample-post/">10 Simple Self-Care Practices for a Healthier, Happier You</a></h2>
+                <p class="excerpt">Small daily habits that make a big difference in your mental and physical wellbeing. Start with just one and build from there.</p>
+                <a href="/blog/sample-post/" class="read-more">Read More &rarr;</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="card-image">[Featured Image: Healthy breakfast]</div>
+            <div class="card-body">
+                <div class="meta">June 25, 2026 &middot; Recipes</div>
+                <h2><a href="#">5-Minute Healthy Breakfast Ideas for Busy Mornings</a></h2>
+                <p class="excerpt">Delicious, nutritious breakfasts that take almost no time to prepare. Perfect for those hectic weekday mornings.</p>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="card-image">[Featured Image: Meal prep]</div>
+            <div class="card-body">
+                <div class="meta">June 20, 2026 &middot; Meal Prep</div>
+                <h2><a href="#">The Ultimate Guide to Sunday Meal Prep</a></h2>
+                <p class="excerpt">How to prep an entire week's worth of healthy meals in just 2 hours. Save time, eat better, and reduce stress.</p>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="card-image">[Featured Image: Gut health foods]</div>
+            <div class="card-body">
+                <div class="meta">June 15, 2026 &middot; Health</div>
+                <h2><a href="#">How Heal Your Gut: A Beginner's Guide to Digestive Health</a></h2>
+                <p class="excerpt">Learn how gut health affects everything from your mood to your immune system, and what you can do about it.</p>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Glow From Inside. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
