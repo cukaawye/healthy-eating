@@ -1,7 +1,9 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 import numpy as np
 import cv2
 from watermark_processor import WatermarkProcessor
-import os
 
 def create_sample_image(path):
     # Create a 800x600 image with some "content" (circles/shapes)
