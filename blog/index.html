@@ -175,52 +175,86 @@
             padding: 8px 0 60px;
         }
 
-        .section-card {
-            margin-top: 28px;
-            padding: 28px;
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            box-shadow: 0 12px 32px rgba(45, 74, 34, 0.04);
+        .article-content {
+            margin-top: 18px;
+            display: grid;
+            gap: 18px;
         }
 
-        .section-card h2 {
+        .article-block {
+            padding: 0;
+            margin: 0;
+        }
+
+        .article-heading {
             font-family: 'Playfair Display', serif;
-            font-size: 1.7rem;
             color: var(--primary);
-            margin-bottom: 14px;
+            line-height: 1.15;
+            margin: 0 0 12px;
         }
 
-        .section-media {
-            margin: 0 0 18px;
+        .article-heading[data-level="2"] { font-size: 1.9rem; }
+        .article-heading[data-level="3"] { font-size: 1.45rem; color: var(--primary-light); }
+        .article-heading[data-level="4"] { font-size: 1.2rem; color: var(--primary-light); }
+
+        .article-paragraph {
+            margin: 0;
+            font-size: 1.03rem;
         }
 
-        .section-media img {
+        .article-quote {
+            margin: 0;
+            padding: 18px 22px;
+            border-left: 4px solid var(--accent);
+            background: rgba(212, 163, 115, 0.08);
+            border-radius: 18px;
+            font-style: italic;
+        }
+
+        .quote-cite {
+            display: block;
+            margin-top: 12px;
+            font-style: normal;
+            color: var(--text-light);
+        }
+
+        .article-image {
+            margin: 0;
+        }
+
+        .article-image img {
             width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
+            display: block;
             border-radius: 18px;
             border: 1px solid var(--border);
             background: var(--bg-alt);
         }
 
-        .section-body p {
-            margin-bottom: 18px;
-            font-size: 1.02rem;
+        .article-image figcaption {
+            margin-top: 8px;
+            font-size: 0.92rem;
+            color: var(--text-light);
         }
 
-        .section-body h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-            color: var(--primary-light);
-            margin: 24px 0 12px;
+        .article-cta {
+            padding: 20px 22px;
+            border-radius: 20px;
+            background: rgba(45, 74, 34, 0.06);
+            border: 1px solid var(--border);
         }
 
-        .section-body ul, .section-body ol {
-            margin: 0 0 18px 22px;
+        .article-divider {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin: 10px 0;
         }
 
-        .section-body li {
+        .article-content ul,
+        .article-content ol {
+            margin: 0 0 0 22px;
+        }
+
+        .article-content li {
             margin-bottom: 8px;
         }
 
@@ -267,7 +301,7 @@
 
         @media (max-width: 700px) {
             .hero { padding-top: 28px; }
-            .hero-card, .section-card, .toc, .cta-box { padding: 20px; }
+            .hero-card, .toc, .cta-box { padding: 20px; }
             .nav-inner { min-height: 68px; }
             .hero h1 { max-width: none; }
         }
@@ -355,6 +389,19 @@
     
     <section class="blog-grid">
         
+                <article class="card">
+                    <a href="/blog/20-small-things-you-need-to-do-if-you-want-to-improve-your-life/" class="card-media"><img src="/assets/images/blog/20-small-things-you-need-to-do-if-you-want-to-improve-your-life/hero.png" alt="20 Small Things You Need To Do If You Want To Improve Your Life"></a>
+                    <div class="card-body">
+                        <div class="meta-row">
+                            <span class="pill">How To Improve Yourself</span>
+                            <span>July 07, 2026</span>
+                        </div>
+                        <h2><a href="/blog/20-small-things-you-need-to-do-if-you-want-to-improve-your-life/">20 Small Things You Need To Do If You Want To Improve Your Life</a></h2>
+                        <p>Henry Ford said, “If you always do what you’ve always done, you’ll always get what you’ve always got.” In a world that is constantly changing and evolving, it goes wit...</p>
+                        <a href="/blog/20-small-things-you-need-to-do-if-you-want-to-improve-your-life/" class="read-more">Read more</a>
+                    </div>
+                </article>
+                
                 <article class="card">
                     <a href="/blog/self-care-101-daily-self-care-checklist-for-beginners-miss-tea-positive-self-care-self-care-ac/" class="card-media"><img src="/assets/images/blog/self-care-101-daily-self-care-checklist-for-beginners-miss-tea-positive-self-care-self-care-ac/hero.png" alt="Self-Care 101: Daily Self-Care Checklist for Beginners | Miss Tea Positive | Self care, Self care ac"></a>
                     <div class="card-body">
