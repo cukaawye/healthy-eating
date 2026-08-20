@@ -2,8 +2,8 @@
   "slug": "baked-chicken-parmesan",
   "title": "Baked Chicken Parmesan",
   "excerpt": "This post may contain affiliate links. Please read our disclosure policy.",
-  "date": "2026-08-19",
-  "date_human": "August 19, 2026",
+  "date": "2026-08-20",
+  "date_human": "August 20, 2026",
   "category": "Healthy Eating",
   "hero_image_url": "",
   "hero_image_alt": "Baked Chicken Parmesan",
@@ -1053,290 +1053,86 @@
       "anchor": "my-storage-tips-79"
     },
     {
-      "type": "image",
-      "src": "https://allnutritious.com/wp-content/uploads/2026/03/Baked-Chicken-Parmesan-featured-300x300.jpg",
-      "alt": "Baked Chicken Parmesan",
-      "caption": "",
-      "width": 0,
-      "height": 0,
-      "context_heading": "## My Storage Tips",
-      "image_query": "Baked Chicken Parmesan aesthetic",
-      "heading": "## My Storage Tips",
-      "content": "Baked Chicken Parmesan",
+      "type": "recipe",
+      "recipe": {
+        "name": "Baked Chicken Parmesan",
+        "image_src": "https://allnutritious.com/wp-content/uploads/2026/03/Baked-Chicken-Parmesan-featured-300x300.jpg",
+        "summary": "Enjoy the savory, garlicky, and rich tomato flavors of this Italian-American classic. It\u2019s a high-protein meal that packs 42 grams of protein per serving.",
+        "prep_time": "21 mins",
+        "cook_time": "35 mins",
+        "total_time": "1 hr 11 mins",
+        "servings": "8",
+        "servings_unit": "cutlets",
+        "macros": {
+          "calories": "518",
+          "protein": "42.3",
+          "carbohydrates": "27.4",
+          "fat": "27.6"
+        },
+        "ingredient_groups": [
+          {
+            "name": "",
+            "items": [
+              "\u25a2 2 \u00bd cups panko breadcrumbs",
+              "\u25a2 5 tbsp olive oil divided",
+              "\u25a2 2 tsp sea salt divided",
+              "\u25a2 \u00bd bunch fresh parsley finely chopped",
+              "\u25a2 1 \u00bc cups Parmesan cheese grated, divided",
+              "\u25a2 1 tbsp garlic powder",
+              "\u25a2 4 large eggs",
+              "\u25a2 \u2153 cup all-purpose flour",
+              "\u25a2 2 lbs chicken breasts sliced horizontally into thin cutlets",
+              "\u25a2 1 tsp black pepper",
+              "\u25a2 12 oz fresh mozzarella thinly sliced",
+              "\u25a2 1 jar marinara sauce"
+            ]
+          },
+          {
+            "name": "Garnish",
+            "items": [
+              "\u25a2 A bunch fresh basil finely chopped"
+            ]
+          }
+        ],
+        "instructions": [
+          "Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.",
+          "Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.",
+          "In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.",
+          "Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.",
+          "In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.",
+          "Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.",
+          "Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.",
+          "Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.",
+          "Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.",
+          "Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.",
+          "Sprinkle with freshly chopped basil before serving."
+        ],
+        "nutrition": {
+          "Serving": "1 cutlet (12 oz)",
+          "Calories": "518 kcal",
+          "Carbohydrates": "27.4 g",
+          "Protein": "42.3 g",
+          "Fat": "27.6 g",
+          "Saturated Fat": "10.4 g",
+          "Cholesterol": "176 mg",
+          "Sodium": "840 mg",
+          "Potassium": "690 mg",
+          "Fiber": "1.7 g",
+          "Sugar": "5.1 g",
+          "Vitamin A": "940 IU",
+          "Vitamin C": "5 mg",
+          "Calcium": "390 mg",
+          "Iron": "2.9 mg"
+        },
+        "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\recipe.jpg",
+        "image_url": "/assets/images/blog/baked-chicken-parmesan/recipe.jpg"
+      },
+      "context_heading": "Recipe",
+      "heading": "Baked Chicken Parmesan",
       "_orig_idx": 80,
-      "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-080.jpg",
-      "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-80.jpg",
-      "anchor": "my-storage-tips-80"
-    },
-    {
-      "type": "heading",
-      "text": "## Baked Chicken Parmesan",
-      "rich_text": "## Baked Chicken Parmesan",
-      "html": "## Baked Chicken Parmesan",
-      "context_heading": "## My Storage Tips",
-      "heading": "## My Storage Tips",
-      "content": "## Baked Chicken Parmesan",
-      "level": 2,
-      "_orig_idx": 81,
+      "content": "",
       "image_url": "",
-      "anchor": "my-storage-tips-81"
-    },
-    {
-      "type": "paragraph",
-      "text": "Cals: 518 Protein: 42.3 Carbs: 27.4 Fat: 27.6",
-      "rich_text": "Cals: 518 Protein: 42.3 Carbs: 27.4 Fat: 27.6",
-      "html": "Cals: 518 Protein: 42.3 Carbs: 27.4 Fat: 27.6",
-      "content": "Cals: 518 Protein: 42.3 Carbs: 27.4 Fat: 27.6",
-      "context_heading": "## Baked Chicken Parmesan",
-      "_orig_idx": 82,
-      "image_url": "",
-      "anchor": "cals-518-protein-42-3-carbs-27-4-fat-27-6-82"
-    },
-    {
-      "type": "heading",
-      "text": "### Ingredients",
-      "rich_text": "### Ingredients",
-      "html": "### Ingredients",
-      "context_heading": "## Baked Chicken Parmesan",
-      "heading": "## Baked Chicken Parmesan",
-      "content": "### Ingredients",
-      "level": 3,
-      "_orig_idx": 83,
-      "image_url": "",
-      "anchor": "baked-chicken-parmesan-83"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "- 2 \u00bd cups panko breadcrumbs",
-          "rich_text": "- 2 \u00bd cups panko breadcrumbs",
-          "html": "- 2 \u00bd cups panko breadcrumbs",
-          "content": "- 2 \u00bd cups panko breadcrumbs"
-        },
-        {
-          "text": "- 5 tbsp olive oil divided",
-          "rich_text": "- 5 tbsp olive oil divided",
-          "html": "- 5 tbsp olive oil divided",
-          "content": "- 5 tbsp olive oil divided"
-        },
-        {
-          "text": "- 2 tsp sea salt divided",
-          "rich_text": "- 2 tsp sea salt divided",
-          "html": "- 2 tsp sea salt divided",
-          "content": "- 2 tsp sea salt divided"
-        },
-        {
-          "text": "- \u00bd bunch fresh parsley finely chopped",
-          "rich_text": "- \u00bd bunch fresh parsley finely chopped",
-          "html": "- \u00bd bunch fresh parsley finely chopped",
-          "content": "- \u00bd bunch fresh parsley finely chopped"
-        },
-        {
-          "text": "- 1 \u00bc cups Parmesan cheese grated, divided",
-          "rich_text": "- 1 \u00bc cups Parmesan cheese grated, divided",
-          "html": "- 1 \u00bc cups Parmesan cheese grated, divided",
-          "content": "- 1 \u00bc cups Parmesan cheese grated, divided"
-        },
-        {
-          "text": "- 1 tbsp garlic powder",
-          "rich_text": "- 1 tbsp garlic powder",
-          "html": "- 1 tbsp garlic powder",
-          "content": "- 1 tbsp garlic powder"
-        },
-        {
-          "text": "- 4 large eggs",
-          "rich_text": "- 4 large eggs",
-          "html": "- 4 large eggs",
-          "content": "- 4 large eggs"
-        },
-        {
-          "text": "- \u2153 cup all-purpose flour",
-          "rich_text": "- \u2153 cup all-purpose flour",
-          "html": "- \u2153 cup all-purpose flour",
-          "content": "- \u2153 cup all-purpose flour"
-        },
-        {
-          "text": "- 2 lbs chicken breasts sliced horizontally into thin cutlets",
-          "rich_text": "- 2 lbs chicken breasts sliced horizontally into thin cutlets",
-          "html": "- 2 lbs chicken breasts sliced horizontally into thin cutlets",
-          "content": "- 2 lbs chicken breasts sliced horizontally into thin cutlets"
-        },
-        {
-          "text": "- 1 tsp black pepper",
-          "rich_text": "- 1 tsp black pepper",
-          "html": "- 1 tsp black pepper",
-          "content": "- 1 tsp black pepper"
-        },
-        {
-          "text": "- 12 oz fresh mozzarella thinly sliced",
-          "rich_text": "- 12 oz fresh mozzarella thinly sliced",
-          "html": "- 12 oz fresh mozzarella thinly sliced",
-          "content": "- 12 oz fresh mozzarella thinly sliced"
-        },
-        {
-          "text": "- 1 jar marinara sauce",
-          "rich_text": "- 1 jar marinara sauce",
-          "html": "- 1 jar marinara sauce",
-          "content": "- 1 jar marinara sauce"
-        }
-      ],
-      "html": "- 2 \u00bd cups panko breadcrumbs\n- 5 tbsp olive oil divided\n- 2 tsp sea salt divided\n- \u00bd bunch fresh parsley finely chopped\n- 1 \u00bc cups Parmesan cheese grated, divided\n- 1 tbsp garlic powder\n- 4 large eggs\n- \u2153 cup all-purpose flour\n- 2 lbs chicken breasts sliced horizontally into thin cutlets\n- 1 tsp black pepper\n- 12 oz fresh mozzarella thinly sliced\n- 1 jar marinara sauce",
-      "context_heading": "### Ingredients",
-      "heading": "### Ingredients",
-      "content": "- 2 \u00bd cups panko breadcrumbs\n- 5 tbsp olive oil divided\n- 2 tsp sea salt divided\n- \u00bd bunch fresh parsley finely chopped\n- 1 \u00bc cups Parmesan cheese grated, divided\n- 1 tbsp garlic powder\n- 4 large eggs\n- \u2153 cup all-purpose flour\n- 2 lbs chicken breasts sliced horizontally into thin cutlets\n- 1 tsp black pepper\n- 12 oz fresh mozzarella thinly sliced\n- 1 jar marinara sauce",
-      "_orig_idx": 84,
-      "image_url": "",
-      "anchor": "ingredients-84"
-    },
-    {
-      "type": "heading",
-      "text": "#### Garnish",
-      "rich_text": "#### Garnish",
-      "html": "#### Garnish",
-      "context_heading": "### Ingredients",
-      "heading": "### Ingredients",
-      "content": "#### Garnish",
-      "level": 4,
-      "_orig_idx": 85,
-      "image_url": "",
-      "anchor": "ingredients-85"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "- A bunch fresh basil finely chopped",
-          "rich_text": "- A bunch fresh basil finely chopped",
-          "html": "- A bunch fresh basil finely chopped",
-          "content": "- A bunch fresh basil finely chopped"
-        }
-      ],
-      "html": "- A bunch fresh basil finely chopped",
-      "context_heading": "#### Garnish",
-      "heading": "#### Garnish",
-      "content": "- A bunch fresh basil finely chopped",
-      "_orig_idx": 86,
-      "image_url": "",
-      "anchor": "garnish-86"
-    },
-    {
-      "type": "heading",
-      "text": "### Instructions",
-      "rich_text": "### Instructions",
-      "html": "### Instructions",
-      "context_heading": "#### Garnish",
-      "heading": "#### Garnish",
-      "content": "### Instructions",
-      "level": 3,
-      "_orig_idx": 87,
-      "image_url": "",
-      "anchor": "garnish-87"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.",
-          "rich_text": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.",
-          "html": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.",
-          "content": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third."
-        },
-        {
-          "text": "- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.",
-          "rich_text": "- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.",
-          "html": "- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.",
-          "content": "- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down."
-        },
-        {
-          "text": "- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.",
-          "rich_text": "- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.",
-          "html": "- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.",
-          "content": "- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well."
-        },
-        {
-          "text": "- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.",
-          "rich_text": "- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.",
-          "html": "- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.",
-          "content": "- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly."
-        },
-        {
-          "text": "- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.",
-          "rich_text": "- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.",
-          "html": "- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.",
-          "content": "- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour."
-        },
-        {
-          "text": "- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.",
-          "rich_text": "- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.",
-          "html": "- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.",
-          "content": "- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper."
-        },
-        {
-          "text": "- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.",
-          "rich_text": "- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.",
-          "html": "- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.",
-          "content": "- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets."
-        },
-        {
-          "text": "- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.",
-          "rich_text": "- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.",
-          "html": "- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.",
-          "content": "- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through."
-        },
-        {
-          "text": "- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.",
-          "rich_text": "- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.",
-          "html": "- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.",
-          "content": "- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan."
-        },
-        {
-          "text": "- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.",
-          "rich_text": "- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.",
-          "html": "- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.",
-          "content": "- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly."
-        },
-        {
-          "text": "- Sprinkle with freshly chopped basil before serving.",
-          "rich_text": "- Sprinkle with freshly chopped basil before serving.",
-          "html": "- Sprinkle with freshly chopped basil before serving.",
-          "content": "- Sprinkle with freshly chopped basil before serving."
-        }
-      ],
-      "html": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.\n- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.\n- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.\n- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.\n- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.\n- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.\n- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.\n- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.\n- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.\n- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.\n- Sprinkle with freshly chopped basil before serving.",
-      "context_heading": "### Instructions",
-      "heading": "### Instructions",
-      "content": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.\n- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.\n- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.\n- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.\n- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.\n- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.\n- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.\n- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.\n- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.\n- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.\n- Sprinkle with freshly chopped basil before serving.",
-      "_orig_idx": 88,
-      "image_url": "",
-      "anchor": "instructions-88"
-    },
-    {
-      "type": "heading",
-      "text": "### Nutrition",
-      "rich_text": "### Nutrition",
-      "html": "### Nutrition",
-      "context_heading": "### Instructions",
-      "heading": "### Instructions",
-      "content": "### Nutrition",
-      "level": 3,
-      "_orig_idx": 89,
-      "image_url": "",
-      "anchor": "instructions-89"
-    },
-    {
-      "type": "paragraph",
-      "text": "Nutrition information is automatically calculated, so should only be used as an approximation.",
-      "rich_text": "Nutrition information is automatically calculated, so should only be used as an approximation.",
-      "html": "Nutrition information is automatically calculated, so should only be used as an approximation.",
-      "content": "Nutrition information is automatically calculated, so should only be used as an approximation.",
-      "context_heading": "### Nutrition",
-      "_orig_idx": 90,
-      "image_url": "",
-      "anchor": "nutrition-information-is-automatically-calculated-so-should-only-be-used-as-an-approximation-90"
+      "anchor": "baked-chicken-parmesan-80"
     }
   ],
   "sections": [
@@ -2385,290 +2181,86 @@
       "anchor": "my-storage-tips-79"
     },
     {
-      "type": "image",
-      "src": "https://allnutritious.com/wp-content/uploads/2026/03/Baked-Chicken-Parmesan-featured-300x300.jpg",
-      "alt": "Baked Chicken Parmesan",
-      "caption": "",
-      "width": 0,
-      "height": 0,
-      "context_heading": "## My Storage Tips",
-      "image_query": "Baked Chicken Parmesan aesthetic",
-      "heading": "## My Storage Tips",
-      "content": "Baked Chicken Parmesan",
+      "type": "recipe",
+      "recipe": {
+        "name": "Baked Chicken Parmesan",
+        "image_src": "https://allnutritious.com/wp-content/uploads/2026/03/Baked-Chicken-Parmesan-featured-300x300.jpg",
+        "summary": "Enjoy the savory, garlicky, and rich tomato flavors of this Italian-American classic. It\u2019s a high-protein meal that packs 42 grams of protein per serving.",
+        "prep_time": "21 mins",
+        "cook_time": "35 mins",
+        "total_time": "1 hr 11 mins",
+        "servings": "8",
+        "servings_unit": "cutlets",
+        "macros": {
+          "calories": "518",
+          "protein": "42.3",
+          "carbohydrates": "27.4",
+          "fat": "27.6"
+        },
+        "ingredient_groups": [
+          {
+            "name": "",
+            "items": [
+              "\u25a2 2 \u00bd cups panko breadcrumbs",
+              "\u25a2 5 tbsp olive oil divided",
+              "\u25a2 2 tsp sea salt divided",
+              "\u25a2 \u00bd bunch fresh parsley finely chopped",
+              "\u25a2 1 \u00bc cups Parmesan cheese grated, divided",
+              "\u25a2 1 tbsp garlic powder",
+              "\u25a2 4 large eggs",
+              "\u25a2 \u2153 cup all-purpose flour",
+              "\u25a2 2 lbs chicken breasts sliced horizontally into thin cutlets",
+              "\u25a2 1 tsp black pepper",
+              "\u25a2 12 oz fresh mozzarella thinly sliced",
+              "\u25a2 1 jar marinara sauce"
+            ]
+          },
+          {
+            "name": "Garnish",
+            "items": [
+              "\u25a2 A bunch fresh basil finely chopped"
+            ]
+          }
+        ],
+        "instructions": [
+          "Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.",
+          "Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.",
+          "In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.",
+          "Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.",
+          "In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.",
+          "Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.",
+          "Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.",
+          "Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.",
+          "Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.",
+          "Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.",
+          "Sprinkle with freshly chopped basil before serving."
+        ],
+        "nutrition": {
+          "Serving": "1 cutlet (12 oz)",
+          "Calories": "518 kcal",
+          "Carbohydrates": "27.4 g",
+          "Protein": "42.3 g",
+          "Fat": "27.6 g",
+          "Saturated Fat": "10.4 g",
+          "Cholesterol": "176 mg",
+          "Sodium": "840 mg",
+          "Potassium": "690 mg",
+          "Fiber": "1.7 g",
+          "Sugar": "5.1 g",
+          "Vitamin A": "940 IU",
+          "Vitamin C": "5 mg",
+          "Calcium": "390 mg",
+          "Iron": "2.9 mg"
+        },
+        "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\recipe.jpg",
+        "image_url": "/assets/images/blog/baked-chicken-parmesan/recipe.jpg"
+      },
+      "context_heading": "Recipe",
+      "heading": "Baked Chicken Parmesan",
       "_orig_idx": 80,
-      "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-080.jpg",
-      "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-80.jpg",
-      "anchor": "my-storage-tips-80"
-    },
-    {
-      "type": "heading",
-      "text": "## Baked Chicken Parmesan",
-      "rich_text": "## Baked Chicken Parmesan",
-      "html": "## Baked Chicken Parmesan",
-      "context_heading": "## My Storage Tips",
-      "heading": "## My Storage Tips",
-      "content": "## Baked Chicken Parmesan",
-      "level": 2,
-      "_orig_idx": 81,
+      "content": "",
       "image_url": "",
-      "anchor": "my-storage-tips-81"
-    },
-    {
-      "type": "paragraph",
-      "text": "Cals: 518 Protein: 42.3 Carbs: 27.4 Fat: 27.6",
-      "rich_text": "Cals: 518 Protein: 42.3 Carbs: 27.4 Fat: 27.6",
-      "html": "Cals: 518 Protein: 42.3 Carbs: 27.4 Fat: 27.6",
-      "content": "Cals: 518 Protein: 42.3 Carbs: 27.4 Fat: 27.6",
-      "context_heading": "## Baked Chicken Parmesan",
-      "_orig_idx": 82,
-      "image_url": "",
-      "anchor": "cals-518-protein-42-3-carbs-27-4-fat-27-6-82"
-    },
-    {
-      "type": "heading",
-      "text": "### Ingredients",
-      "rich_text": "### Ingredients",
-      "html": "### Ingredients",
-      "context_heading": "## Baked Chicken Parmesan",
-      "heading": "## Baked Chicken Parmesan",
-      "content": "### Ingredients",
-      "level": 3,
-      "_orig_idx": 83,
-      "image_url": "",
-      "anchor": "baked-chicken-parmesan-83"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "- 2 \u00bd cups panko breadcrumbs",
-          "rich_text": "- 2 \u00bd cups panko breadcrumbs",
-          "html": "- 2 \u00bd cups panko breadcrumbs",
-          "content": "- 2 \u00bd cups panko breadcrumbs"
-        },
-        {
-          "text": "- 5 tbsp olive oil divided",
-          "rich_text": "- 5 tbsp olive oil divided",
-          "html": "- 5 tbsp olive oil divided",
-          "content": "- 5 tbsp olive oil divided"
-        },
-        {
-          "text": "- 2 tsp sea salt divided",
-          "rich_text": "- 2 tsp sea salt divided",
-          "html": "- 2 tsp sea salt divided",
-          "content": "- 2 tsp sea salt divided"
-        },
-        {
-          "text": "- \u00bd bunch fresh parsley finely chopped",
-          "rich_text": "- \u00bd bunch fresh parsley finely chopped",
-          "html": "- \u00bd bunch fresh parsley finely chopped",
-          "content": "- \u00bd bunch fresh parsley finely chopped"
-        },
-        {
-          "text": "- 1 \u00bc cups Parmesan cheese grated, divided",
-          "rich_text": "- 1 \u00bc cups Parmesan cheese grated, divided",
-          "html": "- 1 \u00bc cups Parmesan cheese grated, divided",
-          "content": "- 1 \u00bc cups Parmesan cheese grated, divided"
-        },
-        {
-          "text": "- 1 tbsp garlic powder",
-          "rich_text": "- 1 tbsp garlic powder",
-          "html": "- 1 tbsp garlic powder",
-          "content": "- 1 tbsp garlic powder"
-        },
-        {
-          "text": "- 4 large eggs",
-          "rich_text": "- 4 large eggs",
-          "html": "- 4 large eggs",
-          "content": "- 4 large eggs"
-        },
-        {
-          "text": "- \u2153 cup all-purpose flour",
-          "rich_text": "- \u2153 cup all-purpose flour",
-          "html": "- \u2153 cup all-purpose flour",
-          "content": "- \u2153 cup all-purpose flour"
-        },
-        {
-          "text": "- 2 lbs chicken breasts sliced horizontally into thin cutlets",
-          "rich_text": "- 2 lbs chicken breasts sliced horizontally into thin cutlets",
-          "html": "- 2 lbs chicken breasts sliced horizontally into thin cutlets",
-          "content": "- 2 lbs chicken breasts sliced horizontally into thin cutlets"
-        },
-        {
-          "text": "- 1 tsp black pepper",
-          "rich_text": "- 1 tsp black pepper",
-          "html": "- 1 tsp black pepper",
-          "content": "- 1 tsp black pepper"
-        },
-        {
-          "text": "- 12 oz fresh mozzarella thinly sliced",
-          "rich_text": "- 12 oz fresh mozzarella thinly sliced",
-          "html": "- 12 oz fresh mozzarella thinly sliced",
-          "content": "- 12 oz fresh mozzarella thinly sliced"
-        },
-        {
-          "text": "- 1 jar marinara sauce",
-          "rich_text": "- 1 jar marinara sauce",
-          "html": "- 1 jar marinara sauce",
-          "content": "- 1 jar marinara sauce"
-        }
-      ],
-      "html": "- 2 \u00bd cups panko breadcrumbs\n- 5 tbsp olive oil divided\n- 2 tsp sea salt divided\n- \u00bd bunch fresh parsley finely chopped\n- 1 \u00bc cups Parmesan cheese grated, divided\n- 1 tbsp garlic powder\n- 4 large eggs\n- \u2153 cup all-purpose flour\n- 2 lbs chicken breasts sliced horizontally into thin cutlets\n- 1 tsp black pepper\n- 12 oz fresh mozzarella thinly sliced\n- 1 jar marinara sauce",
-      "context_heading": "### Ingredients",
-      "heading": "### Ingredients",
-      "content": "- 2 \u00bd cups panko breadcrumbs\n- 5 tbsp olive oil divided\n- 2 tsp sea salt divided\n- \u00bd bunch fresh parsley finely chopped\n- 1 \u00bc cups Parmesan cheese grated, divided\n- 1 tbsp garlic powder\n- 4 large eggs\n- \u2153 cup all-purpose flour\n- 2 lbs chicken breasts sliced horizontally into thin cutlets\n- 1 tsp black pepper\n- 12 oz fresh mozzarella thinly sliced\n- 1 jar marinara sauce",
-      "_orig_idx": 84,
-      "image_url": "",
-      "anchor": "ingredients-84"
-    },
-    {
-      "type": "heading",
-      "text": "#### Garnish",
-      "rich_text": "#### Garnish",
-      "html": "#### Garnish",
-      "context_heading": "### Ingredients",
-      "heading": "### Ingredients",
-      "content": "#### Garnish",
-      "level": 4,
-      "_orig_idx": 85,
-      "image_url": "",
-      "anchor": "ingredients-85"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "- A bunch fresh basil finely chopped",
-          "rich_text": "- A bunch fresh basil finely chopped",
-          "html": "- A bunch fresh basil finely chopped",
-          "content": "- A bunch fresh basil finely chopped"
-        }
-      ],
-      "html": "- A bunch fresh basil finely chopped",
-      "context_heading": "#### Garnish",
-      "heading": "#### Garnish",
-      "content": "- A bunch fresh basil finely chopped",
-      "_orig_idx": 86,
-      "image_url": "",
-      "anchor": "garnish-86"
-    },
-    {
-      "type": "heading",
-      "text": "### Instructions",
-      "rich_text": "### Instructions",
-      "html": "### Instructions",
-      "context_heading": "#### Garnish",
-      "heading": "#### Garnish",
-      "content": "### Instructions",
-      "level": 3,
-      "_orig_idx": 87,
-      "image_url": "",
-      "anchor": "garnish-87"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        {
-          "text": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.",
-          "rich_text": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.",
-          "html": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.",
-          "content": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third."
-        },
-        {
-          "text": "- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.",
-          "rich_text": "- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.",
-          "html": "- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.",
-          "content": "- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down."
-        },
-        {
-          "text": "- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.",
-          "rich_text": "- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.",
-          "html": "- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.",
-          "content": "- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well."
-        },
-        {
-          "text": "- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.",
-          "rich_text": "- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.",
-          "html": "- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.",
-          "content": "- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly."
-        },
-        {
-          "text": "- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.",
-          "rich_text": "- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.",
-          "html": "- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.",
-          "content": "- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour."
-        },
-        {
-          "text": "- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.",
-          "rich_text": "- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.",
-          "html": "- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.",
-          "content": "- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper."
-        },
-        {
-          "text": "- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.",
-          "rich_text": "- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.",
-          "html": "- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.",
-          "content": "- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets."
-        },
-        {
-          "text": "- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.",
-          "rich_text": "- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.",
-          "html": "- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.",
-          "content": "- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through."
-        },
-        {
-          "text": "- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.",
-          "rich_text": "- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.",
-          "html": "- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.",
-          "content": "- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan."
-        },
-        {
-          "text": "- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.",
-          "rich_text": "- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.",
-          "html": "- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.",
-          "content": "- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly."
-        },
-        {
-          "text": "- Sprinkle with freshly chopped basil before serving.",
-          "rich_text": "- Sprinkle with freshly chopped basil before serving.",
-          "html": "- Sprinkle with freshly chopped basil before serving.",
-          "content": "- Sprinkle with freshly chopped basil before serving."
-        }
-      ],
-      "html": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.\n- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.\n- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.\n- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.\n- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.\n- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.\n- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.\n- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.\n- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.\n- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.\n- Sprinkle with freshly chopped basil before serving.",
-      "context_heading": "### Instructions",
-      "heading": "### Instructions",
-      "content": "- Preheat the oven to 425F. Place oven racks so one is in the upper third, and one is in the lower third.\n- Spread the panko crumbs on a baking sheet. Drizzle with 3 tbsp olive oil and sprinkle with \u00bd tsp salt. Toss and spread into an even layer. Bake for 8\u201310 minutes, stirring halfway through, until golden brown. Let it cool down.\n- In a large bowl, combine the toasted panko, chopped parsley, 1 cup of the grated Parmesan, and garlic powder. Mix well.\n- Wipe off the baking sheet. Drizzle the remaining 2 tbsp of olive oil between two baking sheets and brush to coat evenly.\n- In one shallow bowl, whisk the eggs. In another shallow bowl, add the flour.\n- Pat the chicken dry with paper towels. Season both sides with the remaining salt and black pepper.\n- Dredge the chicken cutlets in flour and shake off the excess. Dip into the egg, letting extra drip off, and then press into the panko mixture, coating well. Place the coated chicken in a single layer on the oiled baking sheets.\n- Bake for 8 minutes, then flip the chicken, rotate the pans between racks, and bake another 6\u20139 minutes until fully cooked through.\n- Remove from the oven and turn the oven to broil. Spoon about \u00bc cup of marinara over each piece of chicken. Top with sliced mozzarella and sprinkle with the remaining Parmesan.\n- Broil on the top rack for 5\u20138 minutes, until the cheese is melted and bubbly.\n- Sprinkle with freshly chopped basil before serving.",
-      "_orig_idx": 88,
-      "image_url": "",
-      "anchor": "instructions-88"
-    },
-    {
-      "type": "heading",
-      "text": "### Nutrition",
-      "rich_text": "### Nutrition",
-      "html": "### Nutrition",
-      "context_heading": "### Instructions",
-      "heading": "### Instructions",
-      "content": "### Nutrition",
-      "level": 3,
-      "_orig_idx": 89,
-      "image_url": "",
-      "anchor": "instructions-89"
-    },
-    {
-      "type": "paragraph",
-      "text": "Nutrition information is automatically calculated, so should only be used as an approximation.",
-      "rich_text": "Nutrition information is automatically calculated, so should only be used as an approximation.",
-      "html": "Nutrition information is automatically calculated, so should only be used as an approximation.",
-      "content": "Nutrition information is automatically calculated, so should only be used as an approximation.",
-      "context_heading": "### Nutrition",
-      "_orig_idx": 90,
-      "image_url": "",
-      "anchor": "nutrition-information-is-automatically-calculated-so-should-only-be-used-as-an-approximation-90"
+      "anchor": "baked-chicken-parmesan-80"
     }
   ],
   "cta_heading": "Ready for more?",
@@ -2676,5 +2268,9 @@
   "source_url": "https://allnutritious.com/baked-chicken-parmesan/",
   "seo_description": "This post may contain affiliate links. Please read our disclosure policy.",
   "public_url": "https://glowfrominside.site/blog/baked-chicken-parmesan/",
-  "author": "Glow From Inside"
+  "author": "Maya",
+  "author_name": "Maya",
+  "author_bio": "A certified nutritionist and recipe developer behind Glow From Inside, turning classic recipes into healthier versions.",
+  "author_image_url": "/assets/images/blog/author/avatar.jpg",
+  "pinterest_url": "https://www.pinterest.com/"
 }

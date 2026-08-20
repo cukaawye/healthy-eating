@@ -234,11 +234,280 @@
             color: var(--text-light);
         }
 
+        .img-wrap {
+            position: relative;
+            display: block;
+        }
+
+        .pin-it-btn {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 5;
+            display: none;
+            align-items: center;
+            gap: 6px;
+            background: #e60023;
+            color: #fff;
+            border: 0;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-family: inherit;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            text-decoration: none;
+        }
+
+        .pin-it-btn::before {
+            content: "📌";
+            font-size: 0.9rem;
+        }
+
+        .img-wrap:hover .pin-it-btn,
+        .pin-it-btn:focus {
+            display: inline-flex;
+        }
+
         .article-cta {
             padding: 20px 22px;
             border-radius: 20px;
             background: rgba(45, 74, 34, 0.06);
             border: 1px solid var(--border);
+        }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 22px 24px;
+            margin: 0 0 26px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+        }
+
+        .author-avatar {
+            width: 72px;
+            height: 72px;
+            min-width: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--cream);
+            background: var(--bg-alt);
+        }
+
+        .author-avatar-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            background: var(--cream);
+        }
+
+        .author-box .author-greeting {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .author-box .author-bio {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .author-socials {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .author-socials a {
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 5px 14px;
+            background: #fff;
+        }
+
+        .author-socials a:hover {
+            color: var(--white);
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .recipe-card {
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(45, 74, 34, 0.06);
+        }
+
+        .recipe-card .recipe-img-wrap {
+            margin: 0;
+            position: relative;
+        }
+
+        .recipe-card .recipe-img {
+            width: 100%;
+            display: block;
+            max-height: 420px;
+            object-fit: cover;
+        }
+
+        .recipe-card .recipe-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.7rem;
+            margin: 22px 24px 8px;
+        }
+
+        .recipe-card .recipe-summary {
+            margin: 0 24px 14px;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .recipe-macros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+            gap: 10px;
+            margin: 0 24px 18px;
+        }
+
+        .recipe-macro {
+            text-align: center;
+            background: var(--bg-alt);
+            border-radius: 14px;
+            padding: 10px 6px;
+            border: 1px solid var(--border);
+        }
+
+        .recipe-macro-value {
+            display: block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .recipe-macro-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        .recipe-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 10px;
+            margin: 0 24px 20px;
+        }
+
+        .recipe-time {
+            text-align: center;
+            background: var(--cream);
+            border-radius: 14px;
+            padding: 10px 8px;
+        }
+
+        .recipe-time-label {
+            display: block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-light);
+        }
+
+        .recipe-time-value {
+            display: block;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        .recipe-section {
+            padding: 0 24px 22px;
+        }
+
+        .recipe-section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .recipe-ing-group {
+            color: var(--primary-light);
+            font-size: 1rem;
+            margin: 12px 0 6px;
+        }
+
+        .recipe-ing-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .recipe-ing-item {
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            padding: 6px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .recipe-ing-check {
+            color: var(--accent);
+            min-width: 14px;
+        }
+
+        .recipe-ing-text {
+            color: var(--text);
+        }
+
+        .recipe-steps {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .recipe-step {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .recipe-nutrition {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 8px 18px;
+        }
+
+        .recipe-nutrition-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            border-bottom: 1px dashed var(--border);
+            padding: 4px 0;
+            font-size: 0.95rem;
+        }
+
+        .recipe-nutrition-value {
+            font-weight: 600;
+            color: var(--primary);
         }
 
         .article-divider {
@@ -388,6 +657,32 @@
     <section class="blog-grid">
         
                 <article class="card">
+                    <a href="/blog/test-recipe-post/" class="card-media"><div class="placeholder">Featured image coming soon</div></a>
+                    <div class="card-body">
+                        <div class="meta-row">
+                            <span class="pill">Healthy Eating</span>
+                            <span>August 20, 2026</span>
+                        </div>
+                        <h2><a href="/blog/test-recipe-post/">Test Recipe Post</a></h2>
+                        <p>Intro paragraph.</p>
+                        <a href="/blog/test-recipe-post/" class="read-more">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <a href="/blog/baked-chicken-parmesan/" class="card-media"><div class="placeholder">Featured image coming soon</div></a>
+                    <div class="card-body">
+                        <div class="meta-row">
+                            <span class="pill">Healthy Eating</span>
+                            <span>August 20, 2026</span>
+                        </div>
+                        <h2><a href="/blog/baked-chicken-parmesan/">Baked Chicken Parmesan</a></h2>
+                        <p>This post may contain affiliate links. Please read our disclosure policy.</p>
+                        <a href="/blog/baked-chicken-parmesan/" class="read-more">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
                     <a href="/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/" class="card-media"><div class="placeholder">Featured image coming soon</div></a>
                     <div class="card-body">
                         <div class="meta-row">
@@ -410,19 +705,6 @@
                         <h2><a href="/blog/27-fall-high-protein-clean-eating-recipes/">27 Fall High Protein Clean Eating Recipes</a></h2>
                         <p># 27 Fall High Protein Clean Eating Recipes</p>
                         <a href="/blog/27-fall-high-protein-clean-eating-recipes/" class="read-more">Read more</a>
-                    </div>
-                </article>
-                
-                <article class="card">
-                    <a href="/blog/baked-chicken-parmesan/" class="card-media"><div class="placeholder">Featured image coming soon</div></a>
-                    <div class="card-body">
-                        <div class="meta-row">
-                            <span class="pill">Healthy Eating</span>
-                            <span>August 19, 2026</span>
-                        </div>
-                        <h2><a href="/blog/baked-chicken-parmesan/">Baked Chicken Parmesan</a></h2>
-                        <p>This post may contain affiliate links. Please read our disclosure policy.</p>
-                        <a href="/blog/baked-chicken-parmesan/" class="read-more">Read more</a>
                     </div>
                 </article>
                 
