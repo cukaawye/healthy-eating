@@ -36,7 +36,7 @@
         a { color: inherit; }
 
         .container {
-            max-width: 980px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -173,6 +173,87 @@
             padding: 8px 0 60px;
         }
 
+        .post-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 336px;
+            gap: 40px;
+            align-items: start;
+            margin-top: 26px;
+        }
+
+        .post-sidebar {
+            position: sticky;
+            top: 96px;
+        }
+
+        .author-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            padding: 26px 22px;
+            background: #fdfbf2;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .author-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            background: var(--bg-alt);
+            box-shadow: 0 8px 24px rgba(45, 74, 34, 0.12);
+        }
+
+        .author-avatar-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary);
+            background: var(--cream);
+        }
+
+        .author-box .author-greeting {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+        }
+
+        .author-box .author-bio {
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        .author-socials {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .author-socials a {
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 5px 14px;
+            background: #fff;
+        }
+
+        .author-socials a:hover {
+            color: var(--white);
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
         .article-content {
             margin-top: 18px;
             display: grid;
@@ -277,73 +358,6 @@
             border: 1px solid var(--border);
         }
 
-        .author-box {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            padding: 22px 24px;
-            margin: 0 0 26px;
-            background: rgba(255, 255, 255, 0.82);
-            border: 1px solid var(--border);
-            border-radius: 22px;
-        }
-
-        .author-avatar {
-            width: 72px;
-            height: 72px;
-            min-width: 72px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--cream);
-            background: var(--bg-alt);
-        }
-
-        .author-avatar-fallback {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: var(--primary);
-            background: var(--cream);
-        }
-
-        .author-box .author-greeting {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .author-box .author-bio {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            margin-bottom: 8px;
-        }
-
-        .author-socials {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .author-socials a {
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent-dark);
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            padding: 5px 14px;
-            background: #fff;
-        }
-
-        .author-socials a:hover {
-            color: var(--white);
-            background: var(--primary);
-            border-color: var(--primary);
-        }
-
         .recipe-card {
             margin: 8px 0;
             background: rgba(255, 255, 255, 0.88);
@@ -356,26 +370,35 @@
         .recipe-card .recipe-img-wrap {
             margin: 0;
             position: relative;
+            text-align: center;
+            padding: 28px 28px 0;
         }
 
         .recipe-card .recipe-img {
-            width: 100%;
-            display: block;
-            max-height: 420px;
+            width: 320px;
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
             object-fit: cover;
+            display: inline-block;
+            border-radius: 48px;
+            border: 1px solid var(--border);
+            background: var(--bg-alt);
+            box-shadow: 0 16px 40px rgba(45, 74, 34, 0.12);
         }
 
         .recipe-card .recipe-name {
             font-family: 'Playfair Display', serif;
             color: var(--primary);
-            font-size: 1.7rem;
+            font-size: 2rem;
+            text-align: center;
             margin: 22px 24px 8px;
         }
 
         .recipe-card .recipe-summary {
             margin: 0 24px 14px;
             color: var(--text-light);
-            font-size: 1rem;
+            font-size: 1.02rem;
+            text-align: center;
         }
 
         .recipe-macros {
@@ -566,11 +589,22 @@
             font-size: 0.9rem;
         }
 
+        @media (max-width: 900px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .post-sidebar {
+                position: static;
+            }
+        }
+
         @media (max-width: 700px) {
             .hero { padding-top: 28px; }
             .hero-card, .toc, .cta-box { padding: 20px; }
             .nav-inner { min-height: 68px; }
             .hero h1 { max-width: none; }
+            .recipe-card .recipe-img { width: 260px; }
         }
         
         .blog-grid {
