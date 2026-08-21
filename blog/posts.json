@@ -1,172 +1,10 @@
 [
   {
-    "slug": "test-recipe-post",
-    "title": "Test Recipe Post",
-    "excerpt": "Intro paragraph.",
-    "date": "2026-08-20",
-    "date_human": "August 20, 2026",
-    "category": "Healthy Eating",
-    "hero_image_url": "",
-    "hero_image_alt": "Test Recipe Post",
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Intro paragraph.",
-        "rich_text": "Intro paragraph.",
-        "context_heading": "Intro",
-        "content": "Intro paragraph.",
-        "image_url": "",
-        "anchor": "intro-paragraph-1"
-      },
-      {
-        "type": "image",
-        "src": "https://example.com/photo.jpg",
-        "alt": "Chicken parm photo",
-        "caption": "A photo",
-        "content": "A photo",
-        "image_url": "https://example.com/photo.jpg",
-        "anchor": "block-2-2"
-      },
-      {
-        "type": "recipe",
-        "recipe": {
-          "name": "Baked Chicken Parmesan",
-          "image_src": "https://example.com/recipe.jpg",
-          "summary": "A high-protein Italian-American classic.",
-          "prep_time": "21 minutes",
-          "cook_time": "35 minutes",
-          "total_time": "1 hour 11 minutes",
-          "servings": "8",
-          "servings_unit": "cutlets",
-          "macros": {
-            "calories": "518",
-            "protein": "42.3",
-            "carbohydrates": "27.4",
-            "fat": "27.6"
-          },
-          "ingredient_groups": [
-            {
-              "name": "",
-              "items": [
-                "2 1/2 cups panko breadcrumbs",
-                "5 tbsp olive oil",
-                "4 large eggs"
-              ]
-            },
-            {
-              "name": "Garnish",
-              "items": [
-                "A bunch fresh basil"
-              ]
-            }
-          ],
-          "instructions": [
-            "Preheat oven to 425F.",
-            "Bake 8 minutes.",
-            "Sprinkle basil before serving."
-          ],
-          "nutrition": {
-            "Calories": "518 kcal",
-            "Protein": "42.3 g",
-            "Carbs": "27.4 g",
-            "Fat": "27.6 g"
-          },
-          "image_url": "https://example.com/recipe.jpg"
-        },
-        "context_heading": "Recipe",
-        "content": "",
-        "image_url": "",
-        "anchor": "block-3-3"
-      }
-    ],
-    "sections": [
-      {
-        "type": "paragraph",
-        "text": "Intro paragraph.",
-        "rich_text": "Intro paragraph.",
-        "context_heading": "Intro",
-        "content": "Intro paragraph.",
-        "image_url": "",
-        "anchor": "intro-paragraph-1"
-      },
-      {
-        "type": "image",
-        "src": "https://example.com/photo.jpg",
-        "alt": "Chicken parm photo",
-        "caption": "A photo",
-        "content": "A photo",
-        "image_url": "https://example.com/photo.jpg",
-        "anchor": "block-2-2"
-      },
-      {
-        "type": "recipe",
-        "recipe": {
-          "name": "Baked Chicken Parmesan",
-          "image_src": "https://example.com/recipe.jpg",
-          "summary": "A high-protein Italian-American classic.",
-          "prep_time": "21 minutes",
-          "cook_time": "35 minutes",
-          "total_time": "1 hour 11 minutes",
-          "servings": "8",
-          "servings_unit": "cutlets",
-          "macros": {
-            "calories": "518",
-            "protein": "42.3",
-            "carbohydrates": "27.4",
-            "fat": "27.6"
-          },
-          "ingredient_groups": [
-            {
-              "name": "",
-              "items": [
-                "2 1/2 cups panko breadcrumbs",
-                "5 tbsp olive oil",
-                "4 large eggs"
-              ]
-            },
-            {
-              "name": "Garnish",
-              "items": [
-                "A bunch fresh basil"
-              ]
-            }
-          ],
-          "instructions": [
-            "Preheat oven to 425F.",
-            "Bake 8 minutes.",
-            "Sprinkle basil before serving."
-          ],
-          "nutrition": {
-            "Calories": "518 kcal",
-            "Protein": "42.3 g",
-            "Carbs": "27.4 g",
-            "Fat": "27.6 g"
-          },
-          "image_url": "https://example.com/recipe.jpg"
-        },
-        "context_heading": "Recipe",
-        "content": "",
-        "image_url": "",
-        "anchor": "block-3-3"
-      }
-    ],
-    "cta_heading": "Ready for more?",
-    "cta_text": "Keep exploring the blog for more wellness and healthy eating ideas.",
-    "source_url": "https://example.com",
-    "seo_description": "Intro paragraph.",
-    "public_url": "https://glowfrominside.site/blog/test-recipe-post/",
-    "author": "Glow From Inside",
-    "author_name": "Glow From Inside",
-    "author_bio": "A certified nutritionist and recipe developer behind Glow From Inside, turning classic recipes into healthier versions.",
-    "author_image_url": "/assets/images/blog/author/avatar.jpg",
-    "pinterest_url": "https://www.pinterest.com/"
-  },
-  {
     "slug": "baked-chicken-parmesan",
     "title": "Baked Chicken Parmesan",
     "excerpt": "Enjoy the savory, garlicky, and rich tomato flavors of this Italian-American classic. It\u2019s a high-protein meal that packs 42 grams of protein per serving.",
-    "date": "2026-08-20",
-    "date_human": "August 20, 2026",
+    "date": "2026-08-21",
+    "date_human": "August 21, 2026",
     "category": "Healthy Eating",
     "hero_image_url": "",
     "hero_image_alt": "Baked Chicken Parmesan",
@@ -591,8 +429,8 @@
         "rich_text": "In a shallow bowl, whisk the eggs. And, in another shallow bowl, add the flour.",
         "html": "In a shallow bowl, whisk the eggs. And, in another shallow bowl, add the flour.",
         "content": "In a shallow bowl, whisk the eggs. And, in another shallow bowl, add the flour.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 42,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 40,
         "image_url": "",
         "anchor": "in-a-shallow-bowl-whisk-the-eggs-and-in-another-shallow-bowl-add-the-flour-36"
       },
@@ -602,8 +440,8 @@
         "rich_text": "Step 6. Pat the chicken dry with some paper towels. Season both sides of the chicken breasts with the rest of the salt and pepper.",
         "html": "Step 6. Pat the chicken dry with some paper towels. Season both sides of the chicken breasts with the rest of the salt and pepper.",
         "content": "Step 6. Pat the chicken dry with some paper towels. Season both sides of the chicken breasts with the rest of the salt and pepper.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 43,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 41,
         "image_url": "",
         "anchor": "step-6-pat-the-chicken-dry-with-some-paper-towels-season-both-sides-of-the-chicken-breasts-with-the-rest-of-the-salt-and-pepper-37"
       },
@@ -614,14 +452,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Quick Baked Chicken Parmesan Steps 5-6 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Quick Baked Chicken Parmesan Steps 5-6",
-        "_orig_idx": 44,
+        "_orig_idx": 42,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-038.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-38.jpg",
-        "anchor": "tired-of-ads-38"
+        "anchor": "how-to-make-baked-chicken-parmesan-38"
       },
       {
         "type": "paragraph",
@@ -629,8 +467,8 @@
         "rich_text": "Step 7. Place a chicken breast on top of the flour.",
         "html": "Step 7. Place a chicken breast on top of the flour.",
         "content": "Step 7. Place a chicken breast on top of the flour.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 45,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 43,
         "image_url": "",
         "anchor": "step-7-place-a-chicken-breast-on-top-of-the-flour-39"
       },
@@ -640,8 +478,8 @@
         "rich_text": "Step 8. Flip it to coat the other side. Shake off any excess flour.",
         "html": "Step 8. Flip it to coat the other side. Shake off any excess flour.",
         "content": "Step 8. Flip it to coat the other side. Shake off any excess flour.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 46,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 44,
         "image_url": "",
         "anchor": "step-8-flip-it-to-coat-the-other-side-shake-off-any-excess-flour-40"
       },
@@ -652,14 +490,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Tasty Baked Chicken Parmesan Steps 7-8 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Tasty Baked Chicken Parmesan Steps 7-8",
-        "_orig_idx": 47,
+        "_orig_idx": 45,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-041.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-41.jpg",
-        "anchor": "tired-of-ads-41"
+        "anchor": "how-to-make-baked-chicken-parmesan-41"
       },
       {
         "type": "paragraph",
@@ -667,8 +505,8 @@
         "rich_text": "Step 9. Now dip it into the egg.",
         "html": "Step 9. Now dip it into the egg.",
         "content": "Step 9. Now dip it into the egg.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 48,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 46,
         "image_url": "",
         "anchor": "step-9-now-dip-it-into-the-egg-42"
       },
@@ -678,8 +516,8 @@
         "rich_text": "Step 10. Make sure you coat every part of the chicken breast.",
         "html": "Step 10. Make sure you coat every part of the chicken breast.",
         "content": "Step 10. Make sure you coat every part of the chicken breast.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 49,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 47,
         "image_url": "",
         "anchor": "step-10-make-sure-you-coat-every-part-of-the-chicken-breast-43"
       },
@@ -690,14 +528,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Savory Baked Chicken Parmesan Steps 9-10 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Savory Baked Chicken Parmesan Steps 9-10",
-        "_orig_idx": 50,
+        "_orig_idx": 48,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-044.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-44.jpg",
-        "anchor": "tired-of-ads-44"
+        "anchor": "how-to-make-baked-chicken-parmesan-44"
       },
       {
         "type": "paragraph",
@@ -705,8 +543,8 @@
         "rich_text": "Step 11. Let any extra drip off and then press it into the panko mix.",
         "html": "Step 11. Let any extra drip off and then press it into the panko mix.",
         "content": "Step 11. Let any extra drip off and then press it into the panko mix.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 51,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 49,
         "image_url": "",
         "anchor": "step-11-let-any-extra-drip-off-and-then-press-it-into-the-panko-mix-45"
       },
@@ -716,8 +554,8 @@
         "rich_text": "Step 12. Flip it to the other side to cover both sides. Repeat the process with all the chicken breasts.",
         "html": "Step 12. Flip it to the other side to cover both sides. Repeat the process with all the chicken breasts.",
         "content": "Step 12. Flip it to the other side to cover both sides. Repeat the process with all the chicken breasts.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 52,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 50,
         "image_url": "",
         "anchor": "step-12-flip-it-to-the-other-side-to-cover-both-sides-repeat-the-process-with-all-the-chicken-breasts-46"
       },
@@ -728,14 +566,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Garlicky Baked Chicken Parmesan Steps 11-12 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Garlicky Baked Chicken Parmesan Steps 11-12",
-        "_orig_idx": 53,
+        "_orig_idx": 51,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-047.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-47.jpg",
-        "anchor": "tired-of-ads-47"
+        "anchor": "how-to-make-baked-chicken-parmesan-47"
       },
       {
         "type": "paragraph",
@@ -743,8 +581,8 @@
         "rich_text": "Step 13. Place the coated chicken in a single layer on the oiled baking sheets.",
         "html": "Step 13. Place the coated chicken in a single layer on the oiled baking sheets.",
         "content": "Step 13. Place the coated chicken in a single layer on the oiled baking sheets.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 54,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 52,
         "image_url": "",
         "anchor": "step-13-place-the-coated-chicken-in-a-single-layer-on-the-oiled-baking-sheets-48"
       },
@@ -754,8 +592,8 @@
         "rich_text": "Step 14. Bake for 8 minutes, remove from the oven, and flip them. Make sure you rotate between racks.",
         "html": "Step 14. Bake for 8 minutes, remove from the oven, and flip them. Make sure you rotate between racks.",
         "content": "Step 14. Bake for 8 minutes, remove from the oven, and flip them. Make sure you rotate between racks.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 55,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 53,
         "image_url": "",
         "anchor": "step-14-bake-for-8-minutes-remove-from-the-oven-and-flip-them-make-sure-you-rotate-between-racks-49"
       },
@@ -765,8 +603,8 @@
         "rich_text": "Bake for another 6-9 minutes until they are fully cooked through.",
         "html": "Bake for another 6-9 minutes until they are fully cooked through.",
         "content": "Bake for another 6-9 minutes until they are fully cooked through.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 56,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 54,
         "image_url": "",
         "anchor": "bake-for-another-6-9-minutes-until-they-are-fully-cooked-through-50"
       },
@@ -777,14 +615,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Delectable Baked Chicken Parmesan Steps 13-14 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Delectable Baked Chicken Parmesan Steps 13-14",
-        "_orig_idx": 57,
+        "_orig_idx": 55,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-051.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-51.jpg",
-        "anchor": "tired-of-ads-51"
+        "anchor": "how-to-make-baked-chicken-parmesan-51"
       },
       {
         "type": "paragraph",
@@ -792,8 +630,8 @@
         "rich_text": "Step 15. Take the chicken out of the oven and turn the oven to broil. Place around \u00bc cup of the marinara over each chicken breast.",
         "html": "Step 15. Take the chicken out of the oven and turn the oven to broil. Place around \u00bc cup of the marinara over each chicken breast.",
         "content": "Step 15. Take the chicken out of the oven and turn the oven to broil. Place around \u00bc cup of the marinara over each chicken breast.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 58,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 56,
         "image_url": "",
         "anchor": "step-15-take-the-chicken-out-of-the-oven-and-turn-the-oven-to-broil-place-around-cup-of-the-marinara-over-each-chicken-breast-52"
       },
@@ -803,8 +641,8 @@
         "rich_text": "Step 16. Add the sliced mozzarella on top of the chicken breast.",
         "html": "Step 16. Add the sliced mozzarella on top of the chicken breast.",
         "content": "Step 16. Add the sliced mozzarella on top of the chicken breast.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 59,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 57,
         "image_url": "",
         "anchor": "step-16-add-the-sliced-mozzarella-on-top-of-the-chicken-breast-53"
       },
@@ -815,14 +653,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Satisfying Baked Chicken Parmesan Steps 15-16 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Satisfying Baked Chicken Parmesan Steps 15-16",
-        "_orig_idx": 60,
+        "_orig_idx": 58,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-054.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-54.jpg",
-        "anchor": "tired-of-ads-54"
+        "anchor": "how-to-make-baked-chicken-parmesan-54"
       },
       {
         "type": "paragraph",
@@ -830,8 +668,8 @@
         "rich_text": "Step 17. Sprinkle the rest of the parmesan cheese.",
         "html": "Step 17. Sprinkle the rest of the parmesan cheese.",
         "content": "Step 17. Sprinkle the rest of the parmesan cheese.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 61,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 59,
         "image_url": "",
         "anchor": "step-17-sprinkle-the-rest-of-the-parmesan-cheese-55"
       },
@@ -841,8 +679,8 @@
         "rich_text": "Step 18. Place the chicken back in the oven on the top rack and bake for another 5-8 minutes, or until the cheese melts and starts to bubble.",
         "html": "Step 18. Place the chicken back in the oven on the top rack and bake for another 5-8 minutes, or until the cheese melts and starts to bubble.",
         "content": "Step 18. Place the chicken back in the oven on the top rack and bake for another 5-8 minutes, or until the cheese melts and starts to bubble.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 62,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 60,
         "image_url": "",
         "anchor": "step-18-place-the-chicken-back-in-the-oven-on-the-top-rack-and-bake-for-another-5-8-minutes-or-until-the-cheese-melts-and-starts-to-bubble-56"
       },
@@ -853,14 +691,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Mouthwatering Baked Chicken Parmesan Steps 17-18 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Mouthwatering Baked Chicken Parmesan Steps 17-18",
-        "_orig_idx": 63,
+        "_orig_idx": 61,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-057.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-57.jpg",
-        "anchor": "tired-of-ads-57"
+        "anchor": "how-to-make-baked-chicken-parmesan-57"
       },
       {
         "type": "paragraph",
@@ -868,8 +706,8 @@
         "rich_text": "Step 19. When you are ready to serve it, sprinkle some freshly chopped basil on top of them.",
         "html": "Step 19. When you are ready to serve it, sprinkle some freshly chopped basil on top of them.",
         "content": "Step 19. When you are ready to serve it, sprinkle some freshly chopped basil on top of them.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 64,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 62,
         "image_url": "",
         "anchor": "step-19-when-you-are-ready-to-serve-it-sprinkle-some-freshly-chopped-basil-on-top-of-them-58"
       },
@@ -880,27 +718,27 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "High Protein Baked Chicken Parmesan Step 19 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "High Protein Baked Chicken Parmesan Step 19",
-        "_orig_idx": 65,
+        "_orig_idx": 63,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-059.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-59.jpg",
-        "anchor": "tired-of-ads-59"
+        "anchor": "how-to-make-baked-chicken-parmesan-59"
       },
       {
         "type": "heading",
         "text": "## How I Would Modify This Recipe",
         "rich_text": "## How I Would Modify This Recipe",
         "html": "## How I Would Modify This Recipe",
-        "context_heading": "## Tired of Ads?",
-        "heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "## How I Would Modify This Recipe",
         "level": 2,
-        "_orig_idx": 67,
+        "_orig_idx": 65,
         "image_url": "",
-        "anchor": "tired-of-ads-60"
+        "anchor": "how-to-make-baked-chicken-parmesan-60"
       },
       {
         "type": "list",
@@ -929,7 +767,7 @@
         "context_heading": "## How I Would Modify This Recipe",
         "heading": "## How I Would Modify This Recipe",
         "content": "- Making it Gluten-Free: Swap the all-purpose flour for a gluten-free flour blend and use a gluten-free panko alternative. You can also use almond flour and crushed almonds for a gluten-free option.\n- Go Dairy-Free: You can use any plant-based cheese alternative of your choosing. And, instead of Parmesan, you can use nutritional yeast.\n- Extra Veggies: Try adding some finely chopped spinach or grated zucchini directly into the marinara sauce before you add it on top of the chicken.",
-        "_orig_idx": 68,
+        "_orig_idx": 66,
         "image_url": "",
         "anchor": "how-i-would-modify-this-recipe-61"
       },
@@ -942,7 +780,7 @@
         "heading": "## How I Would Modify This Recipe",
         "content": "## What I Would Serve with This Baked Chicken Parmesan",
         "level": 2,
-        "_orig_idx": 69,
+        "_orig_idx": 67,
         "image_url": "",
         "anchor": "how-i-would-modify-this-recipe-62"
       },
@@ -997,7 +835,7 @@
         "context_heading": "## What I Would Serve with This Baked Chicken Parmesan",
         "heading": "## What I Would Serve with This Baked Chicken Parmesan",
         "content": "- Garlic pasta\n- Zucchini noodles\n- Cauliflower rice\n- Roasted veggies\n- Garlic bread\n- Caesar salad\n- Arugula sald",
-        "_orig_idx": 70,
+        "_orig_idx": 68,
         "image_url": "",
         "anchor": "what-i-would-serve-with-this-baked-chicken-parmesan-63"
       },
@@ -1012,7 +850,7 @@
         "image_query": "Nourishing Baked Chicken Parmesan aesthetic",
         "heading": "## What I Would Serve with This Baked Chicken Parmesan",
         "content": "Nourishing Baked Chicken Parmesan",
-        "_orig_idx": 71,
+        "_orig_idx": 69,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-064.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-64.jpg",
         "anchor": "what-i-would-serve-with-this-baked-chicken-parmesan-64"
@@ -1026,7 +864,7 @@
         "heading": "## What I Would Serve with This Baked Chicken Parmesan",
         "content": "## My Tips & Tricks",
         "level": 2,
-        "_orig_idx": 72,
+        "_orig_idx": 70,
         "image_url": "",
         "anchor": "what-i-would-serve-with-this-baked-chicken-parmesan-65"
       },
@@ -1057,7 +895,7 @@
         "context_heading": "## My Tips & Tricks",
         "heading": "## My Tips & Tricks",
         "content": "- Pound the Chicken Evenly: Try slicing the breasts horizontally. Then lightly pound them to an even thickness. This is going to make sure it all cooks at the exact same rate.\n- Always Pre\u2013Toast the Panko: Baking the panko 8-10 minutes before you coat the chicken is going to guarantee you have that perfect golden-brown color you usually get from frying.\n- Let the Excess Drip Off: When dipping the chicken in the egg wash, hold it up for a couple of seconds. Allow the extra egg to drip away to prevent the breading from clumping or sliding off during baking.",
-        "_orig_idx": 73,
+        "_orig_idx": 71,
         "image_url": "",
         "anchor": "my-tips-tricks-66"
       },
@@ -1070,7 +908,7 @@
         "heading": "## My Tips & Tricks",
         "content": "## My Storage Tips",
         "level": 2,
-        "_orig_idx": 74,
+        "_orig_idx": 72,
         "image_url": "",
         "anchor": "my-tips-tricks-67"
       },
@@ -1081,7 +919,7 @@
         "html": "This is a great recipe to use for meal prepping. Allow any leftovers to cool completely and place them in an airtight container.",
         "content": "This is a great recipe to use for meal prepping. Allow any leftovers to cool completely and place them in an airtight container.",
         "context_heading": "## My Storage Tips",
-        "_orig_idx": 75,
+        "_orig_idx": 73,
         "image_url": "",
         "anchor": "this-is-a-great-recipe-to-use-for-meal-prepping-allow-any-leftovers-to-cool-completely-and-place-them-in-an-airtight-container-68"
       },
@@ -1092,7 +930,7 @@
         "html": "You can keep them in the fridge for up to 4-5 days.",
         "content": "You can keep them in the fridge for up to 4-5 days.",
         "context_heading": "## My Storage Tips",
-        "_orig_idx": 76,
+        "_orig_idx": 74,
         "image_url": "",
         "anchor": "you-can-keep-them-in-the-fridge-for-up-to-4-5-days-69"
       },
@@ -1103,7 +941,7 @@
         "html": "When you want to have it again, place it in the oven at 350F for 10-15 minutes. You can also use the airfryer for 5-7 minutes.",
         "content": "When you want to have it again, place it in the oven at 350F for 10-15 minutes. You can also use the airfryer for 5-7 minutes.",
         "context_heading": "## My Storage Tips",
-        "_orig_idx": 77,
+        "_orig_idx": 75,
         "image_url": "",
         "anchor": "when-you-want-to-have-it-again-place-it-in-the-oven-at-350f-for-10-15-minutes-you-can-also-use-the-airfryer-for-5-7-minutes-70"
       },
@@ -1114,7 +952,7 @@
         "html": "I don\u2019t recommend using the microwave since it might lead to soggy chicken.",
         "content": "I don\u2019t recommend using the microwave since it might lead to soggy chicken.",
         "context_heading": "## My Storage Tips",
-        "_orig_idx": 78,
+        "_orig_idx": 76,
         "image_url": "",
         "anchor": "i-don-t-recommend-using-the-microwave-since-it-might-lead-to-soggy-chicken-71"
       },
@@ -1129,7 +967,7 @@
         "image_query": "Yummy Baked Chicken Parmesan aesthetic",
         "heading": "## My Storage Tips",
         "content": "Yummy Baked Chicken Parmesan",
-        "_orig_idx": 79,
+        "_orig_idx": 77,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-072.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-72.jpg",
         "anchor": "my-storage-tips-72"
@@ -1638,8 +1476,8 @@
         "rich_text": "In a shallow bowl, whisk the eggs. And, in another shallow bowl, add the flour.",
         "html": "In a shallow bowl, whisk the eggs. And, in another shallow bowl, add the flour.",
         "content": "In a shallow bowl, whisk the eggs. And, in another shallow bowl, add the flour.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 42,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 40,
         "image_url": "",
         "anchor": "in-a-shallow-bowl-whisk-the-eggs-and-in-another-shallow-bowl-add-the-flour-36"
       },
@@ -1649,8 +1487,8 @@
         "rich_text": "Step 6. Pat the chicken dry with some paper towels. Season both sides of the chicken breasts with the rest of the salt and pepper.",
         "html": "Step 6. Pat the chicken dry with some paper towels. Season both sides of the chicken breasts with the rest of the salt and pepper.",
         "content": "Step 6. Pat the chicken dry with some paper towels. Season both sides of the chicken breasts with the rest of the salt and pepper.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 43,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 41,
         "image_url": "",
         "anchor": "step-6-pat-the-chicken-dry-with-some-paper-towels-season-both-sides-of-the-chicken-breasts-with-the-rest-of-the-salt-and-pepper-37"
       },
@@ -1661,14 +1499,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Quick Baked Chicken Parmesan Steps 5-6 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Quick Baked Chicken Parmesan Steps 5-6",
-        "_orig_idx": 44,
+        "_orig_idx": 42,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-038.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-38.jpg",
-        "anchor": "tired-of-ads-38"
+        "anchor": "how-to-make-baked-chicken-parmesan-38"
       },
       {
         "type": "paragraph",
@@ -1676,8 +1514,8 @@
         "rich_text": "Step 7. Place a chicken breast on top of the flour.",
         "html": "Step 7. Place a chicken breast on top of the flour.",
         "content": "Step 7. Place a chicken breast on top of the flour.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 45,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 43,
         "image_url": "",
         "anchor": "step-7-place-a-chicken-breast-on-top-of-the-flour-39"
       },
@@ -1687,8 +1525,8 @@
         "rich_text": "Step 8. Flip it to coat the other side. Shake off any excess flour.",
         "html": "Step 8. Flip it to coat the other side. Shake off any excess flour.",
         "content": "Step 8. Flip it to coat the other side. Shake off any excess flour.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 46,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 44,
         "image_url": "",
         "anchor": "step-8-flip-it-to-coat-the-other-side-shake-off-any-excess-flour-40"
       },
@@ -1699,14 +1537,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Tasty Baked Chicken Parmesan Steps 7-8 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Tasty Baked Chicken Parmesan Steps 7-8",
-        "_orig_idx": 47,
+        "_orig_idx": 45,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-041.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-41.jpg",
-        "anchor": "tired-of-ads-41"
+        "anchor": "how-to-make-baked-chicken-parmesan-41"
       },
       {
         "type": "paragraph",
@@ -1714,8 +1552,8 @@
         "rich_text": "Step 9. Now dip it into the egg.",
         "html": "Step 9. Now dip it into the egg.",
         "content": "Step 9. Now dip it into the egg.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 48,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 46,
         "image_url": "",
         "anchor": "step-9-now-dip-it-into-the-egg-42"
       },
@@ -1725,8 +1563,8 @@
         "rich_text": "Step 10. Make sure you coat every part of the chicken breast.",
         "html": "Step 10. Make sure you coat every part of the chicken breast.",
         "content": "Step 10. Make sure you coat every part of the chicken breast.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 49,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 47,
         "image_url": "",
         "anchor": "step-10-make-sure-you-coat-every-part-of-the-chicken-breast-43"
       },
@@ -1737,14 +1575,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Savory Baked Chicken Parmesan Steps 9-10 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Savory Baked Chicken Parmesan Steps 9-10",
-        "_orig_idx": 50,
+        "_orig_idx": 48,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-044.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-44.jpg",
-        "anchor": "tired-of-ads-44"
+        "anchor": "how-to-make-baked-chicken-parmesan-44"
       },
       {
         "type": "paragraph",
@@ -1752,8 +1590,8 @@
         "rich_text": "Step 11. Let any extra drip off and then press it into the panko mix.",
         "html": "Step 11. Let any extra drip off and then press it into the panko mix.",
         "content": "Step 11. Let any extra drip off and then press it into the panko mix.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 51,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 49,
         "image_url": "",
         "anchor": "step-11-let-any-extra-drip-off-and-then-press-it-into-the-panko-mix-45"
       },
@@ -1763,8 +1601,8 @@
         "rich_text": "Step 12. Flip it to the other side to cover both sides. Repeat the process with all the chicken breasts.",
         "html": "Step 12. Flip it to the other side to cover both sides. Repeat the process with all the chicken breasts.",
         "content": "Step 12. Flip it to the other side to cover both sides. Repeat the process with all the chicken breasts.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 52,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 50,
         "image_url": "",
         "anchor": "step-12-flip-it-to-the-other-side-to-cover-both-sides-repeat-the-process-with-all-the-chicken-breasts-46"
       },
@@ -1775,14 +1613,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Garlicky Baked Chicken Parmesan Steps 11-12 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Garlicky Baked Chicken Parmesan Steps 11-12",
-        "_orig_idx": 53,
+        "_orig_idx": 51,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-047.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-47.jpg",
-        "anchor": "tired-of-ads-47"
+        "anchor": "how-to-make-baked-chicken-parmesan-47"
       },
       {
         "type": "paragraph",
@@ -1790,8 +1628,8 @@
         "rich_text": "Step 13. Place the coated chicken in a single layer on the oiled baking sheets.",
         "html": "Step 13. Place the coated chicken in a single layer on the oiled baking sheets.",
         "content": "Step 13. Place the coated chicken in a single layer on the oiled baking sheets.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 54,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 52,
         "image_url": "",
         "anchor": "step-13-place-the-coated-chicken-in-a-single-layer-on-the-oiled-baking-sheets-48"
       },
@@ -1801,8 +1639,8 @@
         "rich_text": "Step 14. Bake for 8 minutes, remove from the oven, and flip them. Make sure you rotate between racks.",
         "html": "Step 14. Bake for 8 minutes, remove from the oven, and flip them. Make sure you rotate between racks.",
         "content": "Step 14. Bake for 8 minutes, remove from the oven, and flip them. Make sure you rotate between racks.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 55,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 53,
         "image_url": "",
         "anchor": "step-14-bake-for-8-minutes-remove-from-the-oven-and-flip-them-make-sure-you-rotate-between-racks-49"
       },
@@ -1812,8 +1650,8 @@
         "rich_text": "Bake for another 6-9 minutes until they are fully cooked through.",
         "html": "Bake for another 6-9 minutes until they are fully cooked through.",
         "content": "Bake for another 6-9 minutes until they are fully cooked through.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 56,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 54,
         "image_url": "",
         "anchor": "bake-for-another-6-9-minutes-until-they-are-fully-cooked-through-50"
       },
@@ -1824,14 +1662,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Delectable Baked Chicken Parmesan Steps 13-14 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Delectable Baked Chicken Parmesan Steps 13-14",
-        "_orig_idx": 57,
+        "_orig_idx": 55,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-051.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-51.jpg",
-        "anchor": "tired-of-ads-51"
+        "anchor": "how-to-make-baked-chicken-parmesan-51"
       },
       {
         "type": "paragraph",
@@ -1839,8 +1677,8 @@
         "rich_text": "Step 15. Take the chicken out of the oven and turn the oven to broil. Place around \u00bc cup of the marinara over each chicken breast.",
         "html": "Step 15. Take the chicken out of the oven and turn the oven to broil. Place around \u00bc cup of the marinara over each chicken breast.",
         "content": "Step 15. Take the chicken out of the oven and turn the oven to broil. Place around \u00bc cup of the marinara over each chicken breast.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 58,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 56,
         "image_url": "",
         "anchor": "step-15-take-the-chicken-out-of-the-oven-and-turn-the-oven-to-broil-place-around-cup-of-the-marinara-over-each-chicken-breast-52"
       },
@@ -1850,8 +1688,8 @@
         "rich_text": "Step 16. Add the sliced mozzarella on top of the chicken breast.",
         "html": "Step 16. Add the sliced mozzarella on top of the chicken breast.",
         "content": "Step 16. Add the sliced mozzarella on top of the chicken breast.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 59,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 57,
         "image_url": "",
         "anchor": "step-16-add-the-sliced-mozzarella-on-top-of-the-chicken-breast-53"
       },
@@ -1862,14 +1700,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Satisfying Baked Chicken Parmesan Steps 15-16 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Satisfying Baked Chicken Parmesan Steps 15-16",
-        "_orig_idx": 60,
+        "_orig_idx": 58,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-054.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-54.jpg",
-        "anchor": "tired-of-ads-54"
+        "anchor": "how-to-make-baked-chicken-parmesan-54"
       },
       {
         "type": "paragraph",
@@ -1877,8 +1715,8 @@
         "rich_text": "Step 17. Sprinkle the rest of the parmesan cheese.",
         "html": "Step 17. Sprinkle the rest of the parmesan cheese.",
         "content": "Step 17. Sprinkle the rest of the parmesan cheese.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 61,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 59,
         "image_url": "",
         "anchor": "step-17-sprinkle-the-rest-of-the-parmesan-cheese-55"
       },
@@ -1888,8 +1726,8 @@
         "rich_text": "Step 18. Place the chicken back in the oven on the top rack and bake for another 5-8 minutes, or until the cheese melts and starts to bubble.",
         "html": "Step 18. Place the chicken back in the oven on the top rack and bake for another 5-8 minutes, or until the cheese melts and starts to bubble.",
         "content": "Step 18. Place the chicken back in the oven on the top rack and bake for another 5-8 minutes, or until the cheese melts and starts to bubble.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 62,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 60,
         "image_url": "",
         "anchor": "step-18-place-the-chicken-back-in-the-oven-on-the-top-rack-and-bake-for-another-5-8-minutes-or-until-the-cheese-melts-and-starts-to-bubble-56"
       },
@@ -1900,14 +1738,14 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "Mouthwatering Baked Chicken Parmesan Steps 17-18 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "Mouthwatering Baked Chicken Parmesan Steps 17-18",
-        "_orig_idx": 63,
+        "_orig_idx": 61,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-057.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-57.jpg",
-        "anchor": "tired-of-ads-57"
+        "anchor": "how-to-make-baked-chicken-parmesan-57"
       },
       {
         "type": "paragraph",
@@ -1915,8 +1753,8 @@
         "rich_text": "Step 19. When you are ready to serve it, sprinkle some freshly chopped basil on top of them.",
         "html": "Step 19. When you are ready to serve it, sprinkle some freshly chopped basil on top of them.",
         "content": "Step 19. When you are ready to serve it, sprinkle some freshly chopped basil on top of them.",
-        "context_heading": "## Tired of Ads?",
-        "_orig_idx": 64,
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "_orig_idx": 62,
         "image_url": "",
         "anchor": "step-19-when-you-are-ready-to-serve-it-sprinkle-some-freshly-chopped-basil-on-top-of-them-58"
       },
@@ -1927,27 +1765,27 @@
         "caption": "",
         "width": 0,
         "height": 0,
-        "context_heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
         "image_query": "High Protein Baked Chicken Parmesan Step 19 aesthetic",
-        "heading": "## Tired of Ads?",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "High Protein Baked Chicken Parmesan Step 19",
-        "_orig_idx": 65,
+        "_orig_idx": 63,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-059.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-59.jpg",
-        "anchor": "tired-of-ads-59"
+        "anchor": "how-to-make-baked-chicken-parmesan-59"
       },
       {
         "type": "heading",
         "text": "## How I Would Modify This Recipe",
         "rich_text": "## How I Would Modify This Recipe",
         "html": "## How I Would Modify This Recipe",
-        "context_heading": "## Tired of Ads?",
-        "heading": "## Tired of Ads?",
+        "context_heading": "## How to Make Baked Chicken Parmesan",
+        "heading": "## How to Make Baked Chicken Parmesan",
         "content": "## How I Would Modify This Recipe",
         "level": 2,
-        "_orig_idx": 67,
+        "_orig_idx": 65,
         "image_url": "",
-        "anchor": "tired-of-ads-60"
+        "anchor": "how-to-make-baked-chicken-parmesan-60"
       },
       {
         "type": "list",
@@ -1976,7 +1814,7 @@
         "context_heading": "## How I Would Modify This Recipe",
         "heading": "## How I Would Modify This Recipe",
         "content": "- Making it Gluten-Free: Swap the all-purpose flour for a gluten-free flour blend and use a gluten-free panko alternative. You can also use almond flour and crushed almonds for a gluten-free option.\n- Go Dairy-Free: You can use any plant-based cheese alternative of your choosing. And, instead of Parmesan, you can use nutritional yeast.\n- Extra Veggies: Try adding some finely chopped spinach or grated zucchini directly into the marinara sauce before you add it on top of the chicken.",
-        "_orig_idx": 68,
+        "_orig_idx": 66,
         "image_url": "",
         "anchor": "how-i-would-modify-this-recipe-61"
       },
@@ -1989,7 +1827,7 @@
         "heading": "## How I Would Modify This Recipe",
         "content": "## What I Would Serve with This Baked Chicken Parmesan",
         "level": 2,
-        "_orig_idx": 69,
+        "_orig_idx": 67,
         "image_url": "",
         "anchor": "how-i-would-modify-this-recipe-62"
       },
@@ -2044,7 +1882,7 @@
         "context_heading": "## What I Would Serve with This Baked Chicken Parmesan",
         "heading": "## What I Would Serve with This Baked Chicken Parmesan",
         "content": "- Garlic pasta\n- Zucchini noodles\n- Cauliflower rice\n- Roasted veggies\n- Garlic bread\n- Caesar salad\n- Arugula sald",
-        "_orig_idx": 70,
+        "_orig_idx": 68,
         "image_url": "",
         "anchor": "what-i-would-serve-with-this-baked-chicken-parmesan-63"
       },
@@ -2059,7 +1897,7 @@
         "image_query": "Nourishing Baked Chicken Parmesan aesthetic",
         "heading": "## What I Would Serve with This Baked Chicken Parmesan",
         "content": "Nourishing Baked Chicken Parmesan",
-        "_orig_idx": 71,
+        "_orig_idx": 69,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-064.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-64.jpg",
         "anchor": "what-i-would-serve-with-this-baked-chicken-parmesan-64"
@@ -2073,7 +1911,7 @@
         "heading": "## What I Would Serve with This Baked Chicken Parmesan",
         "content": "## My Tips & Tricks",
         "level": 2,
-        "_orig_idx": 72,
+        "_orig_idx": 70,
         "image_url": "",
         "anchor": "what-i-would-serve-with-this-baked-chicken-parmesan-65"
       },
@@ -2104,7 +1942,7 @@
         "context_heading": "## My Tips & Tricks",
         "heading": "## My Tips & Tricks",
         "content": "- Pound the Chicken Evenly: Try slicing the breasts horizontally. Then lightly pound them to an even thickness. This is going to make sure it all cooks at the exact same rate.\n- Always Pre\u2013Toast the Panko: Baking the panko 8-10 minutes before you coat the chicken is going to guarantee you have that perfect golden-brown color you usually get from frying.\n- Let the Excess Drip Off: When dipping the chicken in the egg wash, hold it up for a couple of seconds. Allow the extra egg to drip away to prevent the breading from clumping or sliding off during baking.",
-        "_orig_idx": 73,
+        "_orig_idx": 71,
         "image_url": "",
         "anchor": "my-tips-tricks-66"
       },
@@ -2117,7 +1955,7 @@
         "heading": "## My Tips & Tricks",
         "content": "## My Storage Tips",
         "level": 2,
-        "_orig_idx": 74,
+        "_orig_idx": 72,
         "image_url": "",
         "anchor": "my-tips-tricks-67"
       },
@@ -2128,7 +1966,7 @@
         "html": "This is a great recipe to use for meal prepping. Allow any leftovers to cool completely and place them in an airtight container.",
         "content": "This is a great recipe to use for meal prepping. Allow any leftovers to cool completely and place them in an airtight container.",
         "context_heading": "## My Storage Tips",
-        "_orig_idx": 75,
+        "_orig_idx": 73,
         "image_url": "",
         "anchor": "this-is-a-great-recipe-to-use-for-meal-prepping-allow-any-leftovers-to-cool-completely-and-place-them-in-an-airtight-container-68"
       },
@@ -2139,7 +1977,7 @@
         "html": "You can keep them in the fridge for up to 4-5 days.",
         "content": "You can keep them in the fridge for up to 4-5 days.",
         "context_heading": "## My Storage Tips",
-        "_orig_idx": 76,
+        "_orig_idx": 74,
         "image_url": "",
         "anchor": "you-can-keep-them-in-the-fridge-for-up-to-4-5-days-69"
       },
@@ -2150,7 +1988,7 @@
         "html": "When you want to have it again, place it in the oven at 350F for 10-15 minutes. You can also use the airfryer for 5-7 minutes.",
         "content": "When you want to have it again, place it in the oven at 350F for 10-15 minutes. You can also use the airfryer for 5-7 minutes.",
         "context_heading": "## My Storage Tips",
-        "_orig_idx": 77,
+        "_orig_idx": 75,
         "image_url": "",
         "anchor": "when-you-want-to-have-it-again-place-it-in-the-oven-at-350f-for-10-15-minutes-you-can-also-use-the-airfryer-for-5-7-minutes-70"
       },
@@ -2161,7 +1999,7 @@
         "html": "I don\u2019t recommend using the microwave since it might lead to soggy chicken.",
         "content": "I don\u2019t recommend using the microwave since it might lead to soggy chicken.",
         "context_heading": "## My Storage Tips",
-        "_orig_idx": 78,
+        "_orig_idx": 76,
         "image_url": "",
         "anchor": "i-don-t-recommend-using-the-microwave-since-it-might-lead-to-soggy-chicken-71"
       },
@@ -2176,7 +2014,7 @@
         "image_query": "Yummy Baked Chicken Parmesan aesthetic",
         "heading": "## My Storage Tips",
         "content": "Yummy Baked Chicken Parmesan",
-        "_orig_idx": 79,
+        "_orig_idx": 77,
         "image_path": "C:\\Users\\hp\\OneDrive\\Desktop\\pinterest_blog\\output\\extractor_images\\baked-chicken-parmesan\\img-072.jpg",
         "image_url": "/assets/images/blog/baked-chicken-parmesan/block-image-72.jpg",
         "anchor": "my-storage-tips-72"
@@ -2271,6 +2109,168 @@
     "public_url": "https://glowfrominside.site/blog/baked-chicken-parmesan/",
     "author": "Maya",
     "author_name": "Maya",
+    "author_bio": "A certified nutritionist and recipe developer behind Glow From Inside, turning classic recipes into healthier versions.",
+    "author_image_url": "/assets/images/blog/author/avatar.jpg",
+    "pinterest_url": "https://www.pinterest.com/"
+  },
+  {
+    "slug": "test-recipe-post",
+    "title": "Test Recipe Post",
+    "excerpt": "Intro paragraph.",
+    "date": "2026-08-20",
+    "date_human": "August 20, 2026",
+    "category": "Healthy Eating",
+    "hero_image_url": "",
+    "hero_image_alt": "Test Recipe Post",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Intro paragraph.",
+        "rich_text": "Intro paragraph.",
+        "context_heading": "Intro",
+        "content": "Intro paragraph.",
+        "image_url": "",
+        "anchor": "intro-paragraph-1"
+      },
+      {
+        "type": "image",
+        "src": "https://example.com/photo.jpg",
+        "alt": "Chicken parm photo",
+        "caption": "A photo",
+        "content": "A photo",
+        "image_url": "https://example.com/photo.jpg",
+        "anchor": "block-2-2"
+      },
+      {
+        "type": "recipe",
+        "recipe": {
+          "name": "Baked Chicken Parmesan",
+          "image_src": "https://example.com/recipe.jpg",
+          "summary": "A high-protein Italian-American classic.",
+          "prep_time": "21 minutes",
+          "cook_time": "35 minutes",
+          "total_time": "1 hour 11 minutes",
+          "servings": "8",
+          "servings_unit": "cutlets",
+          "macros": {
+            "calories": "518",
+            "protein": "42.3",
+            "carbohydrates": "27.4",
+            "fat": "27.6"
+          },
+          "ingredient_groups": [
+            {
+              "name": "",
+              "items": [
+                "2 1/2 cups panko breadcrumbs",
+                "5 tbsp olive oil",
+                "4 large eggs"
+              ]
+            },
+            {
+              "name": "Garnish",
+              "items": [
+                "A bunch fresh basil"
+              ]
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 425F.",
+            "Bake 8 minutes.",
+            "Sprinkle basil before serving."
+          ],
+          "nutrition": {
+            "Calories": "518 kcal",
+            "Protein": "42.3 g",
+            "Carbs": "27.4 g",
+            "Fat": "27.6 g"
+          },
+          "image_url": "https://example.com/recipe.jpg"
+        },
+        "context_heading": "Recipe",
+        "content": "",
+        "image_url": "",
+        "anchor": "block-3-3"
+      }
+    ],
+    "sections": [
+      {
+        "type": "paragraph",
+        "text": "Intro paragraph.",
+        "rich_text": "Intro paragraph.",
+        "context_heading": "Intro",
+        "content": "Intro paragraph.",
+        "image_url": "",
+        "anchor": "intro-paragraph-1"
+      },
+      {
+        "type": "image",
+        "src": "https://example.com/photo.jpg",
+        "alt": "Chicken parm photo",
+        "caption": "A photo",
+        "content": "A photo",
+        "image_url": "https://example.com/photo.jpg",
+        "anchor": "block-2-2"
+      },
+      {
+        "type": "recipe",
+        "recipe": {
+          "name": "Baked Chicken Parmesan",
+          "image_src": "https://example.com/recipe.jpg",
+          "summary": "A high-protein Italian-American classic.",
+          "prep_time": "21 minutes",
+          "cook_time": "35 minutes",
+          "total_time": "1 hour 11 minutes",
+          "servings": "8",
+          "servings_unit": "cutlets",
+          "macros": {
+            "calories": "518",
+            "protein": "42.3",
+            "carbohydrates": "27.4",
+            "fat": "27.6"
+          },
+          "ingredient_groups": [
+            {
+              "name": "",
+              "items": [
+                "2 1/2 cups panko breadcrumbs",
+                "5 tbsp olive oil",
+                "4 large eggs"
+              ]
+            },
+            {
+              "name": "Garnish",
+              "items": [
+                "A bunch fresh basil"
+              ]
+            }
+          ],
+          "instructions": [
+            "Preheat oven to 425F.",
+            "Bake 8 minutes.",
+            "Sprinkle basil before serving."
+          ],
+          "nutrition": {
+            "Calories": "518 kcal",
+            "Protein": "42.3 g",
+            "Carbs": "27.4 g",
+            "Fat": "27.6 g"
+          },
+          "image_url": "https://example.com/recipe.jpg"
+        },
+        "context_heading": "Recipe",
+        "content": "",
+        "image_url": "",
+        "anchor": "block-3-3"
+      }
+    ],
+    "cta_heading": "Ready for more?",
+    "cta_text": "Keep exploring the blog for more wellness and healthy eating ideas.",
+    "source_url": "https://example.com",
+    "seo_description": "Intro paragraph.",
+    "public_url": "https://glowfrominside.site/blog/test-recipe-post/",
+    "author": "Glow From Inside",
+    "author_name": "Glow From Inside",
     "author_bio": "A certified nutritionist and recipe developer behind Glow From Inside, turning classic recipes into healthier versions.",
     "author_image_url": "/assets/images/blog/author/avatar.jpg",
     "pinterest_url": "https://www.pinterest.com/"
