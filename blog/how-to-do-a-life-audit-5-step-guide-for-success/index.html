@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Do a Life Audit: 5 Step Guide for Success | Glow From Inside</title>
     <meta name="description" content="# How to Do a Life Audit: 5 Step Guide for Success">
+    <link rel="icon" type="image/png" href="/assets/images/blog/favicon.png"><link rel="apple-touch-icon" href="/assets/images/blog/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,6 +26,18 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: radial-gradient(circle at top, rgba(212, 163, 115, 0.08), transparent 28%), var(--bg);
@@ -35,7 +48,7 @@
         a { color: inherit; }
 
         .container {
-            max-width: 980px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -124,6 +137,33 @@
             margin-bottom: 16px;
         }
 
+        .jump-recipe {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px 0 6px;
+            padding: 10px 18px;
+            background: var(--white);
+            color: #212121;
+            border: 1px solid #212121;
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .jump-recipe:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        html { scroll-behavior: smooth; }
+
         .excerpt {
             max-width: 64ch;
             font-size: 1.08rem;
@@ -172,6 +212,87 @@
             padding: 8px 0 60px;
         }
 
+        .post-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 336px;
+            gap: 40px;
+            align-items: start;
+            margin-top: 26px;
+        }
+
+        .post-sidebar {
+            position: sticky;
+            top: 96px;
+        }
+
+        .author-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            padding: 26px 22px;
+            background: #fdfbf2;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .author-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            background: var(--bg-alt);
+            box-shadow: 0 8px 24px rgba(45, 74, 34, 0.12);
+        }
+
+        .author-avatar-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary);
+            background: var(--cream);
+        }
+
+        .author-box .author-greeting {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+        }
+
+        .author-box .author-bio {
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        .author-socials {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .author-socials a {
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 5px 14px;
+            background: #fff;
+        }
+
+        .author-socials a:hover {
+            color: var(--white);
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
         .article-content {
             margin-top: 18px;
             display: grid;
@@ -188,6 +309,7 @@
             color: var(--primary);
             line-height: 1.15;
             margin: 0 0 12px;
+            scroll-margin-top: 100px;
         }
 
         .article-heading[data-level="2"] { font-size: 1.9rem; }
@@ -233,11 +355,223 @@
             color: var(--text-light);
         }
 
+        .img-wrap {
+            position: relative;
+            display: block;
+        }
+
+        .pin-it-btn {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 5;
+            display: none;
+            align-items: center;
+            gap: 6px;
+            background: #e60023;
+            color: #fff;
+            border: 0;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-family: inherit;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            text-decoration: none;
+        }
+
+        .pin-it-btn::before {
+            content: "📌";
+            font-size: 0.9rem;
+        }
+
+        .img-wrap:hover .pin-it-btn,
+        .pin-it-btn:focus {
+            display: inline-flex;
+        }
+
         .article-cta {
             padding: 20px 22px;
             border-radius: 20px;
             background: rgba(45, 74, 34, 0.06);
             border: 1px solid var(--border);
+        }
+
+        .recipe-card {
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(45, 74, 34, 0.06);
+            scroll-margin-top: 100px;
+        }
+
+        .recipe-card .recipe-img-wrap {
+            margin: 0;
+            position: relative;
+            text-align: center;
+            padding: 28px 28px 0;
+        }
+
+        .recipe-card .recipe-img {
+            width: 320px;
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: inline-block;
+            border-radius: 48px;
+            border: 1px solid var(--border);
+            background: var(--bg-alt);
+            box-shadow: 0 16px 40px rgba(45, 74, 34, 0.12);
+        }
+
+        .recipe-card .recipe-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 2rem;
+            text-align: center;
+            margin: 22px 24px 8px;
+        }
+
+        .recipe-card .recipe-summary {
+            margin: 0 24px 14px;
+            color: var(--text-light);
+            font-size: 1.02rem;
+            text-align: center;
+        }
+
+        .recipe-macros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+            gap: 10px;
+            margin: 0 24px 18px;
+        }
+
+        .recipe-macro {
+            text-align: center;
+            background: var(--bg-alt);
+            border-radius: 14px;
+            padding: 10px 6px;
+            border: 1px solid var(--border);
+        }
+
+        .recipe-macro-value {
+            display: block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .recipe-macro-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        .recipe-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 10px;
+            margin: 0 24px 20px;
+        }
+
+        .recipe-time {
+            text-align: center;
+            background: var(--cream);
+            border-radius: 14px;
+            padding: 10px 8px;
+        }
+
+        .recipe-time-label {
+            display: block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-light);
+        }
+
+        .recipe-time-value {
+            display: block;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        .recipe-section {
+            padding: 0 24px 22px;
+        }
+
+        .recipe-section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .recipe-ing-group {
+            color: var(--primary-light);
+            font-size: 1rem;
+            margin: 12px 0 6px;
+        }
+
+        .recipe-ing-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .recipe-ing-item {
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            padding: 6px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .recipe-ing-check {
+            color: var(--accent);
+            min-width: 14px;
+        }
+
+        .recipe-ing-text {
+            color: var(--text);
+        }
+
+        .recipe-steps {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .recipe-step {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .recipe-nutrition {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 8px 18px;
+        }
+
+        .recipe-nutrition-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            border-bottom: 1px dashed var(--border);
+            padding: 4px 0;
+            font-size: 0.95rem;
+        }
+
+        .recipe-nutrition-value {
+            font-weight: 600;
+            color: var(--primary);
         }
 
         .article-divider {
@@ -277,7 +611,7 @@
         .cta-link {
             display: inline-block;
             text-decoration: none;
-            background: var(--accent);
+            background: var(--primary);
             color: var(--white);
             padding: 12px 22px;
             border-radius: 999px;
@@ -296,11 +630,22 @@
             font-size: 0.9rem;
         }
 
+        @media (max-width: 900px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .post-sidebar {
+                position: static;
+            }
+        }
+
         @media (max-width: 700px) {
             .hero { padding-top: 28px; }
             .hero-card, .toc, .cta-box { padding: 20px; }
             .nav-inner { min-height: 68px; }
             .hero h1 { max-width: none; }
+            .recipe-card .recipe-img { width: 260px; }
         }
         </style>
 </head>
@@ -324,35 +669,53 @@
                 <span>by Glow From Inside</span>
             </div>
             <h1>How to Do a Life Audit: 5 Step Guide for Success</h1>
+            
             <div class="hero-media"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/hero.png" alt="How to Do a Life Audit: 5 Step Guide for Success"></div>
         </div>
     </section>
 
     <section class="content-wrap">
-        <div class="article-content">
-            <div class="article-block" id="how-to-do-a-life-audit-5-step-guide-for-success-1"><h1 class="article-heading" data-level="1">How to Do a Life Audit: 5 Step Guide for Success</h1></div><div class="article-block" id="block-2-2"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-02.jpeg" alt="# How to Do a Life Audit: 5 Step Guide for Success"><figcaption># How to Do a Life Audit: 5 Step Guide for Success</figcaption></figure></div><div class="article-block" id="ever-find-yourself-wondering-if-you-re-truly-on-the-right-path-in-life-or-if-you-re-just-going-through-the-motions-it-s-a-common-feeling-and-it-might-be-time-for-a-personal-check-up-also-known-as-a-life-audit-3"><p class="article-paragraph">Ever find yourself wondering if you’re truly on the right path in life or if you’re just going through the motions? It’s a common feeling, and it might be time for a personal check-up – also known as a life audit.</p></div><div class="article-block" id="a-life-audit-isn-t-just-for-overachievers-or-those-in-crisis-it-s-a-powerful-way-to-get-clear-on-what-s-working-what-isn-t-and-where-you-want-to-go-from-here-4"><p class="article-paragraph">A life audit isn’t just for overachievers or those in crisis; it’s a powerful way to get clear on what’s working, what isn’t, and where you want to go from here.</p></div><div class="article-block" id="a-life-audit-can-be-a-game-changer-for-your-personal-growth-and-happiness-it-s-a-chance-to-take-a-step-back-and-look-at-the-big-picture-of-your-life-5"><p class="article-paragraph">A life audit can be a game-changer for your personal growth and happiness. It’s a chance to take a step back and look at the big picture of your life.</p></div><div class="article-block" id="a-life-audit-helps-you-review-different-areas-of-your-life-and-see-where-you-can-make-positive-changes-6"><p class="article-paragraph">A life audit helps you review different areas of your life and see where you can make positive changes.</p></div><div class="article-block" id="think-of-it-like-a-check-up-for-your-life-goals-and-dreams-you-ll-look-at-things-like-your-career-relationships-health-and-personal-development-7"><p class="article-paragraph">Think of it like a check-up for your life goals and dreams. You’ll look at things like your career, relationships, health, and personal development.</p></div><div class="article-block" id="this-process-can-show-you-what-s-working-well-and-areas-that-might-need-more-focus-and-work-8"><p class="article-paragraph">This process can show you what’s working well and areas that might need more focus and work.</p></div><div class="article-block" id="what-is-a-life-audit-9"><h2 class="article-heading" data-level="2">What is a Life Audit?</h2></div><div class="article-block" id="block-10-10"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-10.jpeg" alt="## What is a Life Audit?"><figcaption>## What is a Life Audit?</figcaption></figure></div><div class="article-block" id="a-life-audit-is-a-review-of-the-different-aspects-of-your-life-it-provides-the-opportunity-to-look-at-the-bigger-picture-of-your-life-what-s-working-and-what-isn-t-in-addition-it-s-time-to-decide-what-might-be-missing-from-your-life-11"><p class="article-paragraph">A life audit is a review of the different aspects of your life. It provides the opportunity to look at the bigger picture of your life – what’s working and what isn’t. In addition, it’s time to decide what might be missing from your life.</p></div><div class="article-block" id="the-goal-is-to-take-time-to-think-about-what-s-most-important-to-you-this-helps-you-figure-out-your-personal-values-12"><p class="article-paragraph">The goal is to take time to think about what’s most important to you. This helps you figure out your personal values.</p></div><div class="article-block" id="you-might-ask-yourself-questions-like-13"><p class="article-paragraph">You might ask yourself questions like:</p></div><div class="article-block" id="what-is-a-life-audit-14"><ul><li>What makes me happy?</li><li>Do I feel fulfilled?</li><li>Am I spending time on things that matter to me?</li><li>What do I want to change?</li></ul></div><div class="article-block" id="you-can-do-a-life-audit-when-you-feel-stuck-or-want-to-make-changes-it-s-a-chance-to-think-about-where-you-are-and-where-you-want-to-go-15"><p class="article-paragraph">You can do a life audit when you feel stuck or want to make changes. It’s a chance to think about where you are and where you want to go.</p></div><div class="article-block" id="some-people-do-life-audits-once-a-year-others-do-them-when-big-things-happen-like-getting-a-new-job-or-moving-to-a-new-place-16"><p class="article-paragraph">Some people do life audits once a year. Others do them when big things happen, like getting a new job or moving to a new place.</p></div><div class="article-block" id="why-do-a-life-audit-17"><h2 class="article-heading" data-level="2">Why Do A Life Audit?</h2></div><div class="article-block" id="block-18-18"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-18.jpeg" alt="## Why Do A Life Audit?"><figcaption>## Why Do A Life Audit?</figcaption></figure></div><div class="article-block" id="plain-and-simple-doing-a-life-audit-allows-you-to-reset-your-life-to-ensure-you-re-living-fully-19"><p class="article-paragraph">Plain and simple, doing a life audit allows you to reset your life to ensure you’re living fully.</p></div><div class="article-block" id="it-means-you-can-find-ways-to-enhance-your-relationships-set-the-right-goals-and-live-in-a-way-that-gives-you-life-satisfaction-and-meaning-it-s-your-first-step-to-creating-a-dream-life-that-you-want-to-live-20"><p class="article-paragraph">It means you can find ways to enhance your relationships, set the right goals, and live in a way that gives you life satisfaction and meaning. It’s your first step to creating a dream life that you want to live.</p></div><div class="article-block" id="this-process-can-spark-positive-changes-you-might-discover-new-goals-or-dreams-you-want-to-pursue-it-s-a-chance-to-think-about-what-you-really-want-out-of-life-21"><p class="article-paragraph">This process can spark positive changes. You might discover new goals or dreams you want to pursue. It’s a chance to think about what you really want out of life.</p></div><div class="article-block" id="a-life-audit-can-be-beneficial-for-so-many-reasons-such-as-22"><p class="article-paragraph">A life audit can be beneficial for so many reasons, such as:</p></div><div class="article-block" id="why-do-a-life-audit-23"><ul><li>Identifying your strengths and weaknesses</li><li>Setting clear goals for your future</li><li>Improving your relationships</li><li>Boost your career satisfaction</li><li>Manage your finances better</li></ul></div><div class="article-block" id="a-life-audit-isn-t-about-judging-yourself-it-s-a-friendly-check-in-with-yourself-to-make-sure-you-re-on-the-right-track-24"><p class="article-paragraph">A life audit isn’t about judging yourself. It’s a friendly check-in with yourself to make sure you’re on the right track.</p></div><div class="article-block" id="overall-it-can-help-you-create-and-live-an-intentional-purpose-filled-life-25"><p class="article-paragraph">Overall it can help you create and live an intentional, purpose-filled life.</p></div><div class="article-block" id="what-can-a-life-audit-include-26"><h2 class="article-heading" data-level="2">What can a life audit include?</h2></div><div class="article-block" id="block-27-27"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-27.jpeg" alt="## What can a life audit include?"><figcaption>## What can a life audit include?</figcaption></figure></div><div class="article-block" id="a-life-audit-can-focus-on-different-areas-of-your-life-such-as-28"><p class="article-paragraph">A life audit can focus on different areas of your life such as:</p></div><div class="article-block" id="what-can-a-life-audit-include-29"><ul><li>Career</li><li>Finances</li><li>Relationships</li><li>Health</li><li>Home</li><li>Family</li><li>Personal development</li><li>Personal enjoyment</li></ul></div><div class="article-block" id="however-note-that-it-does-not-have-to-include-all-of-these-you-decide-what-you-d-like-to-audit-and-do-that-30"><p class="article-paragraph">However, note that it does not have to include all of these. You decide what you’d like to audit and do that.</p></div><div class="article-block" id="it-can-be-overwhelming-to-look-at-every-single-aspect-of-life-although-if-this-is-something-you-d-like-to-do-go-for-it-31"><p class="article-paragraph">It can be overwhelming to look at every single aspect of life, although if this is something you’d like to do go for it!</p></div><div class="article-block" id="8-categories-to-use-for-your-life-audit-32"><h2 class="article-heading" data-level="2">8 Categories To Use for Your Life Audit</h2></div><div class="article-block" id="block-33-33"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-33.jpeg" alt="## 8 Categories To Use for Your Life Audit"><figcaption>## 8 Categories To Use for Your Life Audit</figcaption></figure></div><div class="article-block" id="before-we-get-into-the-step-by-step-process-of-doing-a-life-audit-let-s-take-a-look-at-the-categories-i-ve-mentioned-above-34"><p class="article-paragraph">Before we get into the step-by-step process of doing a life audit, let’s take a look at the categories I’ve mentioned above.</p></div><div class="article-block" id="let-s-look-at-things-you-might-want-to-consider-in-each-category-35"><p class="article-paragraph">Let’s look at things you might want to consider in each category.</p></div><div class="article-block" id="career-36"><h3 class="article-heading" data-level="3">Career</h3></div><div class="article-block" id="block-37-37"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-37.jpeg" alt="### Career"><figcaption>### Career</figcaption></figure></div><div class="article-block" id="here-are-some-examples-of-things-you-could-review-in-your-business-or-career-to-help-you-reach-your-career-goals-38"><p class="article-paragraph">Here are some examples of things you could review in your business or career: to help you reach your career goals:</p></div><div class="article-block" id="career-39"><ul><li>Work/life balance – do you have balance? Do you need more?</li><li>Your current position – are you satisfied? Do you want to get a promotion, move companies, or make more money? Are you looking for a specific career change?</li><li>Training – are you getting the training you need or do you want to learn new skills to help you reach your goals?</li><li>Business Owner – How is your business financially doing? What’s working, what isn’t? Are you satisfied with how things are today? Or are you currently a 9-5 employee and want to start your own business?</li></ul></div><div class="article-block" id="finances-40"><h3 class="article-heading" data-level="3">Finances</h3></div><div class="article-block" id="block-41-41"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-41.jpeg" alt="### Finances"><figcaption>### Finances</figcaption></figure></div><div class="article-block" id="staying-on-top-of-finances-and-money-is-one-thing-but-having-a-financial-plan-that-allows-you-to-love-a-life-you-desire-is-something-entirely-different-here-are-some-topics-to-think-about-42"><p class="article-paragraph">Staying on top of finances and money is one thing but having a financial plan that allows you to love a life you desire is something entirely different. Here are some topics to think about:</p></div><div class="article-block" id="finances-43"><ul><li>Do you have debt? If yes how much, what is the interest rate and how much are you paying it down every month?</li><li>Are you making enough money to live comfortably or do you need to make more money?</li><li>Are you saving for retirement?</li><li>Do you have savings for a rainy day (emergency savings)?</li><li>Are you spending too much money? What areas can you save money?</li><li>Do you have financial goals you are working towards?</li></ul></div><div class="article-block" id="relationships-44"><h3 class="article-heading" data-level="3">Relationships</h3></div><div class="article-block" id="block-45-45"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-45.jpeg" alt="### Relationships"><figcaption>### Relationships</figcaption></figure></div><div class="article-block" id="the-key-to-healthy-relationships-is-maintaining-connections-both-with-others-and-yourself-it-can-help-deepen-your-bond-and-make-improvements-where-needed-here-are-some-areas-of-focus-46"><p class="article-paragraph">The key to healthy relationships is maintaining connections – both with others and yourself. It can help deepen your bond and make improvements where needed. Here are some areas of focus…</p></div><div class="article-block" id="relationships-47"><ul><li>Fulfillment: Are you fulfilled in your current relationships?</li><li>Time spent: Do you spend enough time with friends?</li><li>Self-love: How’s your relationship with yourself? Do you ever have negative self-talk? Are you giving yourself what you need – mentally, physically and spiritually?</li><li>Romantic relationship: Are you in a happy romantic relationship?</li></ul></div><div class="article-block" id="health-48"><h3 class="article-heading" data-level="3">Health</h3></div><div class="article-block" id="block-49-49"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-49.jpeg" alt="### Health"><figcaption>### Health</figcaption></figure></div><div class="article-block" id="your-health-affects-everything-else-in-your-life-as-the-quote-by-steve-adler-goes-you-can-have-all-the-riches-and-success-in-the-world-but-if-you-don-t-have-your-health-you-have-nothing-50"><p class="article-paragraph">Your health affects everything else in your life. As the quote by Steve Adler goes, “You can have all the riches and success in the world, but if you don’t have your health, you have nothing.”</p></div><div class="article-block" id="health-51"><ul><li>Physical health: What are you currently doing to support your physical health? What areas would you like to improve on?</li><li>Mental health: What are you doing to support your mental well-being? Are there any areas you would like to start focusing on?</li><li>Health goals: Do you have any health goals you’ve set and how has that been going?</li><li>Physical check-in: How have you been feeling physically and how does this impact your daily life?</li><li>Emotional check-in: How have you been feeling emotionally and how does this impact your daily life?</li></ul></div><div class="article-block" id="home-52"><h3 class="article-heading" data-level="3">Home</h3></div><div class="article-block" id="block-53-53"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-53.jpeg" alt="### Home"><figcaption>### Home</figcaption></figure></div><div class="article-block" id="your-living-space-and-home-life-are-the-foundation-for-how-you-feel-daily-so-ask-yourself-54"><p class="article-paragraph">Your living space and home life are the foundation for how you feel daily, so ask yourself:</p></div><div class="article-block" id="home-55"><ul><li>Physical space: Is your home a place where you feel comfortable and happy? - Look at each room. Do they work well for what you need? Maybe it’s time to declutter or rearrange things.<ul><li>Look at each room. Do they work well for what you need? Maybe it’s time to declutter or rearrange things.</li></ul></li><li>Neighborhood: Think about your neighborhood too. Does it fit your lifestyle? Are you close to things that matter to you? If you rent, are you happy with your place? If you own, are you keeping up with home maintenance?</li></ul></div><div class="article-block" id="family-56"><h3 class="article-heading" data-level="3">Family</h3></div><div class="article-block" id="block-57-57"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-57.jpeg" alt="### Family"><figcaption>### Family</figcaption></figure></div><div class="article-block" id="it-can-be-easy-to-lose-sight-of-what-truly-matters-at-home-and-with-family-due-to-the-crazy-activity-packed-lives-we-all-have-these-days-here-are-some-key-areas-you-can-think-about-when-it-comes-to-doing-a-life-audit-with-a-focus-on-family-58"><p class="article-paragraph">It can be easy to lose sight of what truly matters at home and with family due to the crazy activity-packed lives we all have these days. Here are some key areas you can think about when it comes to doing a life audit with a focus on family…</p></div><div class="article-block" id="family-59"><ul><li>Quality time: Are you spending enough quality time with family members? Do you need to improve communication with anyone?</li><li>Parenting: Are you happy with how you’re raising your kids? Do you need more support?</li><li>Future plans: For those without kids, think about future family plans. Do you want children? Or are you happy with your current family setup?</li><li>Extended family: Do you see your aunts, uncles, cousins and grandparents enough? If not, think about how you’d like to change this.</li></ul></div><div class="article-block" id="personal-development-60"><h3 class="article-heading" data-level="3">Personal Development</h3></div><div class="article-block" id="block-61-61"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-61.jpeg" alt="### Personal Development"><figcaption>### Personal Development</figcaption></figure></div><div class="article-block" id="growing-as-a-person-makes-life-more-fulfilling-it-allows-you-to-feel-accomplished-and-prove-to-yourself-that-when-you-have-goals-you-can-set-your-mind-to-them-and-make-them-happen-62"><p class="article-paragraph">Growing as a person makes life more fulfilling. It allows you to feel accomplished and prove to yourself that when you have goals you can set your mind to them and make them happen.</p></div><div class="article-block" id="personal-development-63"><ul><li>Skills: What new things do you want to learn or try?</li><li>Values: Think about how you can align more to your core values. Are you living in a way that matches what’s truly important to you?</li><li>Improvements: Where can you improve to make life easier? Example: organization, time management, self-care, being more present in the moment, etc.</li><li>Challenge yourself: Think about ways you might want to get out of your comfort zone such as traveling solo or asking for a promotion at work.</li></ul></div><div class="article-block" id="personal-enjoyment-64"><h3 class="article-heading" data-level="3">Personal Enjoyment</h3></div><div class="article-block" id="block-65-65"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-65.jpeg" alt="### Personal Enjoyment"><figcaption>### Personal Enjoyment</figcaption></figure></div><div class="article-block" id="are-you-doing-things-in-life-that-light-you-up-and-make-you-feel-great-this-is-something-we-have-to-be-intentional-about-otherwise-our-time-will-get-filled-by-so-many-other-things-66"><p class="article-paragraph">Are you doing things in life that light you up and make you feel great? This is something we have to be intentional about otherwise our time will get filled by so many other things.</p></div><div class="article-block" id="here-are-some-examples-of-things-to-think-about-67"><p class="article-paragraph">Here are some examples of things to think about:</p></div><div class="article-block" id="personal-enjoyment-68"><ul><li>Fun: Do you have fun on a regular basis and what does fun look like to you?</li><li>Adventure: Are you an adventurous person and if yes when was your last big adventure?</li><li>Hobbies: Do you spend time on hobbies and activities you enjoy? Do you wish you had more time for this?</li><li>Dedicating time: Does anyone in your life prevent you from doing the things you love? If yes, ask yourself why?</li></ul></div><div class="article-block" id="in-fact-i-ve-actually-decided-to-take-the-whole-month-of-august-off-this-summer-from-all-client-work-at-my-other-business-69"><p class="article-paragraph">In fact, I’ve actually decided to take the whole month of August off this summer (from all client work at my other business).</p></div><div class="article-block" id="i-plan-to-use-this-time-to-take-a-step-back-and-do-my-own-life-audit-focusing-on-things-such-as-70"><p class="article-paragraph">I plan to use this time to take a step back and do my own life audit – focusing on things such as:</p></div><div class="article-block" id="personal-enjoyment-71"><ul><li>My daily routine – my son is going off to college so my schedule will be completely different and I’m going to have to figure out how to use it wisely, especially since I’ll be missing him immensely.</li><li>How my business is going – both this business (Put The Kettle On) and my marketing/web development business (Full Circle Digital).</li><li>Re-evaluate other business ideas I have (there are a lot lol)</li></ul></div><div class="article-block" id="in-addition-to-this-i-m-going-to-spend-some-time-getting-back-to-some-hobbies-i-enjoy-that-i-haven-t-been-focusing-on-much-lately-reading-gardening-and-getting-some-self-care-time-in-72"><p class="article-paragraph">In addition to this I’m going to spend some time getting back to some hobbies I enjoy that I haven’t been focusing on much lately – reading, gardening, and getting some self-care time in.</p></div><div class="article-block" id="5-steps-to-do-your-own-life-audit-73"><h2 class="article-heading" data-level="2">5 Steps To Do Your Own Life Audit</h2></div><div class="article-block" id="block-74-74"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-74.jpeg" alt="## 5 Steps To Do Your Own Life Audit"><figcaption>## 5 Steps To Do Your Own Life Audit</figcaption></figure></div><div class="article-block" id="ready-to-dive-in-and-see-where-you-stand-here-s-a-step-by-step-guide-on-how-to-conduct-a-life-audit-and-start-making-meaningful-changes-today-75"><p class="article-paragraph">Ready to dive in and see where you stand? Here’s a step-by-step guide on how to conduct a life audit and start making meaningful changes today.</p></div><div class="article-block" id="1-reflect-on-where-you-are-today-in-all-areas-of-life-76"><h3 class="article-heading" data-level="3"><ol>
+        <div class="post-layout">
+            <div class="post-main">
+                <div class="article-content">
+                    <div class="article-block" id="how-to-do-a-life-audit-5-step-guide-for-success-1"><h1 class="article-heading" data-level="1">How to Do a Life Audit: 5 Step Guide for Success</h1></div><div class="article-block" id="block-2-2"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-02.jpeg" alt="# How to Do a Life Audit: 5 Step Guide for Success" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden"># How to Do a Life Audit: 5 Step Guide for Success</figcaption></figure></div><div class="article-block" id="ever-find-yourself-wondering-if-you-re-truly-on-the-right-path-in-life-or-if-you-re-just-going-through-the-motions-it-s-a-common-feeling-and-it-might-be-time-for-a-personal-check-up-also-known-as-a-life-audit-3"><p class="article-paragraph">Ever find yourself wondering if you’re truly on the right path in life or if you’re just going through the motions? It’s a common feeling, and it might be time for a personal check-up – also known as a life audit.</p></div><div class="article-block" id="a-life-audit-isn-t-just-for-overachievers-or-those-in-crisis-it-s-a-powerful-way-to-get-clear-on-what-s-working-what-isn-t-and-where-you-want-to-go-from-here-4"><p class="article-paragraph">A life audit isn’t just for overachievers or those in crisis; it’s a powerful way to get clear on what’s working, what isn’t, and where you want to go from here.</p></div><div class="article-block" id="a-life-audit-can-be-a-game-changer-for-your-personal-growth-and-happiness-it-s-a-chance-to-take-a-step-back-and-look-at-the-big-picture-of-your-life-5"><p class="article-paragraph">A life audit can be a game-changer for your personal growth and happiness. It’s a chance to take a step back and look at the big picture of your life.</p></div><div class="article-block" id="a-life-audit-helps-you-review-different-areas-of-your-life-and-see-where-you-can-make-positive-changes-6"><p class="article-paragraph">A life audit helps you review different areas of your life and see where you can make positive changes.</p></div><div class="article-block" id="think-of-it-like-a-check-up-for-your-life-goals-and-dreams-you-ll-look-at-things-like-your-career-relationships-health-and-personal-development-7"><p class="article-paragraph">Think of it like a check-up for your life goals and dreams. You’ll look at things like your career, relationships, health, and personal development.</p></div><div class="article-block" id="this-process-can-show-you-what-s-working-well-and-areas-that-might-need-more-focus-and-work-8"><p class="article-paragraph">This process can show you what’s working well and areas that might need more focus and work.</p></div><div class="article-block" id="what-is-a-life-audit-9"><h2 class="article-heading" data-level="2">What is a Life Audit?</h2></div><div class="article-block" id="block-10-10"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-10.jpeg" alt="## What is a Life Audit?" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">## What is a Life Audit?</figcaption></figure></div><div class="article-block" id="a-life-audit-is-a-review-of-the-different-aspects-of-your-life-it-provides-the-opportunity-to-look-at-the-bigger-picture-of-your-life-what-s-working-and-what-isn-t-in-addition-it-s-time-to-decide-what-might-be-missing-from-your-life-11"><p class="article-paragraph">A life audit is a review of the different aspects of your life. It provides the opportunity to look at the bigger picture of your life – what’s working and what isn’t. In addition, it’s time to decide what might be missing from your life.</p></div><div class="article-block" id="the-goal-is-to-take-time-to-think-about-what-s-most-important-to-you-this-helps-you-figure-out-your-personal-values-12"><p class="article-paragraph">The goal is to take time to think about what’s most important to you. This helps you figure out your personal values.</p></div><div class="article-block" id="you-might-ask-yourself-questions-like-13"><p class="article-paragraph">You might ask yourself questions like:</p></div><div class="article-block" id="what-is-a-life-audit-14"><ul><li>What makes me happy?</li><li>Do I feel fulfilled?</li><li>Am I spending time on things that matter to me?</li><li>What do I want to change?</li></ul></div><div class="article-block" id="you-can-do-a-life-audit-when-you-feel-stuck-or-want-to-make-changes-it-s-a-chance-to-think-about-where-you-are-and-where-you-want-to-go-15"><p class="article-paragraph">You can do a life audit when you feel stuck or want to make changes. It’s a chance to think about where you are and where you want to go.</p></div><div class="article-block" id="some-people-do-life-audits-once-a-year-others-do-them-when-big-things-happen-like-getting-a-new-job-or-moving-to-a-new-place-16"><p class="article-paragraph">Some people do life audits once a year. Others do them when big things happen, like getting a new job or moving to a new place.</p></div><div class="article-block" id="why-do-a-life-audit-17"><h2 class="article-heading" data-level="2">Why Do A Life Audit?</h2></div><div class="article-block" id="block-18-18"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-18.jpeg" alt="## Why Do A Life Audit?" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">## Why Do A Life Audit?</figcaption></figure></div><div class="article-block" id="plain-and-simple-doing-a-life-audit-allows-you-to-reset-your-life-to-ensure-you-re-living-fully-19"><p class="article-paragraph">Plain and simple, doing a life audit allows you to reset your life to ensure you’re living fully.</p></div><div class="article-block" id="it-means-you-can-find-ways-to-enhance-your-relationships-set-the-right-goals-and-live-in-a-way-that-gives-you-life-satisfaction-and-meaning-it-s-your-first-step-to-creating-a-dream-life-that-you-want-to-live-20"><p class="article-paragraph">It means you can find ways to enhance your relationships, set the right goals, and live in a way that gives you life satisfaction and meaning. It’s your first step to creating a dream life that you want to live.</p></div><div class="article-block" id="this-process-can-spark-positive-changes-you-might-discover-new-goals-or-dreams-you-want-to-pursue-it-s-a-chance-to-think-about-what-you-really-want-out-of-life-21"><p class="article-paragraph">This process can spark positive changes. You might discover new goals or dreams you want to pursue. It’s a chance to think about what you really want out of life.</p></div><div class="article-block" id="a-life-audit-can-be-beneficial-for-so-many-reasons-such-as-22"><p class="article-paragraph">A life audit can be beneficial for so many reasons, such as:</p></div><div class="article-block" id="why-do-a-life-audit-23"><ul><li>Identifying your strengths and weaknesses</li><li>Setting clear goals for your future</li><li>Improving your relationships</li><li>Boost your career satisfaction</li><li>Manage your finances better</li></ul></div><div class="article-block" id="a-life-audit-isn-t-about-judging-yourself-it-s-a-friendly-check-in-with-yourself-to-make-sure-you-re-on-the-right-track-24"><p class="article-paragraph">A life audit isn’t about judging yourself. It’s a friendly check-in with yourself to make sure you’re on the right track.</p></div><div class="article-block" id="overall-it-can-help-you-create-and-live-an-intentional-purpose-filled-life-25"><p class="article-paragraph">Overall it can help you create and live an intentional, purpose-filled life.</p></div><div class="article-block" id="what-can-a-life-audit-include-26"><h2 class="article-heading" data-level="2">What can a life audit include?</h2></div><div class="article-block" id="block-27-27"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-27.jpeg" alt="## What can a life audit include?" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">## What can a life audit include?</figcaption></figure></div><div class="article-block" id="a-life-audit-can-focus-on-different-areas-of-your-life-such-as-28"><p class="article-paragraph">A life audit can focus on different areas of your life such as:</p></div><div class="article-block" id="what-can-a-life-audit-include-29"><ul><li>Career</li><li>Finances</li><li>Relationships</li><li>Health</li><li>Home</li><li>Family</li><li>Personal development</li><li>Personal enjoyment</li></ul></div><div class="article-block" id="however-note-that-it-does-not-have-to-include-all-of-these-you-decide-what-you-d-like-to-audit-and-do-that-30"><p class="article-paragraph">However, note that it does not have to include all of these. You decide what you’d like to audit and do that.</p></div><div class="article-block" id="it-can-be-overwhelming-to-look-at-every-single-aspect-of-life-although-if-this-is-something-you-d-like-to-do-go-for-it-31"><p class="article-paragraph">It can be overwhelming to look at every single aspect of life, although if this is something you’d like to do go for it!</p></div><div class="article-block" id="8-categories-to-use-for-your-life-audit-32"><h2 class="article-heading" data-level="2">8 Categories To Use for Your Life Audit</h2></div><div class="article-block" id="block-33-33"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-33.jpeg" alt="## 8 Categories To Use for Your Life Audit" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">## 8 Categories To Use for Your Life Audit</figcaption></figure></div><div class="article-block" id="before-we-get-into-the-step-by-step-process-of-doing-a-life-audit-let-s-take-a-look-at-the-categories-i-ve-mentioned-above-34"><p class="article-paragraph">Before we get into the step-by-step process of doing a life audit, let’s take a look at the categories I’ve mentioned above.</p></div><div class="article-block" id="let-s-look-at-things-you-might-want-to-consider-in-each-category-35"><p class="article-paragraph">Let’s look at things you might want to consider in each category.</p></div><div class="article-block" id="career-36"><h3 class="article-heading" data-level="3">Career</h3></div><div class="article-block" id="block-37-37"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-37.jpeg" alt="### Career" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Career</figcaption></figure></div><div class="article-block" id="here-are-some-examples-of-things-you-could-review-in-your-business-or-career-to-help-you-reach-your-career-goals-38"><p class="article-paragraph">Here are some examples of things you could review in your business or career: to help you reach your career goals:</p></div><div class="article-block" id="career-39"><ul><li>Work/life balance – do you have balance? Do you need more?</li><li>Your current position – are you satisfied? Do you want to get a promotion, move companies, or make more money? Are you looking for a specific career change?</li><li>Training – are you getting the training you need or do you want to learn new skills to help you reach your goals?</li><li>Business Owner – How is your business financially doing? What’s working, what isn’t? Are you satisfied with how things are today? Or are you currently a 9-5 employee and want to start your own business?</li></ul></div><div class="article-block" id="finances-40"><h3 class="article-heading" data-level="3">Finances</h3></div><div class="article-block" id="block-41-41"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-41.jpeg" alt="### Finances" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Finances</figcaption></figure></div><div class="article-block" id="staying-on-top-of-finances-and-money-is-one-thing-but-having-a-financial-plan-that-allows-you-to-love-a-life-you-desire-is-something-entirely-different-here-are-some-topics-to-think-about-42"><p class="article-paragraph">Staying on top of finances and money is one thing but having a financial plan that allows you to love a life you desire is something entirely different. Here are some topics to think about:</p></div><div class="article-block" id="finances-43"><ul><li>Do you have debt? If yes how much, what is the interest rate and how much are you paying it down every month?</li><li>Are you making enough money to live comfortably or do you need to make more money?</li><li>Are you saving for retirement?</li><li>Do you have savings for a rainy day (emergency savings)?</li><li>Are you spending too much money? What areas can you save money?</li><li>Do you have financial goals you are working towards?</li></ul></div><div class="article-block" id="relationships-44"><h3 class="article-heading" data-level="3">Relationships</h3></div><div class="article-block" id="block-45-45"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-45.jpeg" alt="### Relationships" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Relationships</figcaption></figure></div><div class="article-block" id="the-key-to-healthy-relationships-is-maintaining-connections-both-with-others-and-yourself-it-can-help-deepen-your-bond-and-make-improvements-where-needed-here-are-some-areas-of-focus-46"><p class="article-paragraph">The key to healthy relationships is maintaining connections – both with others and yourself. It can help deepen your bond and make improvements where needed. Here are some areas of focus…</p></div><div class="article-block" id="relationships-47"><ul><li>Fulfillment: Are you fulfilled in your current relationships?</li><li>Time spent: Do you spend enough time with friends?</li><li>Self-love: How’s your relationship with yourself? Do you ever have negative self-talk? Are you giving yourself what you need – mentally, physically and spiritually?</li><li>Romantic relationship: Are you in a happy romantic relationship?</li></ul></div><div class="article-block" id="health-48"><h3 class="article-heading" data-level="3">Health</h3></div><div class="article-block" id="block-49-49"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-49.jpeg" alt="### Health" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Health</figcaption></figure></div><div class="article-block" id="your-health-affects-everything-else-in-your-life-as-the-quote-by-steve-adler-goes-you-can-have-all-the-riches-and-success-in-the-world-but-if-you-don-t-have-your-health-you-have-nothing-50"><p class="article-paragraph">Your health affects everything else in your life. As the quote by Steve Adler goes, “You can have all the riches and success in the world, but if you don’t have your health, you have nothing.”</p></div><div class="article-block" id="health-51"><ul><li>Physical health: What are you currently doing to support your physical health? What areas would you like to improve on?</li><li>Mental health: What are you doing to support your mental well-being? Are there any areas you would like to start focusing on?</li><li>Health goals: Do you have any health goals you’ve set and how has that been going?</li><li>Physical check-in: How have you been feeling physically and how does this impact your daily life?</li><li>Emotional check-in: How have you been feeling emotionally and how does this impact your daily life?</li></ul></div><div class="article-block" id="home-52"><h3 class="article-heading" data-level="3">Home</h3></div><div class="article-block" id="block-53-53"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-53.jpeg" alt="### Home" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Home</figcaption></figure></div><div class="article-block" id="your-living-space-and-home-life-are-the-foundation-for-how-you-feel-daily-so-ask-yourself-54"><p class="article-paragraph">Your living space and home life are the foundation for how you feel daily, so ask yourself:</p></div><div class="article-block" id="home-55"><ul><li>Physical space: Is your home a place where you feel comfortable and happy? - Look at each room. Do they work well for what you need? Maybe it’s time to declutter or rearrange things.<ul><li>Look at each room. Do they work well for what you need? Maybe it’s time to declutter or rearrange things.</li></ul></li><li>Neighborhood: Think about your neighborhood too. Does it fit your lifestyle? Are you close to things that matter to you? If you rent, are you happy with your place? If you own, are you keeping up with home maintenance?</li></ul></div><div class="article-block" id="family-56"><h3 class="article-heading" data-level="3">Family</h3></div><div class="article-block" id="block-57-57"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-57.jpeg" alt="### Family" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Family</figcaption></figure></div><div class="article-block" id="it-can-be-easy-to-lose-sight-of-what-truly-matters-at-home-and-with-family-due-to-the-crazy-activity-packed-lives-we-all-have-these-days-here-are-some-key-areas-you-can-think-about-when-it-comes-to-doing-a-life-audit-with-a-focus-on-family-58"><p class="article-paragraph">It can be easy to lose sight of what truly matters at home and with family due to the crazy activity-packed lives we all have these days. Here are some key areas you can think about when it comes to doing a life audit with a focus on family…</p></div><div class="article-block" id="family-59"><ul><li>Quality time: Are you spending enough quality time with family members? Do you need to improve communication with anyone?</li><li>Parenting: Are you happy with how you’re raising your kids? Do you need more support?</li><li>Future plans: For those without kids, think about future family plans. Do you want children? Or are you happy with your current family setup?</li><li>Extended family: Do you see your aunts, uncles, cousins and grandparents enough? If not, think about how you’d like to change this.</li></ul></div><div class="article-block" id="personal-development-60"><h3 class="article-heading" data-level="3">Personal Development</h3></div><div class="article-block" id="block-61-61"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-61.jpeg" alt="### Personal Development" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Personal Development</figcaption></figure></div><div class="article-block" id="growing-as-a-person-makes-life-more-fulfilling-it-allows-you-to-feel-accomplished-and-prove-to-yourself-that-when-you-have-goals-you-can-set-your-mind-to-them-and-make-them-happen-62"><p class="article-paragraph">Growing as a person makes life more fulfilling. It allows you to feel accomplished and prove to yourself that when you have goals you can set your mind to them and make them happen.</p></div><div class="article-block" id="personal-development-63"><ul><li>Skills: What new things do you want to learn or try?</li><li>Values: Think about how you can align more to your core values. Are you living in a way that matches what’s truly important to you?</li><li>Improvements: Where can you improve to make life easier? Example: organization, time management, self-care, being more present in the moment, etc.</li><li>Challenge yourself: Think about ways you might want to get out of your comfort zone such as traveling solo or asking for a promotion at work.</li></ul></div><div class="article-block" id="personal-enjoyment-64"><h3 class="article-heading" data-level="3">Personal Enjoyment</h3></div><div class="article-block" id="block-65-65"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-65.jpeg" alt="### Personal Enjoyment" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Personal Enjoyment</figcaption></figure></div><div class="article-block" id="are-you-doing-things-in-life-that-light-you-up-and-make-you-feel-great-this-is-something-we-have-to-be-intentional-about-otherwise-our-time-will-get-filled-by-so-many-other-things-66"><p class="article-paragraph">Are you doing things in life that light you up and make you feel great? This is something we have to be intentional about otherwise our time will get filled by so many other things.</p></div><div class="article-block" id="here-are-some-examples-of-things-to-think-about-67"><p class="article-paragraph">Here are some examples of things to think about:</p></div><div class="article-block" id="personal-enjoyment-68"><ul><li>Fun: Do you have fun on a regular basis and what does fun look like to you?</li><li>Adventure: Are you an adventurous person and if yes when was your last big adventure?</li><li>Hobbies: Do you spend time on hobbies and activities you enjoy? Do you wish you had more time for this?</li><li>Dedicating time: Does anyone in your life prevent you from doing the things you love? If yes, ask yourself why?</li></ul></div><div class="article-block" id="in-fact-i-ve-actually-decided-to-take-the-whole-month-of-august-off-this-summer-from-all-client-work-at-my-other-business-69"><p class="article-paragraph">In fact, I’ve actually decided to take the whole month of August off this summer (from all client work at my other business).</p></div><div class="article-block" id="i-plan-to-use-this-time-to-take-a-step-back-and-do-my-own-life-audit-focusing-on-things-such-as-70"><p class="article-paragraph">I plan to use this time to take a step back and do my own life audit – focusing on things such as:</p></div><div class="article-block" id="personal-enjoyment-71"><ul><li>My daily routine – my son is going off to college so my schedule will be completely different and I’m going to have to figure out how to use it wisely, especially since I’ll be missing him immensely.</li><li>How my business is going – both this business (Put The Kettle On) and my marketing/web development business (Full Circle Digital).</li><li>Re-evaluate other business ideas I have (there are a lot lol)</li></ul></div><div class="article-block" id="in-addition-to-this-i-m-going-to-spend-some-time-getting-back-to-some-hobbies-i-enjoy-that-i-haven-t-been-focusing-on-much-lately-reading-gardening-and-getting-some-self-care-time-in-72"><p class="article-paragraph">In addition to this I’m going to spend some time getting back to some hobbies I enjoy that I haven’t been focusing on much lately – reading, gardening, and getting some self-care time in.</p></div><div class="article-block" id="5-steps-to-do-your-own-life-audit-73"><h2 class="article-heading" data-level="2">5 Steps To Do Your Own Life Audit</h2></div><div class="article-block" id="block-74-74"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-74.jpeg" alt="## 5 Steps To Do Your Own Life Audit" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">## 5 Steps To Do Your Own Life Audit</figcaption></figure></div><div class="article-block" id="ready-to-dive-in-and-see-where-you-stand-here-s-a-step-by-step-guide-on-how-to-conduct-a-life-audit-and-start-making-meaningful-changes-today-75"><p class="article-paragraph">Ready to dive in and see where you stand? Here’s a step-by-step guide on how to conduct a life audit and start making meaningful changes today.</p></div><div class="article-block" id="1-reflect-on-where-you-are-today-in-all-areas-of-life-76"><h3 class="article-heading" data-level="3"><ol>
 <li>Reflect On Where You Are Today (In All Areas Of Life)</li>
-</ol></h3></div><div class="article-block" id="block-77-77"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-77.jpeg" alt="### 1. Reflect On Where You Are Today (In All Areas Of Life)"><figcaption>### 1. Reflect On Where You Are Today (In All Areas Of Life)</figcaption></figure></div><div class="article-block" id="start-by-looking-at-different-parts-of-your-life-refer-to-the-categories-mentioned-above-78"><p class="article-paragraph">Start by looking at different parts of your life (refer to the categories mentioned above.</p></div><div class="article-block" id="1-reflect-on-where-you-are-today-in-all-areas-of-life-79"><ul><li>Rate how happy you are with each area from 1 to 10.</li><li>Make a list of what’s going well and what needs work. Be honest with yourself. This step helps you see your current reality clearly.</li><li>Try using a wheel of life tool to visualize your satisfaction levels. It can show you which areas need more attention.</li></ul></div><div class="article-block" id="remember-there-s-no-right-or-wrong-your-life-audit-is-personal-to-you-80"><p class="article-paragraph">Remember, there’s no right or wrong. Your life audit is personal to you.</p></div><div class="article-block" id="2-think-about-your-core-values-81"><h3 class="article-heading" data-level="3"><ol start="2">
+</ol></h3></div><div class="article-block" id="block-77-77"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-77.jpeg" alt="### 1. Reflect On Where You Are Today (In All Areas Of Life)" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### 1. Reflect On Where You Are Today (In All Areas Of Life)</figcaption></figure></div><div class="article-block" id="start-by-looking-at-different-parts-of-your-life-refer-to-the-categories-mentioned-above-78"><p class="article-paragraph">Start by looking at different parts of your life (refer to the categories mentioned above.</p></div><div class="article-block" id="1-reflect-on-where-you-are-today-in-all-areas-of-life-79"><ul><li>Rate how happy you are with each area from 1 to 10.</li><li>Make a list of what’s going well and what needs work. Be honest with yourself. This step helps you see your current reality clearly.</li><li>Try using a wheel of life tool to visualize your satisfaction levels. It can show you which areas need more attention.</li></ul></div><div class="article-block" id="remember-there-s-no-right-or-wrong-your-life-audit-is-personal-to-you-80"><p class="article-paragraph">Remember, there’s no right or wrong. Your life audit is personal to you.</p></div><div class="article-block" id="2-think-about-your-core-values-81"><h3 class="article-heading" data-level="3"><ol start="2">
 <li>Think About Your Core Values</li>
-</ol></h3></div><div class="article-block" id="block-82-82"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-82.jpeg" alt="### 2. Think About Your Core Values"><figcaption>### 2. Think About Your Core Values</figcaption></figure></div><div class="article-block" id="your-core-values-are-the-things-that-matter-most-to-you-they-guide-your-choices-and-shape-your-ideal-life-83"><p class="article-paragraph">Your core values are the things that matter most to you. They guide your choices and shape your ideal life.</p></div><div class="article-block" id="to-find-your-values-ask-yourself-84"><p class="article-paragraph">To find your values, ask yourself:</p></div><div class="article-block" id="2-think-about-your-core-values-85"><ul><li>What makes you feel proud?</li><li>When are you happiest?</li><li>What do you stand for?</li></ul></div><div class="article-block" id="make-a-list-of-your-top-5-10-values-these-might-include-things-like-family-creativity-or-adventure-86"><p class="article-paragraph">Make a list of your top 5-10 values. These might include things like family, creativity, or adventure.</p></div><div class="article-block" id="examining-your-values-helps-you-make-sure-your-goals-align-with-what-s-truly-important-to-you-87"><p class="article-paragraph">Examining your values helps you make sure your goals align with what’s truly important to you.</p></div><div class="article-block" id="3-decide-where-you-want-to-be-88"><h3 class="article-heading" data-level="3"><ol start="3">
+</ol></h3></div><div class="article-block" id="block-82-82"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-82.jpeg" alt="### 2. Think About Your Core Values" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### 2. Think About Your Core Values</figcaption></figure></div><div class="article-block" id="your-core-values-are-the-things-that-matter-most-to-you-they-guide-your-choices-and-shape-your-ideal-life-83"><p class="article-paragraph">Your core values are the things that matter most to you. They guide your choices and shape your ideal life.</p></div><div class="article-block" id="to-find-your-values-ask-yourself-84"><p class="article-paragraph">To find your values, ask yourself:</p></div><div class="article-block" id="2-think-about-your-core-values-85"><ul><li>What makes you feel proud?</li><li>When are you happiest?</li><li>What do you stand for?</li></ul></div><div class="article-block" id="make-a-list-of-your-top-5-10-values-these-might-include-things-like-family-creativity-or-adventure-86"><p class="article-paragraph">Make a list of your top 5-10 values. These might include things like family, creativity, or adventure.</p></div><div class="article-block" id="examining-your-values-helps-you-make-sure-your-goals-align-with-what-s-truly-important-to-you-87"><p class="article-paragraph">Examining your values helps you make sure your goals align with what’s truly important to you.</p></div><div class="article-block" id="3-decide-where-you-want-to-be-88"><h3 class="article-heading" data-level="3"><ol start="3">
 <li>Decide Where You Want To Be</li>
-</ol></h3></div><div class="article-block" id="block-89-89"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-89.jpeg" alt="### 3. Decide Where You Want To Be"><figcaption>### 3. Decide Where You Want To Be</figcaption></figure></div><div class="article-block" id="picture-your-dream-life-90"><p class="article-paragraph">Picture your dream life.</p></div><div class="article-block" id="3-decide-where-you-want-to-be-91"><ul><li>What does it look like?</li><li>How do you allocate your time?</li><li>Who are the people you surround yourself with?</li></ul></div><div class="article-block" id="write-down-your-vision-for-each-area-of-life-be-specific-instead-of-i-want-to-be-happy-try-i-want-to-spend-more-time-outdoors-with-my-family-92"><p class="article-paragraph">Write down your vision for each area of life. Be specific. Instead of "I want to be happy," try "I want to spend more time outdoors with my family."</p></div><div class="article-block" id="don-t-limit-yourself-this-is-your-chance-to-dream-big-your-vision-will-guide-your-goal-setting-93"><p class="article-paragraph">Don’t limit yourself. This is your chance to dream big. Your vision will guide your goal-setting.</p></div><div class="article-block" id="4-create-short-term-and-long-term-goals-94"><h3 class="article-heading" data-level="3"><ol start="4">
+</ol></h3></div><div class="article-block" id="block-89-89"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-89.jpeg" alt="### 3. Decide Where You Want To Be" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### 3. Decide Where You Want To Be</figcaption></figure></div><div class="article-block" id="picture-your-dream-life-90"><p class="article-paragraph">Picture your dream life.</p></div><div class="article-block" id="3-decide-where-you-want-to-be-91"><ul><li>What does it look like?</li><li>How do you allocate your time?</li><li>Who are the people you surround yourself with?</li></ul></div><div class="article-block" id="write-down-your-vision-for-each-area-of-life-be-specific-instead-of-i-want-to-be-happy-try-i-want-to-spend-more-time-outdoors-with-my-family-92"><p class="article-paragraph">Write down your vision for each area of life. Be specific. Instead of "I want to be happy," try "I want to spend more time outdoors with my family."</p></div><div class="article-block" id="don-t-limit-yourself-this-is-your-chance-to-dream-big-your-vision-will-guide-your-goal-setting-93"><p class="article-paragraph">Don’t limit yourself. This is your chance to dream big. Your vision will guide your goal-setting.</p></div><div class="article-block" id="4-create-short-term-and-long-term-goals-94"><h3 class="article-heading" data-level="3"><ol start="4">
 <li>Create Short-Term And Long-Term Goals</li>
-</ol></h3></div><div class="article-block" id="block-95-95"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-95.jpeg" alt="### 4. Create Short-Term And Long-Term Goals"><figcaption>### 4. Create Short-Term And Long-Term Goals</figcaption></figure></div><div class="article-block" id="now-it-s-time-to-set-goals-that-will-help-you-reach-your-dream-life-for-successful-goal-setting-break-each-goal-into-short-term-next-year-and-long-term-3-5-years-goals-96"><p class="article-paragraph">Now it’s time to set goals that will help you reach your dream life. For successful goal setting, break each goal into short-term (next year) and long-term (3-5 years) goals.</p></div><div class="article-block" id="use-the-smart-goals-method-which-is-to-make-sure-your-goals-are-97"><p class="article-paragraph">Use the SMART goals method, which is to make sure your goals are:</p></div><div class="article-block" id="4-create-short-term-and-long-term-goals-98"><ul><li>Specific</li><li>Measurable</li><li>Achievable</li><li>Relevant</li><li>Time-bound</li></ul></div><div class="article-block" id="for-example-complete-a-specific-online-course-to-apply-to-a-new-job-by-december-31st-99"><p class="article-paragraph">For example: "Complete a specific online course to apply to a new job by December 31st"</p></div><div class="article-block" id="make-sure-your-goals-match-your-values-and-vision-this-keeps-you-motivated-100"><p class="article-paragraph">Make sure your goals match your values and vision. This keeps you motivated.</p></div><div class="article-block" id="5-make-a-plan-to-reach-those-goals-101"><h3 class="article-heading" data-level="3"><ol start="5">
+</ol></h3></div><div class="article-block" id="block-95-95"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-95.jpeg" alt="### 4. Create Short-Term And Long-Term Goals" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### 4. Create Short-Term And Long-Term Goals</figcaption></figure></div><div class="article-block" id="now-it-s-time-to-set-goals-that-will-help-you-reach-your-dream-life-for-successful-goal-setting-break-each-goal-into-short-term-next-year-and-long-term-3-5-years-goals-96"><p class="article-paragraph">Now it’s time to set goals that will help you reach your dream life. For successful goal setting, break each goal into short-term (next year) and long-term (3-5 years) goals.</p></div><div class="article-block" id="use-the-smart-goals-method-which-is-to-make-sure-your-goals-are-97"><p class="article-paragraph">Use the SMART goals method, which is to make sure your goals are:</p></div><div class="article-block" id="4-create-short-term-and-long-term-goals-98"><ul><li>Specific</li><li>Measurable</li><li>Achievable</li><li>Relevant</li><li>Time-bound</li></ul></div><div class="article-block" id="for-example-complete-a-specific-online-course-to-apply-to-a-new-job-by-december-31st-99"><p class="article-paragraph">For example: "Complete a specific online course to apply to a new job by December 31st"</p></div><div class="article-block" id="make-sure-your-goals-match-your-values-and-vision-this-keeps-you-motivated-100"><p class="article-paragraph">Make sure your goals match your values and vision. This keeps you motivated.</p></div><div class="article-block" id="5-make-a-plan-to-reach-those-goals-101"><h3 class="article-heading" data-level="3"><ol start="5">
 <li>Make A Plan To Reach Those Goals</li>
-</ol></h3></div><div class="article-block" id="block-102-102"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-102.jpeg" alt="### 5. Make A Plan To Reach Those Goals"><figcaption>### 5. Make A Plan To Reach Those Goals</figcaption></figure></div><div class="article-block" id="5-make-a-plan-to-reach-those-goals-103"><ul><li>Break your goals into smaller, actionable steps. What can you do this week, month, or quarter to move forward?</li><li><ol start="5">
+</ol></h3></div><div class="article-block" id="block-102-102"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-102.jpeg" alt="### 5. Make A Plan To Reach Those Goals" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### 5. Make A Plan To Reach Those Goals</figcaption></figure></div><div class="article-block" id="5-make-a-plan-to-reach-those-goals-103"><ul><li>Break your goals into smaller, actionable steps. What can you do this week, month, or quarter to move forward?</li><li><ol start="5">
 <li>Make A Plan To Reach Those Goals - Create a timeline for each goal. Set deadlines for your action steps.</li>
 </ol></li><li><ol start="5">
 <li>Make A Plan To Reach Those Goals - Write down potential obstacles and how you’ll overcome them. This prepares you for challenges.</li>
 </ol></li><li><ol start="5">
 <li>Make A Plan To Reach Those Goals - Regular check-ins help you stay on track. Schedule time each month to review your progress and adjust your plan if needed.</li>
-</ol></li></ul></div><div class="article-block" id="remember-a-life-audit-is-an-ongoing-process-your-goals-may-change-as-you-grow-that-s-okay-the-important-thing-is-to-keep-moving-toward-the-life-you-desire-104"><p class="article-paragraph">Remember, a life audit is an ongoing process. Your goals may change as you grow. That’s okay. The important thing is to keep moving toward the life you desire.</p></div><div class="article-block" id="tips-to-start-a-life-audit-5-make-a-plan-to-reach-those-goals-to-start-a-life-audit-consider-the-following-steps-to-help-you-achieve-success-review-your-goals-create-an-action-plan-and-research-resources-url-that-can-aid-in-your-journey-begin-by-breaking-down-large-goals-into-smaller-manageable-tasks-and-establishing-a-timeline-for-completion-this-will-help-you-stay-focused-and-motivated-throughout-the-process-105"><h2 class="article-heading" data-level="2">Tips To Start A Life Audit --- ### 5. Make A Plan To Reach Those Goals To start a life audit, consider the following steps to help you achieve success: <em>review your goals</em>, <strong>create an action plan</strong>, and research resources that can aid in your journey. Begin by <em>breaking down large goals</em> into smaller, manageable tasks and <em>establishing a timeline</em> for completion. This will help you <em>stay focused</em> and <em>motivated</em> throughout the process.</h2></div><div class="article-block" id="block-106-106"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-106.jpeg" alt="## Tips To Start A Life Audit --- ### 5. Make A Plan To Reach Those Goals To start a life audit, consider the following steps to help you achieve success: *review your goals*, **create an action plan**, and [research resources](url) that can aid in your journey. Begin by *breaking down large goals* into smaller, manageable tasks and *establishing a timeline* for completion. This will help you *stay focused* and *motivated* throughout the process."><figcaption>## Tips To Start A Life Audit --- ### 5. Make A Plan To Reach Those Goals To start a life audit, consider the following steps to help you achieve success: *review your goals*, **create an action plan**, and [research resources](url) that can aid in your journey. Begin by *breaking down large goals* into smaller, manageable tasks and *establishing a timeline* for completion. This will help you *stay focused* and *motivated* throughout the process.</figcaption></figure></div><div class="article-block" id="ready-to-begin-your-life-audit-here-are-some-helpful-tips-to-get-you-started-107"><p class="article-paragraph">Ready to begin your life audit? Here are some helpful tips to get you started:</p></div><div class="article-block" id="article-title-how-to-do-a-life-audit-5-step-guide-for-success-block-type-heading-surrounding-heading-tips-to-start-a-life-audit-source-fragment-go-slow-108"><h3 class="article-heading" data-level="3">ARTICLE TITLE: How to Do a Life Audit: 5 Step Guide for Success BLOCK TYPE: heading SURROUNDING HEADING: ## Tips To Start A Life Audit SOURCE FRAGMENT: --- ### Go Slow ---</h3></div><div class="article-block" id="block-109-109"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-109.jpeg" alt="ARTICLE TITLE: How to Do a Life Audit: 5 Step Guide for Success BLOCK TYPE: heading SURROUNDING HEADING: ## Tips To Start A Life Audit SOURCE FRAGMENT: --- ### Go Slow ---"><figcaption>ARTICLE TITLE: How to Do a Life Audit: 5 Step Guide for Success BLOCK TYPE: heading SURROUNDING HEADING: ## Tips To Start A Life Audit SOURCE FRAGMENT: --- ### Go Slow ---</figcaption></figure></div><div class="article-block" id="the-first-time-you-do-a-life-audit-choose-one-area-to-focus-on-after-all-this-is-not-a-competition-with-yourself-110"><p class="article-paragraph">The first time you do a life audit, choose ONE area to focus on, after all this is not a competition with yourself.</p></div><div class="article-block" id="choosing-one-area-of-life-i-e-career-or-relationships-allows-you-to-put-all-of-your-attention-there-the-result-is-you-ll-have-more-focus-and-control-to-make-any-changes-you-set-your-mind-to-111"><p class="article-paragraph">Choosing one area of life, i.e., career, or relationships, allows you to put all of your attention there. The result is you’ll have more focus and control to make any changes you set your mind to.</p></div><div class="article-block" id="choose-the-right-time-112"><h3 class="article-heading" data-level="3">Choose the Right Time</h3></div><div class="article-block" id="block-113-113"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-113.jpeg" alt="### Choose the Right Time"><figcaption>### Choose the Right Time</figcaption></figure></div><div class="article-block" id="choose-the-perfect-time-for-your-audit-pick-a-day-when-you-have-little-distractions-and-can-focus-fully-on-the-task-you-can-block-time-in-your-calendar-for-this-if-it-helps-114"><p class="article-paragraph">Choose the perfect time for your audit. Pick a day when you have little distractions and can focus fully on the task. You can block time in your calendar for this if it helps.</p></div><div class="article-block" id="some-popular-times-to-do-a-life-audit-are-during-changes-throughout-the-year-a-change-in-seasons-back-to-school-time-the-new-year-and-your-birthday-but-of-course-you-can-do-a-life-audit-any-time-you-feel-the-need-115"><p class="article-paragraph">Some popular times to do a life audit are during changes throughout the year – a change in seasons, back to school time, the new year, and your birthday. But, of course you can do a life audit any time you feel the need.</p></div><div class="article-block" id="make-it-fun-116"><h3 class="article-heading" data-level="3">Make it Fun</h3></div><div class="article-block" id="block-117-117"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-117.jpeg" alt="### Make it Fun"><figcaption>### Make it Fun</figcaption></figure></div><div class="article-block" id="grab-a-colorful-notebook-or-journal-some-sticky-notes-and-markers-to-get-creative-with-your-life-audit-you-can-also-try-mind-mapping-if-you-brainstorm-best-with-a-visual-method-118"><p class="article-paragraph">Grab a colorful notebook or journal, some sticky notes and markers to get creative with your life audit. You can also try mind mapping if you brainstorm best with a visual method.</p></div><div class="article-block" id="it-can-also-help-to-move-to-a-different-environment-like-a-coffee-shop-or-outside-to-get-more-thoughts-flowing-119"><p class="article-paragraph">It can also help to move to a different environment like a coffee shop or outside to get more thoughts flowing.</p></div><div class="article-block" id="keep-an-open-mind-120"><h3 class="article-heading" data-level="3">Keep an Open Mind</h3></div><div class="article-block" id="block-121-121"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-121.jpeg" alt="### Keep an Open Mind"><figcaption>### Keep an Open Mind</figcaption></figure></div><div class="article-block" id="as-you-dig-into-your-area-of-focus-be-open-to-new-ideas-122"><p class="article-paragraph">As you dig into your area of focus, be open to new ideas.</p></div><div class="article-block" id="it-may-turn-out-that-you-thought-you-wanted-a-promotion-in-your-job-when-actually-you-re-wanting-a-career-change-123"><p class="article-paragraph">It may turn out that you thought you wanted a promotion in your job when actually you’re wanting a career change.</p></div><div class="article-block" id="or-you-may-have-thought-you-were-doing-a-good-job-looking-after-your-personal-growth-when-in-reality-now-is-the-time-to-dedicate-more-time-to-yourself-124"><p class="article-paragraph">Or you may have thought you were doing a good job looking after your personal growth when in reality now is the time to dedicate more time to yourself.</p></div><div class="article-block" id="final-thoughts-resources-125"><h2 class="article-heading" data-level="2">Final Thoughts &amp; Resources</h2></div><div class="article-block" id="block-126-126"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-126.jpeg" alt="## Final Thoughts &amp; Resources"><figcaption>## Final Thoughts &amp; Resources</figcaption></figure></div><div class="article-block" id="i-hope-i-ve-left-you-feeling-inspired-to-begin-your-life-audit-in-whatever-area-of-life-you-need-to-focus-on-right-now-this-is-a-great-opportunity-to-intentionally-create-the-meaningful-life-you-ve-been-seeking-127"><p class="article-paragraph">I hope I’ve left you feeling inspired to begin your life audit in whatever area of life you need to focus on right now. This is a great opportunity to intentionally create the meaningful life you’ve been seeking.</p></div><div class="article-block" id="reminder-ease-into-the-process-and-keep-your-core-values-and-goals-top-of-mind-during-your-audit-you-ve-got-this-and-you-re-one-step-closer-to-creating-a-life-you-want-to-be-present-in-every-day-128"><p class="article-paragraph">Reminder: Ease into the process and keep your core values and goals top of mind during your audit. You’ve got this and you’re one step closer to creating a life you want to be present in every day.</p></div><div class="article-block" id="resources-to-help-with-your-life-audit-129"><h3 class="article-heading" data-level="3">Resources to help with your life audit:</h3></div><div class="article-block" id="block-130-130"><figure class="article-image"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-130.jpeg" alt="### Resources to help with your life audit:"><figcaption>### Resources to help with your life audit:</figcaption></figure></div><div class="article-block" id="resources-to-help-with-your-life-audit-131"><ul><li>How To Set Your Top Priorities in Life: 12 Examples</li><li><strong>SMART Goals Template &amp; Worksheet</strong> (Free Printable)</li><li><em>11 Ways To Create a Life You Love</em></li><li>Personal Growth Planner Bundle (Shop my Etsy Store &amp; get 40% off with code 40OFFPTKO)</li></ul></div>
-        </div>
+</ol></li></ul></div><div class="article-block" id="remember-a-life-audit-is-an-ongoing-process-your-goals-may-change-as-you-grow-that-s-okay-the-important-thing-is-to-keep-moving-toward-the-life-you-desire-104"><p class="article-paragraph">Remember, a life audit is an ongoing process. Your goals may change as you grow. That’s okay. The important thing is to keep moving toward the life you desire.</p></div><div class="article-block" id="tips-to-start-a-life-audit-5-make-a-plan-to-reach-those-goals-to-start-a-life-audit-consider-the-following-steps-to-help-you-achieve-success-review-your-goals-create-an-action-plan-and-research-resources-url-that-can-aid-in-your-journey-begin-by-breaking-down-large-goals-into-smaller-manageable-tasks-and-establishing-a-timeline-for-completion-this-will-help-you-stay-focused-and-motivated-throughout-the-process-105"><h2 class="article-heading" data-level="2">Tips To Start A Life Audit --- ### 5. Make A Plan To Reach Those Goals To start a life audit, consider the following steps to help you achieve success: <em>review your goals</em>, <strong>create an action plan</strong>, and research resources that can aid in your journey. Begin by <em>breaking down large goals</em> into smaller, manageable tasks and <em>establishing a timeline</em> for completion. This will help you <em>stay focused</em> and <em>motivated</em> throughout the process.</h2></div><div class="article-block" id="block-106-106"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-106.jpeg" alt="## Tips To Start A Life Audit --- ### 5. Make A Plan To Reach Those Goals To start a life audit, consider the following steps to help you achieve success: *review your goals*, **create an action plan**, and [research resources](url) that can aid in your journey. Begin by *breaking down large goals* into smaller, manageable tasks and *establishing a timeline* for completion. This will help you *stay focused* and *motivated* throughout the process." loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">## Tips To Start A Life Audit --- ### 5. Make A Plan To Reach Those Goals To start a life audit, consider the following steps to help you achieve success: *review your goals*, **create an action plan**, and [research resources](url) that can aid in your journey. Begin by *breaking down large goals* into smaller, manageable tasks and *establishing a timeline* for completion. This will help you *stay focused* and *motivated* throughout the process.</figcaption></figure></div><div class="article-block" id="ready-to-begin-your-life-audit-here-are-some-helpful-tips-to-get-you-started-107"><p class="article-paragraph">Ready to begin your life audit? Here are some helpful tips to get you started:</p></div><div class="article-block" id="article-title-how-to-do-a-life-audit-5-step-guide-for-success-block-type-heading-surrounding-heading-tips-to-start-a-life-audit-source-fragment-go-slow-108"><h3 class="article-heading" data-level="3">ARTICLE TITLE: How to Do a Life Audit: 5 Step Guide for Success BLOCK TYPE: heading SURROUNDING HEADING: ## Tips To Start A Life Audit SOURCE FRAGMENT: --- ### Go Slow ---</h3></div><div class="article-block" id="block-109-109"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-109.jpeg" alt="ARTICLE TITLE: How to Do a Life Audit: 5 Step Guide for Success BLOCK TYPE: heading SURROUNDING HEADING: ## Tips To Start A Life Audit SOURCE FRAGMENT: --- ### Go Slow ---" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">ARTICLE TITLE: How to Do a Life Audit: 5 Step Guide for Success BLOCK TYPE: heading SURROUNDING HEADING: ## Tips To Start A Life Audit SOURCE FRAGMENT: --- ### Go Slow ---</figcaption></figure></div><div class="article-block" id="the-first-time-you-do-a-life-audit-choose-one-area-to-focus-on-after-all-this-is-not-a-competition-with-yourself-110"><p class="article-paragraph">The first time you do a life audit, choose ONE area to focus on, after all this is not a competition with yourself.</p></div><div class="article-block" id="choosing-one-area-of-life-i-e-career-or-relationships-allows-you-to-put-all-of-your-attention-there-the-result-is-you-ll-have-more-focus-and-control-to-make-any-changes-you-set-your-mind-to-111"><p class="article-paragraph">Choosing one area of life, i.e., career, or relationships, allows you to put all of your attention there. The result is you’ll have more focus and control to make any changes you set your mind to.</p></div><div class="article-block" id="choose-the-right-time-112"><h3 class="article-heading" data-level="3">Choose the Right Time</h3></div><div class="article-block" id="block-113-113"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-113.jpeg" alt="### Choose the Right Time" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Choose the Right Time</figcaption></figure></div><div class="article-block" id="choose-the-perfect-time-for-your-audit-pick-a-day-when-you-have-little-distractions-and-can-focus-fully-on-the-task-you-can-block-time-in-your-calendar-for-this-if-it-helps-114"><p class="article-paragraph">Choose the perfect time for your audit. Pick a day when you have little distractions and can focus fully on the task. You can block time in your calendar for this if it helps.</p></div><div class="article-block" id="some-popular-times-to-do-a-life-audit-are-during-changes-throughout-the-year-a-change-in-seasons-back-to-school-time-the-new-year-and-your-birthday-but-of-course-you-can-do-a-life-audit-any-time-you-feel-the-need-115"><p class="article-paragraph">Some popular times to do a life audit are during changes throughout the year – a change in seasons, back to school time, the new year, and your birthday. But, of course you can do a life audit any time you feel the need.</p></div><div class="article-block" id="make-it-fun-116"><h3 class="article-heading" data-level="3">Make it Fun</h3></div><div class="article-block" id="block-117-117"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-117.jpeg" alt="### Make it Fun" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Make it Fun</figcaption></figure></div><div class="article-block" id="grab-a-colorful-notebook-or-journal-some-sticky-notes-and-markers-to-get-creative-with-your-life-audit-you-can-also-try-mind-mapping-if-you-brainstorm-best-with-a-visual-method-118"><p class="article-paragraph">Grab a colorful notebook or journal, some sticky notes and markers to get creative with your life audit. You can also try mind mapping if you brainstorm best with a visual method.</p></div><div class="article-block" id="it-can-also-help-to-move-to-a-different-environment-like-a-coffee-shop-or-outside-to-get-more-thoughts-flowing-119"><p class="article-paragraph">It can also help to move to a different environment like a coffee shop or outside to get more thoughts flowing.</p></div><div class="article-block" id="keep-an-open-mind-120"><h3 class="article-heading" data-level="3">Keep an Open Mind</h3></div><div class="article-block" id="block-121-121"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-121.jpeg" alt="### Keep an Open Mind" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Keep an Open Mind</figcaption></figure></div><div class="article-block" id="as-you-dig-into-your-area-of-focus-be-open-to-new-ideas-122"><p class="article-paragraph">As you dig into your area of focus, be open to new ideas.</p></div><div class="article-block" id="it-may-turn-out-that-you-thought-you-wanted-a-promotion-in-your-job-when-actually-you-re-wanting-a-career-change-123"><p class="article-paragraph">It may turn out that you thought you wanted a promotion in your job when actually you’re wanting a career change.</p></div><div class="article-block" id="or-you-may-have-thought-you-were-doing-a-good-job-looking-after-your-personal-growth-when-in-reality-now-is-the-time-to-dedicate-more-time-to-yourself-124"><p class="article-paragraph">Or you may have thought you were doing a good job looking after your personal growth when in reality now is the time to dedicate more time to yourself.</p></div><div class="article-block" id="final-thoughts-resources-125"><h2 class="article-heading" data-level="2">Final Thoughts &amp; Resources</h2></div><div class="article-block" id="block-126-126"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-126.jpeg" alt="## Final Thoughts &amp; Resources" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">## Final Thoughts &amp; Resources</figcaption></figure></div><div class="article-block" id="i-hope-i-ve-left-you-feeling-inspired-to-begin-your-life-audit-in-whatever-area-of-life-you-need-to-focus-on-right-now-this-is-a-great-opportunity-to-intentionally-create-the-meaningful-life-you-ve-been-seeking-127"><p class="article-paragraph">I hope I’ve left you feeling inspired to begin your life audit in whatever area of life you need to focus on right now. This is a great opportunity to intentionally create the meaningful life you’ve been seeking.</p></div><div class="article-block" id="reminder-ease-into-the-process-and-keep-your-core-values-and-goals-top-of-mind-during-your-audit-you-ve-got-this-and-you-re-one-step-closer-to-creating-a-life-you-want-to-be-present-in-every-day-128"><p class="article-paragraph">Reminder: Ease into the process and keep your core values and goals top of mind during your audit. You’ve got this and you’re one step closer to creating a life you want to be present in every day.</p></div><div class="article-block" id="resources-to-help-with-your-life-audit-129"><h3 class="article-heading" data-level="3">Resources to help with your life audit:</h3></div><div class="article-block" id="block-130-130"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/how-to-do-a-life-audit-5-step-guide-for-success/block-image-130.jpeg" alt="### Resources to help with your life audit:" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">### Resources to help with your life audit:</figcaption></figure></div><div class="article-block" id="resources-to-help-with-your-life-audit-131"><ul><li>How To Set Your Top Priorities in Life: 12 Examples</li><li><strong>SMART Goals Template &amp; Worksheet</strong> (Free Printable)</li><li><em>11 Ways To Create a Life You Love</em></li><li>Personal Growth Planner Bundle (Shop my Etsy Store &amp; get 40% off with code 40OFFPTKO)</li></ul></div>
+                </div>
 
-        <div class="cta-box">
-            <h3>Need more healthy ideas?</h3>
-            <p>Browse more posts for simple, consistent wellness inspiration.</p>
-            <a class="cta-link" href="/blog/">Browse more posts</a>
+                <div class="cta-box">
+                    <h3>Need more healthy ideas?</h3>
+                    <p>Browse more posts for simple, consistent wellness inspiration.</p>
+                    <a class="cta-link" href="/blog/">Browse more posts</a>
+                </div>
+            </div>
+
+            <aside class="post-sidebar">
+                
+        <div class="author-box">
+            <div class="author-avatar author-avatar-fallback">M</div>
+            <h3 class="author-greeting">Hi, I'm Maya</h3>
+            <p class="author-bio">A certified nutritionist and recipe developer behind Glow From Inside, turning classic recipes into healthier versions.</p>
+            <div class="author-socials">
+                <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+            </div>
+        </div>
+        
+            </aside>
         </div>
     </section>
 </main>
@@ -362,5 +725,29 @@
         <p>&copy; 2026 Glow From Inside. All rights reserved.</p>
     </div>
 </footer>
+<script>
+        (function () {
+            var buttons = document.querySelectorAll('[data-pin-btn]');
+            var origin = window.location.origin;
+            var pageUrl = window.location.href;
+            var pageTitle = document.title;
+            Array.prototype.forEach.call(buttons, function (btn) {
+                var wrap = btn.closest('.img-wrap');
+                var img = wrap ? wrap.querySelector('img') : null;
+                if (!img) return;
+                var media = origin + img.getAttribute('src');
+                var url = 'https://www.pinterest.com/pin/create/button/?url=' +
+                    encodeURIComponent(pageUrl) + '&media=' + encodeURIComponent(media) +
+                    '&description=' + encodeURIComponent(pageTitle);
+                var link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
+                link.rel = 'noopener';
+                link.className = 'pin-it-btn';
+                link.textContent = 'Pin it';
+                btn.parentNode.replaceChild(link, btn);
+            });
+        })();
+        </script>
 </body>
 </html>

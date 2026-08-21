@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>27 Fall High Protein Clean Eating Recipes | Glow From Inside</title>
     <meta name="description" content="# 27 Fall High Protein Clean Eating Recipes">
+    <link rel="icon" type="image/png" href="/assets/images/blog/favicon.png"><link rel="apple-touch-icon" href="/assets/images/blog/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,6 +26,18 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: radial-gradient(circle at top, rgba(212, 163, 115, 0.08), transparent 28%), var(--bg);
@@ -35,7 +48,7 @@
         a { color: inherit; }
 
         .container {
-            max-width: 980px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -124,6 +137,33 @@
             margin-bottom: 16px;
         }
 
+        .jump-recipe {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px 0 6px;
+            padding: 10px 18px;
+            background: var(--white);
+            color: #212121;
+            border: 1px solid #212121;
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .jump-recipe:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        html { scroll-behavior: smooth; }
+
         .excerpt {
             max-width: 64ch;
             font-size: 1.08rem;
@@ -172,6 +212,87 @@
             padding: 8px 0 60px;
         }
 
+        .post-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 336px;
+            gap: 40px;
+            align-items: start;
+            margin-top: 26px;
+        }
+
+        .post-sidebar {
+            position: sticky;
+            top: 96px;
+        }
+
+        .author-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            padding: 26px 22px;
+            background: #fdfbf2;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .author-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            background: var(--bg-alt);
+            box-shadow: 0 8px 24px rgba(45, 74, 34, 0.12);
+        }
+
+        .author-avatar-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary);
+            background: var(--cream);
+        }
+
+        .author-box .author-greeting {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+        }
+
+        .author-box .author-bio {
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        .author-socials {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .author-socials a {
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 5px 14px;
+            background: #fff;
+        }
+
+        .author-socials a:hover {
+            color: var(--white);
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
         .article-content {
             margin-top: 18px;
             display: grid;
@@ -188,6 +309,7 @@
             color: var(--primary);
             line-height: 1.15;
             margin: 0 0 12px;
+            scroll-margin-top: 100px;
         }
 
         .article-heading[data-level="2"] { font-size: 1.9rem; }
@@ -233,11 +355,223 @@
             color: var(--text-light);
         }
 
+        .img-wrap {
+            position: relative;
+            display: block;
+        }
+
+        .pin-it-btn {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 5;
+            display: none;
+            align-items: center;
+            gap: 6px;
+            background: #e60023;
+            color: #fff;
+            border: 0;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-family: inherit;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            text-decoration: none;
+        }
+
+        .pin-it-btn::before {
+            content: "📌";
+            font-size: 0.9rem;
+        }
+
+        .img-wrap:hover .pin-it-btn,
+        .pin-it-btn:focus {
+            display: inline-flex;
+        }
+
         .article-cta {
             padding: 20px 22px;
             border-radius: 20px;
             background: rgba(45, 74, 34, 0.06);
             border: 1px solid var(--border);
+        }
+
+        .recipe-card {
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(45, 74, 34, 0.06);
+            scroll-margin-top: 100px;
+        }
+
+        .recipe-card .recipe-img-wrap {
+            margin: 0;
+            position: relative;
+            text-align: center;
+            padding: 28px 28px 0;
+        }
+
+        .recipe-card .recipe-img {
+            width: 320px;
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: inline-block;
+            border-radius: 48px;
+            border: 1px solid var(--border);
+            background: var(--bg-alt);
+            box-shadow: 0 16px 40px rgba(45, 74, 34, 0.12);
+        }
+
+        .recipe-card .recipe-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 2rem;
+            text-align: center;
+            margin: 22px 24px 8px;
+        }
+
+        .recipe-card .recipe-summary {
+            margin: 0 24px 14px;
+            color: var(--text-light);
+            font-size: 1.02rem;
+            text-align: center;
+        }
+
+        .recipe-macros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+            gap: 10px;
+            margin: 0 24px 18px;
+        }
+
+        .recipe-macro {
+            text-align: center;
+            background: var(--bg-alt);
+            border-radius: 14px;
+            padding: 10px 6px;
+            border: 1px solid var(--border);
+        }
+
+        .recipe-macro-value {
+            display: block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .recipe-macro-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        .recipe-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 10px;
+            margin: 0 24px 20px;
+        }
+
+        .recipe-time {
+            text-align: center;
+            background: var(--cream);
+            border-radius: 14px;
+            padding: 10px 8px;
+        }
+
+        .recipe-time-label {
+            display: block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-light);
+        }
+
+        .recipe-time-value {
+            display: block;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        .recipe-section {
+            padding: 0 24px 22px;
+        }
+
+        .recipe-section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .recipe-ing-group {
+            color: var(--primary-light);
+            font-size: 1rem;
+            margin: 12px 0 6px;
+        }
+
+        .recipe-ing-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .recipe-ing-item {
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            padding: 6px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .recipe-ing-check {
+            color: var(--accent);
+            min-width: 14px;
+        }
+
+        .recipe-ing-text {
+            color: var(--text);
+        }
+
+        .recipe-steps {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .recipe-step {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .recipe-nutrition {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 8px 18px;
+        }
+
+        .recipe-nutrition-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            border-bottom: 1px dashed var(--border);
+            padding: 4px 0;
+            font-size: 0.95rem;
+        }
+
+        .recipe-nutrition-value {
+            font-weight: 600;
+            color: var(--primary);
         }
 
         .article-divider {
@@ -277,7 +611,7 @@
         .cta-link {
             display: inline-block;
             text-decoration: none;
-            background: var(--accent);
+            background: var(--primary);
             color: var(--white);
             padding: 12px 22px;
             border-radius: 999px;
@@ -296,11 +630,22 @@
             font-size: 0.9rem;
         }
 
+        @media (max-width: 900px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .post-sidebar {
+                position: static;
+            }
+        }
+
         @media (max-width: 700px) {
             .hero { padding-top: 28px; }
             .hero-card, .toc, .cta-box { padding: 20px; }
             .nav-inner { min-height: 68px; }
             .hero h1 { max-width: none; }
+            .recipe-card .recipe-img { width: 260px; }
         }
         </style>
 </head>
@@ -324,73 +669,91 @@
                 <span>by Glow From Inside</span>
             </div>
             <h1>27 Fall High Protein Clean Eating Recipes</h1>
+            
             <div class="hero-media"><div class="placeholder">Featured image will appear here</div></div>
         </div>
     </section>
 
     <section class="content-wrap">
-        <div class="article-content">
-            <div class="article-block" id="introduction-1"><h1 class="article-heading" data-level="1">27 Fall High Protein Clean Eating Recipes</h1></div><div class="article-block" id="this-post-may-contain-affiliate-links-please-see-our-disclosure-policy-2"><p class="article-paragraph">This post may contain affiliate links. Please see our disclosure policy.</p></div><div class="article-block" id="this-fall-my-goal-is-to-keep-eating-clean-and-have-a-higher-protein-intake-these-high-protein-clean-eating-recipes-are-easy-to-make-pack-protein-and-have-a-ton-of-flavor-3"><p class="article-paragraph">This fall, my goal is to keep eating clean and have a higher protein intake. These high protein clean eating recipes are easy to make, pack protein and have a ton of flavor.</p></div><div class="article-block" id="simple-nutritious-and-filled-with-flavor-one-of-the-favorites-of-all-of-my-websites-is-the-greek-chicken-at-12-4"><p class="article-paragraph">Simple, nutritious, and filled with flavor. One of the favorites of all of my websites is the Greek chicken at #12.</p></div><div class="article-block" id="it-s-incredibly-good-check-it-out-5"><p class="article-paragraph">It’s incredibly good. Check it out.</p></div><div class="article-block" id="27-fall-high-protein-clean-eating-recipes-6"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-06.jpg" alt="27 Fall High Protein Clean Eating Recipes"><figcaption>27 Fall High Protein Clean Eating Recipes</figcaption></figure></div><div class="article-block" id="my-latest-videos-7"><h2 class="article-heading" data-level="2"><ol>
+        <div class="post-layout">
+            <div class="post-main">
+                <div class="article-content">
+                    <div class="article-block" id="introduction-1"><h1 class="article-heading" data-level="1">27 Fall High Protein Clean Eating Recipes</h1></div><div class="article-block" id="this-post-may-contain-affiliate-links-please-see-our-disclosure-policy-2"><p class="article-paragraph">This post may contain affiliate links. Please see our disclosure policy.</p></div><div class="article-block" id="this-fall-my-goal-is-to-keep-eating-clean-and-have-a-higher-protein-intake-these-high-protein-clean-eating-recipes-are-easy-to-make-pack-protein-and-have-a-ton-of-flavor-3"><p class="article-paragraph">This fall, my goal is to keep eating clean and have a higher protein intake. These high protein clean eating recipes are easy to make, pack protein and have a ton of flavor.</p></div><div class="article-block" id="simple-nutritious-and-filled-with-flavor-one-of-the-favorites-of-all-of-my-websites-is-the-greek-chicken-at-12-4"><p class="article-paragraph">Simple, nutritious, and filled with flavor. One of the favorites of all of my websites is the Greek chicken at #12.</p></div><div class="article-block" id="it-s-incredibly-good-check-it-out-5"><p class="article-paragraph">It’s incredibly good. Check it out.</p></div><div class="article-block" id="27-fall-high-protein-clean-eating-recipes-6"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-06.jpg" alt="27 Fall High Protein Clean Eating Recipes" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">27 Fall High Protein Clean Eating Recipes</figcaption></figure></div><div class="article-block" id="my-latest-videos-7"><h2 class="article-heading" data-level="2"><ol>
 <li>Ham and Bean Soup</li>
-</ol></h2></div><div class="article-block" id="1-ham-and-bean-soup-8"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-08.jpg" alt="Ham and Bean Soup"><figcaption>Ham and Bean Soup</figcaption></figure></div><div class="article-block" id="when-i-was-growing-my-my-favorite-soups-were-always-made-with-beans-my-dad-figured-that-out-when-i-was-about-10-and-every-soup-had-beans-in-them-after-that-9"><p class="article-paragraph">When I was growing my, my favorite soups were always made with beans. My dad figured that out when I was about 10, and every soup had beans in them after that!</p></div><div class="article-block" id="that-s-how-he-made-sure-i-d-actually-eat-them-beans-pack-protein-and-fiber-and-when-soaked-for-a-long-time-they-can-work-extremely-well-with-your-gut-10"><p class="article-paragraph">That’s how he made sure I’d actually eat them! Beans pack protein and fiber, and when soaked for a long time, they can work extremely well with your gut.</p></div><div class="article-block" id="however-it-usually-takes-time-to-build-up-to-that-either-way-this-is-by-far-one-of-my-favorite-soups-11"><p class="article-paragraph">However, it usually takes time to build up to that. Either way, this is by far one of my favorite soups!</p></div><div class="article-block" id="per-serving-12"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="1-ham-and-bean-soup-13"><ul><li>Calories: 385</li><li>Fats: 11.4g</li><li>Protein: 30.4g</li><li>Carbs: 39.8g</li><li>Fiber: 10.6g</li><li>Sugar: 5.8g</li></ul></div><div class="article-block" id="1-ham-and-bean-soup-14"><h2 class="article-heading" data-level="2"><ol start="2">
+</ol></h2></div><div class="article-block" id="1-ham-and-bean-soup-8"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-08.jpg" alt="Ham and Bean Soup" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Ham and Bean Soup</figcaption></figure></div><div class="article-block" id="when-i-was-growing-my-my-favorite-soups-were-always-made-with-beans-my-dad-figured-that-out-when-i-was-about-10-and-every-soup-had-beans-in-them-after-that-9"><p class="article-paragraph">When I was growing my, my favorite soups were always made with beans. My dad figured that out when I was about 10, and every soup had beans in them after that!</p></div><div class="article-block" id="that-s-how-he-made-sure-i-d-actually-eat-them-beans-pack-protein-and-fiber-and-when-soaked-for-a-long-time-they-can-work-extremely-well-with-your-gut-10"><p class="article-paragraph">That’s how he made sure I’d actually eat them! Beans pack protein and fiber, and when soaked for a long time, they can work extremely well with your gut.</p></div><div class="article-block" id="however-it-usually-takes-time-to-build-up-to-that-either-way-this-is-by-far-one-of-my-favorite-soups-11"><p class="article-paragraph">However, it usually takes time to build up to that. Either way, this is by far one of my favorite soups!</p></div><div class="article-block" id="per-serving-12"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="1-ham-and-bean-soup-13"><ul><li>Calories: 385</li><li>Fats: 11.4g</li><li>Protein: 30.4g</li><li>Carbs: 39.8g</li><li>Fiber: 10.6g</li><li>Sugar: 5.8g</li></ul></div><div class="article-block" id="1-ham-and-bean-soup-14"><h2 class="article-heading" data-level="2"><ol start="2">
 <li>Baked Chicken Parmesan</li>
-</ol></h2></div><div class="article-block" id="2-baked-chicken-parmesan-15"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-15.jpg" alt="Baked Chicken Parmesan"><figcaption>Baked Chicken Parmesan</figcaption></figure></div><div class="article-block" id="when-i-cook-this-recipe-everyone-comes-rushing-to-the-table-16"><p class="article-paragraph">When I cook this recipe, everyone comes rushing to the table.</p></div><div class="article-block" id="it-s-a-classic-comforting-dish-of-chicken-breasts-coated-in-seasoned-breadcrumbs-and-parmesan-topped-with-rich-marinara-sauce-and-melty-mozzarella-and-baked-until-golden-17"><p class="article-paragraph">It’s a classic, comforting dish of chicken breasts coated in seasoned breadcrumbs and Parmesan, topped with rich marinara sauce and melty mozzarella, and baked until golden.</p></div><div class="article-block" id="it-s-even-better-paired-with-zoodles-that-s-zucchini-noodles-if-you-re-wondering-18"><p class="article-paragraph">It’s even better paired with zoodles – that’s zucchini noodles, if you’re wondering!</p></div><div class="article-block" id="per-serving-19"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="2-baked-chicken-parmesan-20"><ul><li>Calories: 518</li><li>Fats: 27.6g</li><li>Protein: 42.3g</li><li>Carbs: 27.4g</li><li>Fiber: 1.7g</li><li>Sugar: 5.1g</li></ul></div><div class="article-block" id="2-baked-chicken-parmesan-21"><h2 class="article-heading" data-level="2"><ol start="3">
+</ol></h2></div><div class="article-block" id="2-baked-chicken-parmesan-15"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-15.jpg" alt="Baked Chicken Parmesan" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Baked Chicken Parmesan</figcaption></figure></div><div class="article-block" id="when-i-cook-this-recipe-everyone-comes-rushing-to-the-table-16"><p class="article-paragraph">When I cook this recipe, everyone comes rushing to the table.</p></div><div class="article-block" id="it-s-a-classic-comforting-dish-of-chicken-breasts-coated-in-seasoned-breadcrumbs-and-parmesan-topped-with-rich-marinara-sauce-and-melty-mozzarella-and-baked-until-golden-17"><p class="article-paragraph">It’s a classic, comforting dish of chicken breasts coated in seasoned breadcrumbs and Parmesan, topped with rich marinara sauce and melty mozzarella, and baked until golden.</p></div><div class="article-block" id="it-s-even-better-paired-with-zoodles-that-s-zucchini-noodles-if-you-re-wondering-18"><p class="article-paragraph">It’s even better paired with zoodles – that’s zucchini noodles, if you’re wondering!</p></div><div class="article-block" id="per-serving-19"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="2-baked-chicken-parmesan-20"><ul><li>Calories: 518</li><li>Fats: 27.6g</li><li>Protein: 42.3g</li><li>Carbs: 27.4g</li><li>Fiber: 1.7g</li><li>Sugar: 5.1g</li></ul></div><div class="article-block" id="2-baked-chicken-parmesan-21"><h2 class="article-heading" data-level="2"><ol start="3">
 <li>Mediterranean Chicken Bake</li>
-</ol></h2></div><div class="article-block" id="3-mediterranean-chicken-bake-22"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-22.jpg" alt="Mediterranean Chicken Bake"><figcaption>Mediterranean Chicken Bake</figcaption></figure></div><div class="article-block" id="next-up-a-chicken-bake-that-will-bring-smiles-to-all-around-the-table-23"><p class="article-paragraph">Next up, a chicken bake that will bring smiles to all around the table.</p></div><div class="article-block" id="tender-chicken-is-baked-with-cherry-tomatoes-kalamata-olives-red-onion-bell-pepper-garlic-olive-oil-herbs-and-a-sprinkle-of-feta-for-a-meal-that-feels-special-without-being-difficult-24"><p class="article-paragraph">Tender chicken is baked with cherry tomatoes, Kalamata olives, red onion, bell pepper, garlic, olive oil, herbs, and a sprinkle of feta for a meal that feels special without being difficult.</p></div><div class="article-block" id="it-s-high-in-protein-low-in-carbs-and-perfect-for-an-easy-dinner-filled-with-classic-mediterranean-flavors-25"><p class="article-paragraph">It’s high in protein, low in carbs, and perfect for an easy dinner filled with classic Mediterranean flavors.</p></div><div class="article-block" id="per-serving-26"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="3-mediterranean-chicken-bake-27"><ul><li>Calories: 555</li><li>Fats: 35.8g</li><li>Protein: 56.8g</li><li>Carbs: 12.6g</li><li>Fiber: 3.1g</li><li>Sugar: 6.4g</li></ul></div><div class="article-block" id="3-mediterranean-chicken-bake-28"><h2 class="article-heading" data-level="2"><ol start="4">
+</ol></h2></div><div class="article-block" id="3-mediterranean-chicken-bake-22"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-22.jpg" alt="Mediterranean Chicken Bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Mediterranean Chicken Bake</figcaption></figure></div><div class="article-block" id="next-up-a-chicken-bake-that-will-bring-smiles-to-all-around-the-table-23"><p class="article-paragraph">Next up, a chicken bake that will bring smiles to all around the table.</p></div><div class="article-block" id="tender-chicken-is-baked-with-cherry-tomatoes-kalamata-olives-red-onion-bell-pepper-garlic-olive-oil-herbs-and-a-sprinkle-of-feta-for-a-meal-that-feels-special-without-being-difficult-24"><p class="article-paragraph">Tender chicken is baked with cherry tomatoes, Kalamata olives, red onion, bell pepper, garlic, olive oil, herbs, and a sprinkle of feta for a meal that feels special without being difficult.</p></div><div class="article-block" id="it-s-high-in-protein-low-in-carbs-and-perfect-for-an-easy-dinner-filled-with-classic-mediterranean-flavors-25"><p class="article-paragraph">It’s high in protein, low in carbs, and perfect for an easy dinner filled with classic Mediterranean flavors.</p></div><div class="article-block" id="per-serving-26"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="3-mediterranean-chicken-bake-27"><ul><li>Calories: 555</li><li>Fats: 35.8g</li><li>Protein: 56.8g</li><li>Carbs: 12.6g</li><li>Fiber: 3.1g</li><li>Sugar: 6.4g</li></ul></div><div class="article-block" id="3-mediterranean-chicken-bake-28"><h2 class="article-heading" data-level="2"><ol start="4">
 <li>Pico de Gallo Chicken Bake</li>
-</ol></h2></div><div class="article-block" id="4-pico-de-gallo-chicken-bake-29"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-29.jpg" alt="pico de gallo chicken bake"><figcaption>pico de gallo chicken bake</figcaption></figure></div><div class="article-block" id="this-pico-de-gallo-chicken-bake-brings-cozy-mexican-style-flavor-to-your-dinner-table-no-takeout-required-30"><p class="article-paragraph">This pico de gallo chicken bake brings cozy Mexican-style flavor to your dinner table, no takeout required.</p></div><div class="article-block" id="juicy-chicken-breasts-are-seasoned-with-taco-spices-topped-with-mozzarella-and-baked-with-pico-de-gallo-a-chunky-fresh-salsa-made-with-tomatoes-onion-jalapeno-cilantro-lime-salt-and-pepper-31"><p class="article-paragraph">Juicy chicken breasts are seasoned with taco spices, topped with mozzarella, and baked with pico de gallo – a chunky fresh salsa made with tomatoes, onion, jalapeno, cilantro, lime, salt, and pepper.</p></div><div class="article-block" id="with-63-2g-of-protein-and-only-465-calories-per-serving-it-s-a-tasty-option-for-a-high-protein-low-cal-meal-plan-32"><p class="article-paragraph">With 63.2g of protein and only 465 calories per serving, it’s a tasty option for a high-protein, low-cal meal plan.</p></div><div class="article-block" id="per-serving-33"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="4-pico-de-gallo-chicken-bake-34"><ul><li>Calories: 465</li><li>Fats: 16.8g</li><li>Protein: 63.2g</li><li>Carbs: 8.4g</li><li>Fiber: 1.7g</li><li>Sugar: 4.3g</li></ul></div><div class="article-block" id="4-pico-de-gallo-chicken-bake-35"><h2 class="article-heading" data-level="2"><ol start="5">
+</ol></h2></div><div class="article-block" id="4-pico-de-gallo-chicken-bake-29"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-29.jpg" alt="pico de gallo chicken bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">pico de gallo chicken bake</figcaption></figure></div><div class="article-block" id="this-pico-de-gallo-chicken-bake-brings-cozy-mexican-style-flavor-to-your-dinner-table-no-takeout-required-30"><p class="article-paragraph">This pico de gallo chicken bake brings cozy Mexican-style flavor to your dinner table, no takeout required.</p></div><div class="article-block" id="juicy-chicken-breasts-are-seasoned-with-taco-spices-topped-with-mozzarella-and-baked-with-pico-de-gallo-a-chunky-fresh-salsa-made-with-tomatoes-onion-jalapeno-cilantro-lime-salt-and-pepper-31"><p class="article-paragraph">Juicy chicken breasts are seasoned with taco spices, topped with mozzarella, and baked with pico de gallo – a chunky fresh salsa made with tomatoes, onion, jalapeno, cilantro, lime, salt, and pepper.</p></div><div class="article-block" id="with-63-2g-of-protein-and-only-465-calories-per-serving-it-s-a-tasty-option-for-a-high-protein-low-cal-meal-plan-32"><p class="article-paragraph">With 63.2g of protein and only 465 calories per serving, it’s a tasty option for a high-protein, low-cal meal plan.</p></div><div class="article-block" id="per-serving-33"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="4-pico-de-gallo-chicken-bake-34"><ul><li>Calories: 465</li><li>Fats: 16.8g</li><li>Protein: 63.2g</li><li>Carbs: 8.4g</li><li>Fiber: 1.7g</li><li>Sugar: 4.3g</li></ul></div><div class="article-block" id="4-pico-de-gallo-chicken-bake-35"><h2 class="article-heading" data-level="2"><ol start="5">
 <li>Salsa Chicken Bake</li>
-</ol></h2></div><div class="article-block" id="5-salsa-chicken-bake-36"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-36.jpg" alt="Salsa Chicken Bake"><figcaption>Salsa Chicken Bake</figcaption></figure></div><div class="article-block" id="to-all-my-salsa-lovers-you-re-going-to-enjoy-this-dinner-it-s-simple-to-make-yet-will-remind-you-of-all-the-mexican-flavors-you-could-wish-for-37"><p class="article-paragraph">To all my salsa lovers, you’re going to enjoy this dinner. It’s simple to make yet will remind you of all the Mexican flavors you could wish for.</p></div><div class="article-block" id="it-s-simple-enough-to-make-but-has-enough-variety-and-beans-so-the-meal-is-not-only-packing-flavors-but-protein-and-fiber-38"><p class="article-paragraph">It’s simple enough to make but has enough variety, and beans. So the meal is not only packing flavors but protein and fiber.</p></div><div class="article-block" id="we-re-talking-52g-of-protein-and-10-8g-of-fiber-now-that-s-a-filling-meal-and-all-of-that-in-just-435-calories-39"><p class="article-paragraph">We’re talking 52g of protein and 10.8g of fiber, now that’s a filling meal. And all of that in just 435 calories.</p></div><div class="article-block" id="if-you-re-cutting-down-on-calories-this-fall-this-has-to-go-onto-your-meal-plan-40"><p class="article-paragraph">If you’re cutting down on calories this fall, this has to go onto your meal plan.</p></div><div class="article-block" id="per-serving-41"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="5-salsa-chicken-bake-42"><ul><li>Calories: 435</li><li>Fats: 6.8g</li><li>Protein: 52.4g</li><li>Carbs: 41.6g</li><li>Fiber: 10.8g</li><li>Sugar: 8.6g</li></ul></div><div class="article-block" id="5-salsa-chicken-bake-43"><h2 class="article-heading" data-level="2"><ol start="6">
+</ol></h2></div><div class="article-block" id="5-salsa-chicken-bake-36"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-36.jpg" alt="Salsa Chicken Bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Salsa Chicken Bake</figcaption></figure></div><div class="article-block" id="to-all-my-salsa-lovers-you-re-going-to-enjoy-this-dinner-it-s-simple-to-make-yet-will-remind-you-of-all-the-mexican-flavors-you-could-wish-for-37"><p class="article-paragraph">To all my salsa lovers, you’re going to enjoy this dinner. It’s simple to make yet will remind you of all the Mexican flavors you could wish for.</p></div><div class="article-block" id="it-s-simple-enough-to-make-but-has-enough-variety-and-beans-so-the-meal-is-not-only-packing-flavors-but-protein-and-fiber-38"><p class="article-paragraph">It’s simple enough to make but has enough variety, and beans. So the meal is not only packing flavors but protein and fiber.</p></div><div class="article-block" id="we-re-talking-52g-of-protein-and-10-8g-of-fiber-now-that-s-a-filling-meal-and-all-of-that-in-just-435-calories-39"><p class="article-paragraph">We’re talking 52g of protein and 10.8g of fiber, now that’s a filling meal. And all of that in just 435 calories.</p></div><div class="article-block" id="if-you-re-cutting-down-on-calories-this-fall-this-has-to-go-onto-your-meal-plan-40"><p class="article-paragraph">If you’re cutting down on calories this fall, this has to go onto your meal plan.</p></div><div class="article-block" id="per-serving-41"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="5-salsa-chicken-bake-42"><ul><li>Calories: 435</li><li>Fats: 6.8g</li><li>Protein: 52.4g</li><li>Carbs: 41.6g</li><li>Fiber: 10.8g</li><li>Sugar: 8.6g</li></ul></div><div class="article-block" id="5-salsa-chicken-bake-43"><h2 class="article-heading" data-level="2"><ol start="6">
 <li>Sweet Potato Taco Bowls</li>
-</ol></h2></div><div class="article-block" id="6-sweet-potato-taco-bowls-44"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-44.jpg" alt="Sweet Potato Taco Bowls"><figcaption>Sweet Potato Taco Bowls</figcaption></figure></div><div class="article-block" id="i-loooveee-tacos-i-could-eat-tacos-every-day-so-i-figured-i-ll-just-make-a-bunch-of-different-recipes-that-remind-me-of-tacos-45"><p class="article-paragraph">I loooveee tacos! I could eat tacos every day. So, I figured I’ll just make a bunch of different recipes that remind me of tacos.</p></div><div class="article-block" id="this-is-one-of-them-sweet-potato-taco-bowls-46"><p class="article-paragraph">This is one of them. Sweet potato taco bowls.</p></div><div class="article-block" id="they-are-naturally-sweet-thanks-to-sweet-potato-filling-and-just-495-calories-perfect-for-those-fall-days-when-you-just-want-to-have-a-good-yummy-lunch-47"><p class="article-paragraph">They are naturally sweet, thanks to sweet potato, filling, and just 495 calories! Perfect for those fall days when you just want to have a good, yummy lunch.</p></div><div class="article-block" id="per-serving-48"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="6-sweet-potato-taco-bowls-49"><ul><li>Calories: 495</li><li>Fats: 18g</li><li>Protein: 34g</li><li>Carbs: 52g</li><li>Fiber: 13g</li><li>Sugar: 9g</li></ul></div><div class="article-block" id="6-sweet-potato-taco-bowls-50"><h2 class="article-heading" data-level="2"><ol start="7">
+</ol></h2></div><div class="article-block" id="6-sweet-potato-taco-bowls-44"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-44.jpg" alt="Sweet Potato Taco Bowls" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Sweet Potato Taco Bowls</figcaption></figure></div><div class="article-block" id="i-loooveee-tacos-i-could-eat-tacos-every-day-so-i-figured-i-ll-just-make-a-bunch-of-different-recipes-that-remind-me-of-tacos-45"><p class="article-paragraph">I loooveee tacos! I could eat tacos every day. So, I figured I’ll just make a bunch of different recipes that remind me of tacos.</p></div><div class="article-block" id="this-is-one-of-them-sweet-potato-taco-bowls-46"><p class="article-paragraph">This is one of them. Sweet potato taco bowls.</p></div><div class="article-block" id="they-are-naturally-sweet-thanks-to-sweet-potato-filling-and-just-495-calories-perfect-for-those-fall-days-when-you-just-want-to-have-a-good-yummy-lunch-47"><p class="article-paragraph">They are naturally sweet, thanks to sweet potato, filling, and just 495 calories! Perfect for those fall days when you just want to have a good, yummy lunch.</p></div><div class="article-block" id="per-serving-48"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="6-sweet-potato-taco-bowls-49"><ul><li>Calories: 495</li><li>Fats: 18g</li><li>Protein: 34g</li><li>Carbs: 52g</li><li>Fiber: 13g</li><li>Sugar: 9g</li></ul></div><div class="article-block" id="6-sweet-potato-taco-bowls-50"><h2 class="article-heading" data-level="2"><ol start="7">
 <li>Caprese Chicken Bake</li>
-</ol></h2></div><div class="article-block" id="7-caprese-chicken-bake-51"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-51.jpg" alt="Caprese Chicken Bake"><figcaption>Caprese Chicken Bake</figcaption></figure></div><div class="article-block" id="a-caprese-salad-always-wins-me-over-with-its-fresh-simple-flavors-that-s-why-i-love-turning-this-classic-combo-of-mozzarella-sweet-tomatoes-and-basil-into-a-light-satisfying-chicken-bake-that-s-packed-with-protein-52"><p class="article-paragraph">A Caprese salad always wins me over with its fresh, simple flavors. That’s why I love turning this classic combo of mozzarella, sweet tomatoes, and basil into a light, satisfying chicken bake that’s packed with protein.</p></div><div class="article-block" id="serve-it-with-a-side-of-roasted-baby-potatoes-crusty-garlic-bread-or-cauliflower-rice-53"><p class="article-paragraph">Serve it with a side of roasted baby potatoes, crusty garlic bread, or cauliflower rice.</p></div><div class="article-block" id="per-serving-54"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="7-caprese-chicken-bake-55"><ul><li>Calories: 445</li><li>Fats: 18.9g</li><li>Protein: 58.6g</li><li>Carbs: 9.2g</li><li>Fiber: 1.3g</li><li>Sugar: 6.8g</li></ul></div><div class="article-block" id="7-caprese-chicken-bake-56"><h2 class="article-heading" data-level="2"><ol start="8">
+</ol></h2></div><div class="article-block" id="7-caprese-chicken-bake-51"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-51.jpg" alt="Caprese Chicken Bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Caprese Chicken Bake</figcaption></figure></div><div class="article-block" id="a-caprese-salad-always-wins-me-over-with-its-fresh-simple-flavors-that-s-why-i-love-turning-this-classic-combo-of-mozzarella-sweet-tomatoes-and-basil-into-a-light-satisfying-chicken-bake-that-s-packed-with-protein-52"><p class="article-paragraph">A Caprese salad always wins me over with its fresh, simple flavors. That’s why I love turning this classic combo of mozzarella, sweet tomatoes, and basil into a light, satisfying chicken bake that’s packed with protein.</p></div><div class="article-block" id="serve-it-with-a-side-of-roasted-baby-potatoes-crusty-garlic-bread-or-cauliflower-rice-53"><p class="article-paragraph">Serve it with a side of roasted baby potatoes, crusty garlic bread, or cauliflower rice.</p></div><div class="article-block" id="per-serving-54"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="7-caprese-chicken-bake-55"><ul><li>Calories: 445</li><li>Fats: 18.9g</li><li>Protein: 58.6g</li><li>Carbs: 9.2g</li><li>Fiber: 1.3g</li><li>Sugar: 6.8g</li></ul></div><div class="article-block" id="7-caprese-chicken-bake-56"><h2 class="article-heading" data-level="2"><ol start="8">
 <li>Garlic Butter Meatballs with Zucchini Noodles</li>
-</ol></h2></div><div class="article-block" id="8-garlic-butter-meatballs-with-zucchini-noodles-57"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-57.jpg" alt=""></figure></div><div class="article-block" id="savory-garlic-butter-meatballs-served-over-spiraled-zucchini-make-a-satisfying-low-carb-dinner-that-s-packed-with-flavor-and-ready-in-minutes-58"><p class="article-paragraph">Savory garlic butter meatballs served over spiraled zucchini make a satisfying low-carb dinner that’s packed with flavor and ready in minutes.</p></div><div class="article-block" id="who-says-cutting-carbs-means-sacrificing-taste-these-tender-meatballs-in-rich-garlic-butter-sauce-prove-otherwise-59"><p class="article-paragraph">Who says cutting carbs means sacrificing taste? These tender meatballs in rich garlic butter sauce prove otherwise.</p></div><div class="article-block" id="paired-with-zucchini-noodles-you-get-all-the-comfort-of-a-hearty-pasta-dish-with-just-8g-net-carbs-and-25g-protein-per-serving-ideal-for-keto-meal-planning-60"><p class="article-paragraph">Paired with zucchini noodles, you get all the comfort of a hearty pasta dish with just 8g net carbs and 25g protein per serving – ideal for keto meal planning.</p></div><div class="article-block" id="per-serving-61"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="8-garlic-butter-meatballs-with-zucchini-noodles-62"><ul><li>Calories: 413</li><li>Fats: 31g</li><li>Protein: 25g</li><li>Carbs: 11g</li><li>Fiber: 2.8g</li><li>Sugar: 6.3g</li></ul></div><div class="article-block" id="8-garlic-butter-meatballs-with-zucchini-noodles-63"><h2 class="article-heading" data-level="2"><ol start="9">
+</ol></h2></div><div class="article-block" id="8-garlic-butter-meatballs-with-zucchini-noodles-57"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-57.jpg" alt="" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div></figure></div><div class="article-block" id="savory-garlic-butter-meatballs-served-over-spiraled-zucchini-make-a-satisfying-low-carb-dinner-that-s-packed-with-flavor-and-ready-in-minutes-58"><p class="article-paragraph">Savory garlic butter meatballs served over spiraled zucchini make a satisfying low-carb dinner that’s packed with flavor and ready in minutes.</p></div><div class="article-block" id="who-says-cutting-carbs-means-sacrificing-taste-these-tender-meatballs-in-rich-garlic-butter-sauce-prove-otherwise-59"><p class="article-paragraph">Who says cutting carbs means sacrificing taste? These tender meatballs in rich garlic butter sauce prove otherwise.</p></div><div class="article-block" id="paired-with-zucchini-noodles-you-get-all-the-comfort-of-a-hearty-pasta-dish-with-just-8g-net-carbs-and-25g-protein-per-serving-ideal-for-keto-meal-planning-60"><p class="article-paragraph">Paired with zucchini noodles, you get all the comfort of a hearty pasta dish with just 8g net carbs and 25g protein per serving – ideal for keto meal planning.</p></div><div class="article-block" id="per-serving-61"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="8-garlic-butter-meatballs-with-zucchini-noodles-62"><ul><li>Calories: 413</li><li>Fats: 31g</li><li>Protein: 25g</li><li>Carbs: 11g</li><li>Fiber: 2.8g</li><li>Sugar: 6.3g</li></ul></div><div class="article-block" id="8-garlic-butter-meatballs-with-zucchini-noodles-63"><h2 class="article-heading" data-level="2"><ol start="9">
 <li>Cheesy French Onion Chicken</li>
-</ol></h2></div><div class="article-block" id="9-cheesy-french-onion-chicken-64"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-64.jpg" alt="cheesy french onion chicken"><figcaption>cheesy french onion chicken</figcaption></figure></div><div class="article-block" id="rich-french-onion-chicken-bake-brings-together-caramelized-onions-melted-cheese-and-tender-chicken-in-one-low-carb-protein-packed-dish-65"><p class="article-paragraph">Rich French onion chicken bake brings together caramelized onions, melted cheese, and tender chicken in one low-carb, protein-packed dish.</p></div><div class="article-block" id="love-french-onion-soup-this-baked-chicken-version-captures-all-those-deep-savory-flavors-you-crave-66"><p class="article-paragraph">Love French onion soup? This baked chicken version captures all those deep, savory flavors you crave.</p></div><div class="article-block" id="sweet-caramelized-onions-aromatic-garlic-and-gooey-melted-cheese-transform-simple-chicken-into-comfort-food-that-fits-your-healthy-eating-goals-it-s-like-having-your-favorite-soup-reimagined-as-a-satisfying-main-course-67"><p class="article-paragraph">Sweet caramelized onions, aromatic garlic, and gooey melted cheese transform simple chicken into comfort food that fits your healthy eating goals. It’s like having your favorite soup reimagined as a satisfying main course.</p></div><div class="article-block" id="per-serving-68"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="9-cheesy-french-onion-chicken-69"><ul><li>Calories: 534</li><li>Fats: 21g</li><li>Protein: 55g</li><li>Carbs: 30g</li><li>Fiber: 5.2g</li><li>Sugar: 11g</li></ul></div><div class="article-block" id="9-cheesy-french-onion-chicken-70"><h2 class="article-heading" data-level="2"><ol start="10">
+</ol></h2></div><div class="article-block" id="9-cheesy-french-onion-chicken-64"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-64.jpg" alt="cheesy french onion chicken" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">cheesy french onion chicken</figcaption></figure></div><div class="article-block" id="rich-french-onion-chicken-bake-brings-together-caramelized-onions-melted-cheese-and-tender-chicken-in-one-low-carb-protein-packed-dish-65"><p class="article-paragraph">Rich French onion chicken bake brings together caramelized onions, melted cheese, and tender chicken in one low-carb, protein-packed dish.</p></div><div class="article-block" id="love-french-onion-soup-this-baked-chicken-version-captures-all-those-deep-savory-flavors-you-crave-66"><p class="article-paragraph">Love French onion soup? This baked chicken version captures all those deep, savory flavors you crave.</p></div><div class="article-block" id="sweet-caramelized-onions-aromatic-garlic-and-gooey-melted-cheese-transform-simple-chicken-into-comfort-food-that-fits-your-healthy-eating-goals-it-s-like-having-your-favorite-soup-reimagined-as-a-satisfying-main-course-67"><p class="article-paragraph">Sweet caramelized onions, aromatic garlic, and gooey melted cheese transform simple chicken into comfort food that fits your healthy eating goals. It’s like having your favorite soup reimagined as a satisfying main course.</p></div><div class="article-block" id="per-serving-68"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="9-cheesy-french-onion-chicken-69"><ul><li>Calories: 534</li><li>Fats: 21g</li><li>Protein: 55g</li><li>Carbs: 30g</li><li>Fiber: 5.2g</li><li>Sugar: 11g</li></ul></div><div class="article-block" id="9-cheesy-french-onion-chicken-70"><h2 class="article-heading" data-level="2"><ol start="10">
 <li>Teriyaki Chicken Casserole</li>
-</ol></h2></div><div class="article-block" id="10-teriyaki-chicken-casserole-71"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-71.jpg" alt="teriyaki chicken casserole"><figcaption>teriyaki chicken casserole</figcaption></figure></div><div class="article-block" id="when-you-re-craving-teriyaki-chicken-this-is-the-casserole-to-make-first-of-all-it-s-easy-to-make-but-also-tastes-absolutely-delicious-72"><p class="article-paragraph">When you’re craving teriyaki chicken, this is the casserole to make. First of all, it’s easy to make but also tastes absolutely delicious.</p></div><div class="article-block" id="it-s-also-perfect-for-the-little-ones-that-tend-to-avoid-veggies-because-you-can-hide-them-right-in-carrots-broccoli-or-any-other-greens-you-want-73"><p class="article-paragraph">It’s also perfect for the little ones that tend to avoid veggies because you can hide them right in. Carrots, broccoli, or any other greens you want.</p></div><div class="article-block" id="per-serving-74"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="10-teriyaki-chicken-casserole-75"><ul><li>Calories: 428</li><li>Fats: 3.7g</li><li>Protein: 35g</li><li>Carbs: 64g</li><li>Fiber: 2.9g</li><li>Sugar: 20g</li></ul></div><div class="article-block" id="10-teriyaki-chicken-casserole-76"><h2 class="article-heading" data-level="2"><ol start="11">
+</ol></h2></div><div class="article-block" id="10-teriyaki-chicken-casserole-71"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-71.jpg" alt="teriyaki chicken casserole" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">teriyaki chicken casserole</figcaption></figure></div><div class="article-block" id="when-you-re-craving-teriyaki-chicken-this-is-the-casserole-to-make-first-of-all-it-s-easy-to-make-but-also-tastes-absolutely-delicious-72"><p class="article-paragraph">When you’re craving teriyaki chicken, this is the casserole to make. First of all, it’s easy to make but also tastes absolutely delicious.</p></div><div class="article-block" id="it-s-also-perfect-for-the-little-ones-that-tend-to-avoid-veggies-because-you-can-hide-them-right-in-carrots-broccoli-or-any-other-greens-you-want-73"><p class="article-paragraph">It’s also perfect for the little ones that tend to avoid veggies because you can hide them right in. Carrots, broccoli, or any other greens you want.</p></div><div class="article-block" id="per-serving-74"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="10-teriyaki-chicken-casserole-75"><ul><li>Calories: 428</li><li>Fats: 3.7g</li><li>Protein: 35g</li><li>Carbs: 64g</li><li>Fiber: 2.9g</li><li>Sugar: 20g</li></ul></div><div class="article-block" id="10-teriyaki-chicken-casserole-76"><h2 class="article-heading" data-level="2"><ol start="11">
 <li>Baked Caesar Chicken</li>
-</ol></h2></div><div class="article-block" id="11-baked-caesar-chicken-77"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-77.jpg" alt="Baked Caesar Chicken"><figcaption>Baked Caesar Chicken</figcaption></figure></div><div class="article-block" id="when-you-need-to-make-something-quickly-i-recommend-this-chicken-with-just-10-minutes-of-prepping-you-ll-have-it-ready-for-the-whole-family-78"><p class="article-paragraph">When you need to make something quickly, I recommend this chicken. With just 10 minutes of prepping, you’ll have it ready for the whole family.</p></div><div class="article-block" id="using-just-7-ingredients-i-ve-made-this-chicken-and-it-s-absolutely-packed-with-protein-on-the-days-when-i-m-noticing-i-m-craving-savory-snacks-like-chips-i-know-that-my-body-is-need-of-protein-79"><p class="article-paragraph">Using just 7 ingredients, I’ve made this chicken, and it’s absolutely packed with protein. On the days when I’m noticing I’m craving savory snacks like chips, I know that my body is need of protein.</p></div><div class="article-block" id="this-baked-meal-satisfies-those-needs-super-quickly-80"><p class="article-paragraph">This baked meal satisfies those needs super quickly.</p></div><div class="article-block" id="per-serving-81"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="11-baked-caesar-chicken-82"><ul><li>Calories: 471</li><li>Fats: 25g</li><li>Protein: 51g</li><li>Carbs: 6.6g</li><li>Fiber: 0.5g</li><li>Sugar: 1.1g</li></ul></div><div class="article-block" id="11-baked-caesar-chicken-83"><h2 class="article-heading" data-level="2"><ol start="12">
+</ol></h2></div><div class="article-block" id="11-baked-caesar-chicken-77"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-77.jpg" alt="Baked Caesar Chicken" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Baked Caesar Chicken</figcaption></figure></div><div class="article-block" id="when-you-need-to-make-something-quickly-i-recommend-this-chicken-with-just-10-minutes-of-prepping-you-ll-have-it-ready-for-the-whole-family-78"><p class="article-paragraph">When you need to make something quickly, I recommend this chicken. With just 10 minutes of prepping, you’ll have it ready for the whole family.</p></div><div class="article-block" id="using-just-7-ingredients-i-ve-made-this-chicken-and-it-s-absolutely-packed-with-protein-on-the-days-when-i-m-noticing-i-m-craving-savory-snacks-like-chips-i-know-that-my-body-is-need-of-protein-79"><p class="article-paragraph">Using just 7 ingredients, I’ve made this chicken, and it’s absolutely packed with protein. On the days when I’m noticing I’m craving savory snacks like chips, I know that my body is need of protein.</p></div><div class="article-block" id="this-baked-meal-satisfies-those-needs-super-quickly-80"><p class="article-paragraph">This baked meal satisfies those needs super quickly.</p></div><div class="article-block" id="per-serving-81"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="11-baked-caesar-chicken-82"><ul><li>Calories: 471</li><li>Fats: 25g</li><li>Protein: 51g</li><li>Carbs: 6.6g</li><li>Fiber: 0.5g</li><li>Sugar: 1.1g</li></ul></div><div class="article-block" id="11-baked-caesar-chicken-83"><h2 class="article-heading" data-level="2"><ol start="12">
 <li>Greek Chicken with Lemon Rice and Tomatoes</li>
-</ol></h2></div><div class="article-block" id="12-greek-chicken-with-lemon-rice-and-tomatoes-84"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-84.jpg" alt="Greek Chicken with Lemon Rice and Tomatoes"><figcaption>Greek Chicken with Lemon Rice and Tomatoes</figcaption></figure></div><div class="article-block" id="who-says-clean-eating-has-to-be-boring-the-mediterranean-cuisine-has-been-figuring-out-how-to-make-clean-meals-irresistible-for-centuries-now-and-we-can-benefit-from-all-that-hard-work-85"><p class="article-paragraph">Who says clean eating has to be boring? The Mediterranean cuisine has been figuring out how to make clean meals irresistible for centuries now, and we can benefit from all that hard work.</p></div><div class="article-block" id="case-in-point-this-greek-chicken-lemon-rice-bowl-is-zesty-full-of-flavor-filling-and-straight-up-delicious-86"><p class="article-paragraph">Case in point, this Greek chicken lemon rice bowl is zesty, full of flavor, filling and straight up delicious.</p></div><div class="article-block" id="enjoy-more-high-protein-lunch-recipes-here-87"><p class="article-paragraph">Enjoy more high protein lunch recipes here!</p></div><div class="article-block" id="per-serving-88"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="12-greek-chicken-with-lemon-rice-and-tomatoes-89"><ul><li>Calories: 660</li><li>Fats: 29g</li><li>Protein: 53g</li><li>Carbs: 48g</li><li>Fiber: 7.7g</li><li>Sugar: 3.8g</li></ul></div><div class="article-block" id="12-greek-chicken-with-lemon-rice-and-tomatoes-90"><h2 class="article-heading" data-level="2"><ol start="13">
+</ol></h2></div><div class="article-block" id="12-greek-chicken-with-lemon-rice-and-tomatoes-84"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-84.jpg" alt="Greek Chicken with Lemon Rice and Tomatoes" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Greek Chicken with Lemon Rice and Tomatoes</figcaption></figure></div><div class="article-block" id="who-says-clean-eating-has-to-be-boring-the-mediterranean-cuisine-has-been-figuring-out-how-to-make-clean-meals-irresistible-for-centuries-now-and-we-can-benefit-from-all-that-hard-work-85"><p class="article-paragraph">Who says clean eating has to be boring? The Mediterranean cuisine has been figuring out how to make clean meals irresistible for centuries now, and we can benefit from all that hard work.</p></div><div class="article-block" id="case-in-point-this-greek-chicken-lemon-rice-bowl-is-zesty-full-of-flavor-filling-and-straight-up-delicious-86"><p class="article-paragraph">Case in point, this Greek chicken lemon rice bowl is zesty, full of flavor, filling and straight up delicious.</p></div><div class="article-block" id="enjoy-more-high-protein-lunch-recipes-here-87"><p class="article-paragraph">Enjoy more high protein lunch recipes here!</p></div><div class="article-block" id="per-serving-88"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="12-greek-chicken-with-lemon-rice-and-tomatoes-89"><ul><li>Calories: 660</li><li>Fats: 29g</li><li>Protein: 53g</li><li>Carbs: 48g</li><li>Fiber: 7.7g</li><li>Sugar: 3.8g</li></ul></div><div class="article-block" id="12-greek-chicken-with-lemon-rice-and-tomatoes-90"><h2 class="article-heading" data-level="2"><ol start="13">
 <li>Chicken and Sweet Potato Meal Prep</li>
-</ol></h2></div><div class="article-block" id="13-chicken-and-sweet-potato-meal-prep-91"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-91.jpg" alt="Chicken and Sweet Potato Meal Prep"><figcaption>Chicken and Sweet Potato Meal Prep</figcaption></figure></div><div class="article-block" id="first-up-one-of-my-favorite-meal-prep-recipes-of-all-time-this-recipe-is-packed-with-protein-from-the-lean-chicken-to-the-high-protein-root-vegetables-92"><p class="article-paragraph">First up, one of my favorite meal prep recipes of all time! This recipe is packed with protein, from the lean chicken to the high-protein root vegetables.</p></div><div class="article-block" id="the-sweet-light-tomatoes-help-balance-the-richness-of-this-meal-and-create-some-much-needed-acidity-93"><p class="article-paragraph">The sweet, light tomatoes help balance the richness of this meal and create some much-needed acidity.</p></div><div class="article-block" id="per-serving-94"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="13-chicken-and-sweet-potato-meal-prep-95"><ul><li>Calories: 728</li><li>Fats: 37g</li><li>Protein: 56g</li><li>Carbs: 43g</li><li>Fiber: 8.6g</li><li>Sugar: 12g</li></ul></div><div class="article-block" id="13-chicken-and-sweet-potato-meal-prep-96"><h2 class="article-heading" data-level="2"><ol start="14">
+</ol></h2></div><div class="article-block" id="13-chicken-and-sweet-potato-meal-prep-91"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-91.jpg" alt="Chicken and Sweet Potato Meal Prep" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Chicken and Sweet Potato Meal Prep</figcaption></figure></div><div class="article-block" id="first-up-one-of-my-favorite-meal-prep-recipes-of-all-time-this-recipe-is-packed-with-protein-from-the-lean-chicken-to-the-high-protein-root-vegetables-92"><p class="article-paragraph">First up, one of my favorite meal prep recipes of all time! This recipe is packed with protein, from the lean chicken to the high-protein root vegetables.</p></div><div class="article-block" id="the-sweet-light-tomatoes-help-balance-the-richness-of-this-meal-and-create-some-much-needed-acidity-93"><p class="article-paragraph">The sweet, light tomatoes help balance the richness of this meal and create some much-needed acidity.</p></div><div class="article-block" id="per-serving-94"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="13-chicken-and-sweet-potato-meal-prep-95"><ul><li>Calories: 728</li><li>Fats: 37g</li><li>Protein: 56g</li><li>Carbs: 43g</li><li>Fiber: 8.6g</li><li>Sugar: 12g</li></ul></div><div class="article-block" id="13-chicken-and-sweet-potato-meal-prep-96"><h2 class="article-heading" data-level="2"><ol start="14">
 <li>Buffalo Chicken Cottage Cheese Bowl</li>
-</ol></h2></div><div class="article-block" id="14-buffalo-chicken-cottage-cheese-bowl-97"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-97.jpg" alt="Buffalo Chicken Cottage Cheese Bowl"><figcaption>Buffalo Chicken Cottage Cheese Bowl</figcaption></figure></div><div class="article-block" id="yes-you-can-make-delicious-and-healthy-meals-with-buffalo-sauce-and-this-chicken-bowl-is-a-proof-of-that-98"><p class="article-paragraph">Yes, you can make delicious and healthy meals with buffalo sauce and this chicken bowl is a proof of that.</p></div><div class="article-block" id="i-absolutely-love-the-creaminess-of-cottage-cheese-combined-with-buffalo-sauce-it-creates-a-unique-taste-that-s-like-nothing-else-99"><p class="article-paragraph">I absolutely love the creaminess of cottage cheese, combined with buffalo sauce. It creates a unique taste that’s like nothing else.</p></div><div class="article-block" id="i-recommend-this-for-a-high-protein-lunch-especially-if-you-re-working-out-later-in-the-day-100"><p class="article-paragraph">I recommend this for a high protein lunch, especially if you’re working out later in the day.</p></div><div class="article-block" id="per-serving-101"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="14-buffalo-chicken-cottage-cheese-bowl-102"><ul><li>Calories: 483</li><li>Fats: 23g</li><li>Protein: 56g</li><li>Carbs: 9.9g</li><li>Fiber: 1.4g</li><li>Sugar: 6.5g</li></ul></div><div class="article-block" id="14-buffalo-chicken-cottage-cheese-bowl-103"><h2 class="article-heading" data-level="2"><ol start="15">
+</ol></h2></div><div class="article-block" id="14-buffalo-chicken-cottage-cheese-bowl-97"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-97.jpg" alt="Buffalo Chicken Cottage Cheese Bowl" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Buffalo Chicken Cottage Cheese Bowl</figcaption></figure></div><div class="article-block" id="yes-you-can-make-delicious-and-healthy-meals-with-buffalo-sauce-and-this-chicken-bowl-is-a-proof-of-that-98"><p class="article-paragraph">Yes, you can make delicious and healthy meals with buffalo sauce and this chicken bowl is a proof of that.</p></div><div class="article-block" id="i-absolutely-love-the-creaminess-of-cottage-cheese-combined-with-buffalo-sauce-it-creates-a-unique-taste-that-s-like-nothing-else-99"><p class="article-paragraph">I absolutely love the creaminess of cottage cheese, combined with buffalo sauce. It creates a unique taste that’s like nothing else.</p></div><div class="article-block" id="i-recommend-this-for-a-high-protein-lunch-especially-if-you-re-working-out-later-in-the-day-100"><p class="article-paragraph">I recommend this for a high protein lunch, especially if you’re working out later in the day.</p></div><div class="article-block" id="per-serving-101"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="14-buffalo-chicken-cottage-cheese-bowl-102"><ul><li>Calories: 483</li><li>Fats: 23g</li><li>Protein: 56g</li><li>Carbs: 9.9g</li><li>Fiber: 1.4g</li><li>Sugar: 6.5g</li></ul></div><div class="article-block" id="14-buffalo-chicken-cottage-cheese-bowl-103"><h2 class="article-heading" data-level="2"><ol start="15">
 <li>Chicken Salad Meal Prep</li>
-</ol></h2></div><div class="article-block" id="15-chicken-salad-meal-prep-104"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-104.jpg" alt="Chicken Salad Meal Prep"><figcaption>Chicken Salad Meal Prep</figcaption></figure></div><div class="article-block" id="looking-for-a-quick-and-easy-lunch-to-tide-you-over-this-week-the-chicken-salad-meal-prep-is-classic-an-easy-go-to-with-an-addictively-tangy-dressing-105"><p class="article-paragraph">Looking for a quick and easy lunch to tide you over this week? The chicken salad meal prep is classic, an easy go-to with an addictively tangy dressing.</p></div><div class="article-block" id="if-you-need-some-extra-energy-add-some-whole-grains-like-quinoa-to-boost-the-calories-in-a-healthy-way-106"><p class="article-paragraph">If you need some extra energy, add some whole grains like quinoa to boost the calories in a healthy way.</p></div><div class="article-block" id="per-serving-107"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="15-chicken-salad-meal-prep-108"><ul><li>Calories: 597</li><li>Fats: 31g</li><li>Protein: 55g</li><li>Carbs: 26g</li><li>Fiber: 5.9g</li><li>Sugar: 17g</li></ul></div><div class="article-block" id="15-chicken-salad-meal-prep-109"><h2 class="article-heading" data-level="2"><ol start="16">
+</ol></h2></div><div class="article-block" id="15-chicken-salad-meal-prep-104"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-104.jpg" alt="Chicken Salad Meal Prep" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Chicken Salad Meal Prep</figcaption></figure></div><div class="article-block" id="looking-for-a-quick-and-easy-lunch-to-tide-you-over-this-week-the-chicken-salad-meal-prep-is-classic-an-easy-go-to-with-an-addictively-tangy-dressing-105"><p class="article-paragraph">Looking for a quick and easy lunch to tide you over this week? The chicken salad meal prep is classic, an easy go-to with an addictively tangy dressing.</p></div><div class="article-block" id="if-you-need-some-extra-energy-add-some-whole-grains-like-quinoa-to-boost-the-calories-in-a-healthy-way-106"><p class="article-paragraph">If you need some extra energy, add some whole grains like quinoa to boost the calories in a healthy way.</p></div><div class="article-block" id="per-serving-107"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="15-chicken-salad-meal-prep-108"><ul><li>Calories: 597</li><li>Fats: 31g</li><li>Protein: 55g</li><li>Carbs: 26g</li><li>Fiber: 5.9g</li><li>Sugar: 17g</li></ul></div><div class="article-block" id="15-chicken-salad-meal-prep-109"><h2 class="article-heading" data-level="2"><ol start="16">
 <li>Baked Tuscan Chicken</li>
-</ol></h2></div><div class="article-block" id="16-baked-tuscan-chicken-110"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-110.jpg" alt="baked tuscan chicken"><figcaption>baked tuscan chicken</figcaption></figure></div><div class="article-block" id="enjoy-all-the-flavors-of-tuscany-without-the-carbs-this-baked-tuscan-chicken-is-high-in-protein-and-super-easy-to-make-111"><p class="article-paragraph">Enjoy all the flavors of Tuscany without the carbs. This baked Tuscan chicken is high in protein and super easy to make.</p></div><div class="article-block" id="i-loved-making-this-dinner-112"><p class="article-paragraph">I loved making this dinner!</p></div><div class="article-block" id="per-serving-113"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="16-baked-tuscan-chicken-114"><ul><li>Calories: 471</li><li>Fats: 32g</li><li>Protein: 32g</li><li>Carbs: 17g</li><li>Fiber: 3.3g</li><li>Sugar: 1.8g</li></ul></div><div class="article-block" id="16-baked-tuscan-chicken-115"><h2 class="article-heading" data-level="2"><ol start="17">
+</ol></h2></div><div class="article-block" id="16-baked-tuscan-chicken-110"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-110.jpg" alt="baked tuscan chicken" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">baked tuscan chicken</figcaption></figure></div><div class="article-block" id="enjoy-all-the-flavors-of-tuscany-without-the-carbs-this-baked-tuscan-chicken-is-high-in-protein-and-super-easy-to-make-111"><p class="article-paragraph">Enjoy all the flavors of Tuscany without the carbs. This baked Tuscan chicken is high in protein and super easy to make.</p></div><div class="article-block" id="i-loved-making-this-dinner-112"><p class="article-paragraph">I loved making this dinner!</p></div><div class="article-block" id="per-serving-113"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="16-baked-tuscan-chicken-114"><ul><li>Calories: 471</li><li>Fats: 32g</li><li>Protein: 32g</li><li>Carbs: 17g</li><li>Fiber: 3.3g</li><li>Sugar: 1.8g</li></ul></div><div class="article-block" id="16-baked-tuscan-chicken-115"><h2 class="article-heading" data-level="2"><ol start="17">
 <li>Sesame Pork and Green Beans</li>
-</ol></h2></div><div class="article-block" id="17-sesame-pork-and-green-beans-116"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-116.jpg" alt="keto sesame pork with green beans"><figcaption>keto sesame pork with green beans</figcaption></figure></div><div class="article-block" id="sometimes-all-you-need-is-a-stir-fry-this-is-a-delicious-filling-recipe-that-s-full-of-delight-117"><p class="article-paragraph">Sometimes, all you need is a stir fry. This is a delicious, filling recipe that’s full of delight.</p></div><div class="article-block" id="what-i-love-about-this-stir-fry-is-that-you-can-add-just-whatever-vegetables-you-want-and-enjoy-the-meal-simple-delicious-and-full-of-nutrition-118"><p class="article-paragraph">What I love about this stir fry is that you can add just whatever vegetables you want and enjoy the meal. Simple, delicious and full of nutrition.</p></div><div class="article-block" id="per-serving-119"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="17-sesame-pork-and-green-beans-120"><ul><li>Calories: 432</li><li>Fats: 32g</li><li>Protein: 28g</li><li>Carbs: 10g</li><li>Fiber: 3.6g</li><li>Sugar: 3.2g</li></ul></div><div class="article-block" id="17-sesame-pork-and-green-beans-121"><h2 class="article-heading" data-level="2"><ol start="18">
+</ol></h2></div><div class="article-block" id="17-sesame-pork-and-green-beans-116"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-116.jpg" alt="keto sesame pork with green beans" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">keto sesame pork with green beans</figcaption></figure></div><div class="article-block" id="sometimes-all-you-need-is-a-stir-fry-this-is-a-delicious-filling-recipe-that-s-full-of-delight-117"><p class="article-paragraph">Sometimes, all you need is a stir fry. This is a delicious, filling recipe that’s full of delight.</p></div><div class="article-block" id="what-i-love-about-this-stir-fry-is-that-you-can-add-just-whatever-vegetables-you-want-and-enjoy-the-meal-simple-delicious-and-full-of-nutrition-118"><p class="article-paragraph">What I love about this stir fry is that you can add just whatever vegetables you want and enjoy the meal. Simple, delicious and full of nutrition.</p></div><div class="article-block" id="per-serving-119"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="17-sesame-pork-and-green-beans-120"><ul><li>Calories: 432</li><li>Fats: 32g</li><li>Protein: 28g</li><li>Carbs: 10g</li><li>Fiber: 3.6g</li><li>Sugar: 3.2g</li></ul></div><div class="article-block" id="17-sesame-pork-and-green-beans-121"><h2 class="article-heading" data-level="2"><ol start="18">
 <li>Herb Chicken Breasts with Couscous</li>
-</ol></h2></div><div class="article-block" id="18-herb-chicken-breasts-with-couscous-122"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-122.jpg" alt="Baked Herb Chicken Breasts with Couscous"><figcaption>Baked Herb Chicken Breasts with Couscous</figcaption></figure></div><div class="article-block" id="next-up-this-baked-herb-chicken-breast-recipe-ensures-you-can-prepare-a-whole-week-of-lunches-in-just-an-hour-123"><p class="article-paragraph">Next up, this baked herb chicken breast recipe ensures you can prepare a whole week of lunches in just an hour!</p></div><div class="article-block" id="the-couscous-and-roasted-peppers-underneath-are-sweet-rich-and-perfect-with-the-herbaceous-chicken-124"><p class="article-paragraph">The couscous and roasted peppers underneath are sweet, rich, and perfect with the herbaceous chicken.</p></div><div class="article-block" id="per-serving-125"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="18-herb-chicken-breasts-with-couscous-126"><ul><li>Calories: 633</li><li>Fats: 17g</li><li>Protein: 61g</li><li>Carbs: 56g</li><li>Fiber: 7.5g</li><li>Sugar: 9.7g</li></ul></div><div class="article-block" id="18-herb-chicken-breasts-with-couscous-127"><h2 class="article-heading" data-level="2"><ol start="19">
+</ol></h2></div><div class="article-block" id="18-herb-chicken-breasts-with-couscous-122"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-122.jpg" alt="Baked Herb Chicken Breasts with Couscous" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Baked Herb Chicken Breasts with Couscous</figcaption></figure></div><div class="article-block" id="next-up-this-baked-herb-chicken-breast-recipe-ensures-you-can-prepare-a-whole-week-of-lunches-in-just-an-hour-123"><p class="article-paragraph">Next up, this baked herb chicken breast recipe ensures you can prepare a whole week of lunches in just an hour!</p></div><div class="article-block" id="the-couscous-and-roasted-peppers-underneath-are-sweet-rich-and-perfect-with-the-herbaceous-chicken-124"><p class="article-paragraph">The couscous and roasted peppers underneath are sweet, rich, and perfect with the herbaceous chicken.</p></div><div class="article-block" id="per-serving-125"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="18-herb-chicken-breasts-with-couscous-126"><ul><li>Calories: 633</li><li>Fats: 17g</li><li>Protein: 61g</li><li>Carbs: 56g</li><li>Fiber: 7.5g</li><li>Sugar: 9.7g</li></ul></div><div class="article-block" id="18-herb-chicken-breasts-with-couscous-127"><h2 class="article-heading" data-level="2"><ol start="19">
 <li>3-Ingredient Honey Chicken Wings</li>
-</ol></h2></div><div class="article-block" id="19-3-ingredient-honey-chicken-wings-128"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-128.jpg" alt=""></figure></div><div class="article-block" id="the-simpler-a-dish-is-the-more-likely-we-actually-are-to-make-them-that-s-why-i-love-these-3-ingredient-honey-chicken-wings-129"><p class="article-paragraph">The simpler a dish is, the more likely we actually are to make them! That’s why I love these 3-ingredient honey chicken wings.</p></div><div class="article-block" id="honey-is-unique-because-it-actually-helps-tenderize-meat-while-it-marinades-and-it-caramelizes-on-the-bone-all-up-this-is-a-simple-tasty-dish-perfect-for-game-day-130"><p class="article-paragraph">Honey is unique because it actually helps tenderize meat while it marinades, and it caramelizes on the bone. All up, this is a simple, tasty dish perfect for game day.</p></div><div class="article-block" id="per-serving-131"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="19-3-ingredient-honey-chicken-wings-132"><ul><li>Calories: 527</li><li>Fats: 37g</li><li>Protein: 26g</li><li>Carbs: 23g</li><li>Fiber: 2g</li><li>Sugar: 6.2g</li></ul></div><div class="article-block" id="19-3-ingredient-honey-chicken-wings-133"><h2 class="article-heading" data-level="2"><ol start="20">
+</ol></h2></div><div class="article-block" id="19-3-ingredient-honey-chicken-wings-128"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-128.jpg" alt="" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div></figure></div><div class="article-block" id="the-simpler-a-dish-is-the-more-likely-we-actually-are-to-make-them-that-s-why-i-love-these-3-ingredient-honey-chicken-wings-129"><p class="article-paragraph">The simpler a dish is, the more likely we actually are to make them! That’s why I love these 3-ingredient honey chicken wings.</p></div><div class="article-block" id="honey-is-unique-because-it-actually-helps-tenderize-meat-while-it-marinades-and-it-caramelizes-on-the-bone-all-up-this-is-a-simple-tasty-dish-perfect-for-game-day-130"><p class="article-paragraph">Honey is unique because it actually helps tenderize meat while it marinades, and it caramelizes on the bone. All up, this is a simple, tasty dish perfect for game day.</p></div><div class="article-block" id="per-serving-131"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="19-3-ingredient-honey-chicken-wings-132"><ul><li>Calories: 527</li><li>Fats: 37g</li><li>Protein: 26g</li><li>Carbs: 23g</li><li>Fiber: 2g</li><li>Sugar: 6.2g</li></ul></div><div class="article-block" id="19-3-ingredient-honey-chicken-wings-133"><h2 class="article-heading" data-level="2"><ol start="20">
 <li>Sheet Pan Chicken with Sweet Potatoes</li>
-</ol></h2></div><div class="article-block" id="20-sheet-pan-chicken-with-sweet-potatoes-134"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-134.jpg" alt="Sheet Pan Chicken with Sweet Potatoes, Apples, and Brussels Sprouts"><figcaption>Sheet Pan Chicken with Sweet Potatoes, Apples, and Brussels Sprouts</figcaption></figure></div><div class="article-block" id="next-up-a-simple-sheet-pan-dish-that-won-t-leave-you-with-a-pile-of-dishes-or-a-heavy-feeling-in-your-gut-if-you-love-a-one-pot-wonder-then-this-is-the-meal-for-you-135"><p class="article-paragraph">Next up, a simple sheet pan dish that won’t leave you with a pile of dishes (or a heavy feeling in your gut). If you love a one-pot wonder, then this is the meal for you.</p></div><div class="article-block" id="this-is-a-fall-friendly-dish-rich-with-spices-and-humming-with-that-nuttiness-that-makes-all-fall-dishes-so-great-136"><p class="article-paragraph">This is a fall-friendly dish rich with spices and humming with that nuttiness that makes all fall dishes so great.</p></div><div class="article-block" id="per-serving-137"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="20-sheet-pan-chicken-with-sweet-potatoes-138"><ul><li>Calories: 471</li><li>Fats: 16g</li><li>Protein: 48g</li><li>Carbs: 37g</li><li>Fiber: 8.4g</li><li>Sugar: 16g</li></ul></div><div class="article-block" id="20-sheet-pan-chicken-with-sweet-potatoes-139"><h2 class="article-heading" data-level="2"><ol start="21">
+</ol></h2></div><div class="article-block" id="20-sheet-pan-chicken-with-sweet-potatoes-134"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-134.jpg" alt="Sheet Pan Chicken with Sweet Potatoes, Apples, and Brussels Sprouts" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Sheet Pan Chicken with Sweet Potatoes, Apples, and Brussels Sprouts</figcaption></figure></div><div class="article-block" id="next-up-a-simple-sheet-pan-dish-that-won-t-leave-you-with-a-pile-of-dishes-or-a-heavy-feeling-in-your-gut-if-you-love-a-one-pot-wonder-then-this-is-the-meal-for-you-135"><p class="article-paragraph">Next up, a simple sheet pan dish that won’t leave you with a pile of dishes (or a heavy feeling in your gut). If you love a one-pot wonder, then this is the meal for you.</p></div><div class="article-block" id="this-is-a-fall-friendly-dish-rich-with-spices-and-humming-with-that-nuttiness-that-makes-all-fall-dishes-so-great-136"><p class="article-paragraph">This is a fall-friendly dish rich with spices and humming with that nuttiness that makes all fall dishes so great.</p></div><div class="article-block" id="per-serving-137"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="20-sheet-pan-chicken-with-sweet-potatoes-138"><ul><li>Calories: 471</li><li>Fats: 16g</li><li>Protein: 48g</li><li>Carbs: 37g</li><li>Fiber: 8.4g</li><li>Sugar: 16g</li></ul></div><div class="article-block" id="20-sheet-pan-chicken-with-sweet-potatoes-139"><h2 class="article-heading" data-level="2"><ol start="21">
 <li>Savory Breakfast Bowl with Parmesan</li>
-</ol></h2></div><div class="article-block" id="21-savory-breakfast-bowl-with-parmesan-140"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-140.jpg" alt="Savory Breakfast Bowl with Parmesan"><figcaption>Savory Breakfast Bowl with Parmesan</figcaption></figure></div><div class="article-block" id="next-up-one-of-the-best-things-you-can-do-for-a-lifestyle-change-is-make-sure-you-start-your-day-with-a-good-breakfast-this-savory-breakfast-bowl-contains-a-healthy-dose-of-parmesan-141"><p class="article-paragraph">Next up, one of the best things you can do for a lifestyle change is make sure you start your day with a good breakfast. This savory breakfast bowl contains a healthy dose of parmesan.</p></div><div class="article-block" id="the-boiled-eggs-pack-on-the-protein-and-the-raw-vegetables-are-perfect-for-starting-things-on-a-fresh-note-check-out-these-other-clean-eating-brunch-recipes-142"><p class="article-paragraph">The boiled eggs pack on the protein, and the raw vegetables are perfect for starting things on a fresh note. Check out these other clean eating brunch recipes!</p></div><div class="article-block" id="per-serving-143"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="21-savory-breakfast-bowl-with-parmesan-144"><ul><li>Calories: 895</li><li>Fats: 66g</li><li>Protein: 26g</li><li>Carbs: 56g</li><li>Fiber: 16g</li><li>Sugar: 14g</li></ul></div><div class="article-block" id="21-savory-breakfast-bowl-with-parmesan-145"><h2 class="article-heading" data-level="2"><ol start="22">
+</ol></h2></div><div class="article-block" id="21-savory-breakfast-bowl-with-parmesan-140"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-140.jpg" alt="Savory Breakfast Bowl with Parmesan" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Savory Breakfast Bowl with Parmesan</figcaption></figure></div><div class="article-block" id="next-up-one-of-the-best-things-you-can-do-for-a-lifestyle-change-is-make-sure-you-start-your-day-with-a-good-breakfast-this-savory-breakfast-bowl-contains-a-healthy-dose-of-parmesan-141"><p class="article-paragraph">Next up, one of the best things you can do for a lifestyle change is make sure you start your day with a good breakfast. This savory breakfast bowl contains a healthy dose of parmesan.</p></div><div class="article-block" id="the-boiled-eggs-pack-on-the-protein-and-the-raw-vegetables-are-perfect-for-starting-things-on-a-fresh-note-check-out-these-other-clean-eating-brunch-recipes-142"><p class="article-paragraph">The boiled eggs pack on the protein, and the raw vegetables are perfect for starting things on a fresh note. Check out these other clean eating brunch recipes!</p></div><div class="article-block" id="per-serving-143"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="21-savory-breakfast-bowl-with-parmesan-144"><ul><li>Calories: 895</li><li>Fats: 66g</li><li>Protein: 26g</li><li>Carbs: 56g</li><li>Fiber: 16g</li><li>Sugar: 14g</li></ul></div><div class="article-block" id="21-savory-breakfast-bowl-with-parmesan-145"><h2 class="article-heading" data-level="2"><ol start="22">
 <li>Teriyaki Chicken Lettuce Wraps</li>
-</ol></h2></div><div class="article-block" id="22-teriyaki-chicken-lettuce-wraps-146"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-146.jpg" alt="Teriyaki Chicken Lettuce Wraps"><figcaption>Teriyaki Chicken Lettuce Wraps</figcaption></figure></div><div class="article-block" id="are-you-as-much-of-a-fan-of-teriyaki-as-i-am-then-you-ve-got-to-try-these-delicious-wraps-rich-light-and-sweet-all-at-the-same-time-this-is-a-next-level-dish-everyone-should-try-at-least-once-147"><p class="article-paragraph">Are you as much of a fan of teriyaki as I am? Then you’ve got to try these delicious wraps! Rich, light, and sweet all at the same time, this is a next-level dish everyone should try at least once.</p></div><div class="article-block" id="each-wrap-is-less-than-200-calories-so-it-s-the-perfect-dish-to-make-when-you-re-watching-your-intake-148"><p class="article-paragraph">Each wrap is less than 200 calories, so it’s the perfect dish to make when you’re watching your intake.</p></div><div class="article-block" id="per-serving-149"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="22-teriyaki-chicken-lettuce-wraps-150"><ul><li>Calories: 161</li><li>Fats: 4.5g</li><li>Protein: 22g</li><li>Carbs: 7.1g</li><li>Fiber: 0.7g</li><li>Sugar: 3.8g</li></ul></div><div class="article-block" id="22-teriyaki-chicken-lettuce-wraps-151"><h2 class="article-heading" data-level="2"><ol start="23">
+</ol></h2></div><div class="article-block" id="22-teriyaki-chicken-lettuce-wraps-146"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-146.jpg" alt="Teriyaki Chicken Lettuce Wraps" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Teriyaki Chicken Lettuce Wraps</figcaption></figure></div><div class="article-block" id="are-you-as-much-of-a-fan-of-teriyaki-as-i-am-then-you-ve-got-to-try-these-delicious-wraps-rich-light-and-sweet-all-at-the-same-time-this-is-a-next-level-dish-everyone-should-try-at-least-once-147"><p class="article-paragraph">Are you as much of a fan of teriyaki as I am? Then you’ve got to try these delicious wraps! Rich, light, and sweet all at the same time, this is a next-level dish everyone should try at least once.</p></div><div class="article-block" id="each-wrap-is-less-than-200-calories-so-it-s-the-perfect-dish-to-make-when-you-re-watching-your-intake-148"><p class="article-paragraph">Each wrap is less than 200 calories, so it’s the perfect dish to make when you’re watching your intake.</p></div><div class="article-block" id="per-serving-149"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="22-teriyaki-chicken-lettuce-wraps-150"><ul><li>Calories: 161</li><li>Fats: 4.5g</li><li>Protein: 22g</li><li>Carbs: 7.1g</li><li>Fiber: 0.7g</li><li>Sugar: 3.8g</li></ul></div><div class="article-block" id="22-teriyaki-chicken-lettuce-wraps-151"><h2 class="article-heading" data-level="2"><ol start="23">
 <li>Air Fryer Salmon</li>
-</ol></h2></div><div class="article-block" id="23-air-fryer-salmon-152"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-152.jpg" alt="Air Fryer Salmon"><figcaption>Air Fryer Salmon</figcaption></figure></div><div class="article-block" id="next-up-one-of-my-favorite-ways-to-use-my-air-fryer-this-honey-soy-glazed-salmon-is-unbeatable-especially-with-a-side-of-flash-fried-garlic-greens-153"><p class="article-paragraph">Next up, one of my favorite ways to use my air fryer! This honey soy glazed salmon is unbeatable, especially with a side of flash-fried garlic greens.</p></div><div class="article-block" id="the-crispy-skin-makes-this-dish-feel-super-indulgent-but-it-s-actually-a-clean-high-protein-meal-you-can-feel-proud-of-154"><p class="article-paragraph">The crispy skin makes this dish feel super indulgent, but it’s actually a clean, high protein meal you can feel proud of.</p></div><div class="article-block" id="per-serving-155"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="23-air-fryer-salmon-156"><ul><li>Calories: 287</li><li>Fats: 17g</li><li>Protein: 26g</li><li>Carbs: 7.2g</li><li>Fiber: 0.6g</li><li>Sugar: 4.5g</li></ul></div><div class="article-block" id="23-air-fryer-salmon-157"><h2 class="article-heading" data-level="2"><ol start="24">
+</ol></h2></div><div class="article-block" id="23-air-fryer-salmon-152"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-152.jpg" alt="Air Fryer Salmon" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Air Fryer Salmon</figcaption></figure></div><div class="article-block" id="next-up-one-of-my-favorite-ways-to-use-my-air-fryer-this-honey-soy-glazed-salmon-is-unbeatable-especially-with-a-side-of-flash-fried-garlic-greens-153"><p class="article-paragraph">Next up, one of my favorite ways to use my air fryer! This honey soy glazed salmon is unbeatable, especially with a side of flash-fried garlic greens.</p></div><div class="article-block" id="the-crispy-skin-makes-this-dish-feel-super-indulgent-but-it-s-actually-a-clean-high-protein-meal-you-can-feel-proud-of-154"><p class="article-paragraph">The crispy skin makes this dish feel super indulgent, but it’s actually a clean, high protein meal you can feel proud of.</p></div><div class="article-block" id="per-serving-155"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="23-air-fryer-salmon-156"><ul><li>Calories: 287</li><li>Fats: 17g</li><li>Protein: 26g</li><li>Carbs: 7.2g</li><li>Fiber: 0.6g</li><li>Sugar: 4.5g</li></ul></div><div class="article-block" id="23-air-fryer-salmon-157"><h2 class="article-heading" data-level="2"><ol start="24">
 <li>Sheet Pan Chicken Fajitas</li>
-</ol></h2></div><div class="article-block" id="24-sheet-pan-chicken-fajitas-158"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-158.jpg" alt="sheet pan chicken fajitas"><figcaption>sheet pan chicken fajitas</figcaption></figure></div><div class="article-block" id="take-taco-tuesday-up-a-notch-with-these-super-simple-chicken-fajitas-rich-with-spice-and-twice-as-juicy-this-recipe-lets-you-enjoy-an-iconic-mexican-dish-without-clearing-up-any-dishes-159"><p class="article-paragraph">Take Taco Tuesday up a notch with these super simple chicken fajitas. Rich with spice and twice as juicy, this recipe lets you enjoy an iconic Mexican dish without clearing up any dishes.</p></div><div class="article-block" id="i-really-recommend-enjoying-this-on-rice-on-tortillas-or-just-on-its-own-160"><p class="article-paragraph">I really recommend enjoying this on rice, on tortillas, or just on its own!</p></div><div class="article-block" id="per-serving-161"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="24-sheet-pan-chicken-fajitas-162"><ul><li>Calories: 473</li><li>Fats: 14g</li><li>Protein: 44g</li><li>Carbs: 44g</li><li>Fiber: 7.1g</li><li>Sugar: 4.7g</li></ul></div><div class="article-block" id="24-sheet-pan-chicken-fajitas-163"><h2 class="article-heading" data-level="2"><ol start="25">
+</ol></h2></div><div class="article-block" id="24-sheet-pan-chicken-fajitas-158"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-158.jpg" alt="sheet pan chicken fajitas" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">sheet pan chicken fajitas</figcaption></figure></div><div class="article-block" id="take-taco-tuesday-up-a-notch-with-these-super-simple-chicken-fajitas-rich-with-spice-and-twice-as-juicy-this-recipe-lets-you-enjoy-an-iconic-mexican-dish-without-clearing-up-any-dishes-159"><p class="article-paragraph">Take Taco Tuesday up a notch with these super simple chicken fajitas. Rich with spice and twice as juicy, this recipe lets you enjoy an iconic Mexican dish without clearing up any dishes.</p></div><div class="article-block" id="i-really-recommend-enjoying-this-on-rice-on-tortillas-or-just-on-its-own-160"><p class="article-paragraph">I really recommend enjoying this on rice, on tortillas, or just on its own!</p></div><div class="article-block" id="per-serving-161"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="24-sheet-pan-chicken-fajitas-162"><ul><li>Calories: 473</li><li>Fats: 14g</li><li>Protein: 44g</li><li>Carbs: 44g</li><li>Fiber: 7.1g</li><li>Sugar: 4.7g</li></ul></div><div class="article-block" id="24-sheet-pan-chicken-fajitas-163"><h2 class="article-heading" data-level="2"><ol start="25">
 <li>Lemon Chicken with Veggies Meal Prep</li>
-</ol></h2></div><div class="article-block" id="25-lemon-chicken-with-veggies-meal-prep-164"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-164.jpg" alt="Lemon Chicken with Veggies Meal Prep"><figcaption>Lemon Chicken with Veggies Meal Prep</figcaption></figure></div><div class="article-block" id="lemon-is-one-of-the-best-seasoning-agents-you-can-use-when-you-re-eating-clean-it-s-fresh-aromatic-and-adds-virtually-no-calories-to-the-meal-165"><p class="article-paragraph">Lemon is one of the best seasoning agents you can use when you’re eating clean. It’s fresh, aromatic, and adds virtually no calories to the meal.</p></div><div class="article-block" id="with-that-in-mind-you-can-season-the-dish-to-your-heart-s-content-and-keep-an-easier-eye-on-what-you-re-deciding-to-put-in-your-body-plus-it-tastes-amazing-win-win-166"><p class="article-paragraph">With that in mind, you can season the dish to your heart’s content and keep an easier eye on what you’re deciding to put in your body. Plus, it tastes amazing. Win-win!</p></div><div class="article-block" id="per-serving-167"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="25-lemon-chicken-with-veggies-meal-prep-168"><ul><li>Calories: 500</li><li>Fats: 23g</li><li>Protein: 40g</li><li>Carbs: 35g</li><li>Fiber: 7.3g</li><li>Sugar: 11g</li></ul></div><div class="article-block" id="25-lemon-chicken-with-veggies-meal-prep-169"><h2 class="article-heading" data-level="2"><ol start="26">
+</ol></h2></div><div class="article-block" id="25-lemon-chicken-with-veggies-meal-prep-164"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-164.jpg" alt="Lemon Chicken with Veggies Meal Prep" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Lemon Chicken with Veggies Meal Prep</figcaption></figure></div><div class="article-block" id="lemon-is-one-of-the-best-seasoning-agents-you-can-use-when-you-re-eating-clean-it-s-fresh-aromatic-and-adds-virtually-no-calories-to-the-meal-165"><p class="article-paragraph">Lemon is one of the best seasoning agents you can use when you’re eating clean. It’s fresh, aromatic, and adds virtually no calories to the meal.</p></div><div class="article-block" id="with-that-in-mind-you-can-season-the-dish-to-your-heart-s-content-and-keep-an-easier-eye-on-what-you-re-deciding-to-put-in-your-body-plus-it-tastes-amazing-win-win-166"><p class="article-paragraph">With that in mind, you can season the dish to your heart’s content and keep an easier eye on what you’re deciding to put in your body. Plus, it tastes amazing. Win-win!</p></div><div class="article-block" id="per-serving-167"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="25-lemon-chicken-with-veggies-meal-prep-168"><ul><li>Calories: 500</li><li>Fats: 23g</li><li>Protein: 40g</li><li>Carbs: 35g</li><li>Fiber: 7.3g</li><li>Sugar: 11g</li></ul></div><div class="article-block" id="25-lemon-chicken-with-veggies-meal-prep-169"><h2 class="article-heading" data-level="2"><ol start="26">
 <li>Berry Protein Overnight Oats</li>
-</ol></h2></div><div class="article-block" id="26-berry-protein-overnight-oats-170"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-170.jpg" alt="Berry Protein Overnight Oats"><figcaption>Berry Protein Overnight Oats</figcaption></figure></div><div class="article-block" id="berries-protein-and-a-side-of-tasty-chia-seeds-these-overnight-oats-are-more-like-a-pudding-you-can-enjoy-at-breakfast-171"><p class="article-paragraph">Berries, protein, and a side of tasty chia seeds, these overnight oats are more like a pudding you can enjoy at breakfast.</p></div><div class="article-block" id="while-these-oats-are-great-for-breakfast-you-can-enjoy-them-any-time-of-the-day-172"><p class="article-paragraph">While these oats are great for breakfast, you can enjoy them any time of the day.</p></div><div class="article-block" id="per-serving-173"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="26-berry-protein-overnight-oats-174"><ul><li>Calories: 430</li><li>Fats: 8.5g</li><li>Protein: 29g</li><li>Carbs: 63g</li><li>Fiber: 12g</li><li>Sugar: 24g</li></ul></div><div class="article-block" id="26-berry-protein-overnight-oats-175"><h2 class="article-heading" data-level="2"><ol start="27">
+</ol></h2></div><div class="article-block" id="26-berry-protein-overnight-oats-170"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-170.jpg" alt="Berry Protein Overnight Oats" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Berry Protein Overnight Oats</figcaption></figure></div><div class="article-block" id="berries-protein-and-a-side-of-tasty-chia-seeds-these-overnight-oats-are-more-like-a-pudding-you-can-enjoy-at-breakfast-171"><p class="article-paragraph">Berries, protein, and a side of tasty chia seeds, these overnight oats are more like a pudding you can enjoy at breakfast.</p></div><div class="article-block" id="while-these-oats-are-great-for-breakfast-you-can-enjoy-them-any-time-of-the-day-172"><p class="article-paragraph">While these oats are great for breakfast, you can enjoy them any time of the day.</p></div><div class="article-block" id="per-serving-173"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="26-berry-protein-overnight-oats-174"><ul><li>Calories: 430</li><li>Fats: 8.5g</li><li>Protein: 29g</li><li>Carbs: 63g</li><li>Fiber: 12g</li><li>Sugar: 24g</li></ul></div><div class="article-block" id="26-berry-protein-overnight-oats-175"><h2 class="article-heading" data-level="2"><ol start="27">
 <li>Egg Muffin Cups with Veggies</li>
-</ol></h2></div><div class="article-block" id="27-egg-muffin-cups-with-veggies-176"><figure class="article-image"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-176.jpg" alt="Egg Muffin Cups with Veggies"><figcaption>Egg Muffin Cups with Veggies</figcaption></figure></div><div class="article-block" id="i-really-love-egg-muffin-cups-because-they-re-the-ultimate-versatile-protein-snack-177"><p class="article-paragraph">I really love egg muffin cups because they’re the ultimate versatile protein snack.</p></div><div class="article-block" id="enjoy-a-few-for-breakfast-keep-a-few-in-your-fridge-for-a-pre-lunch-snack-or-have-a-couple-on-the-side-for-dinner-178"><p class="article-paragraph">Enjoy a few for breakfast, keep a few in your fridge for a pre-lunch snack, or have a couple on the side for dinner.</p></div><div class="article-block" id="go-wild-with-any-vegetables-you-like-for-this-recipe-this-is-a-great-way-to-clean-out-the-vegetable-drawer-before-your-next-grocery-trip-179"><p class="article-paragraph">Go wild with any vegetables you like for this recipe! This is a great way to clean out the vegetable drawer before your next grocery trip.</p></div><div class="article-block" id="per-serving-180"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="27-egg-muffin-cups-with-veggies-181"><ul><li>Calories: 81</li><li>Fats: 3.7g</li><li>Protein: 6g</li><li>Carbs: 6.1g</li><li>Fiber: 1.6g</li><li>Sugar: 2.9g</li></ul></div>
-        </div>
+</ol></h2></div><div class="article-block" id="27-egg-muffin-cups-with-veggies-176"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/27-fall-high-protein-clean-eating-recipes/block-image-176.jpg" alt="Egg Muffin Cups with Veggies" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Egg Muffin Cups with Veggies</figcaption></figure></div><div class="article-block" id="i-really-love-egg-muffin-cups-because-they-re-the-ultimate-versatile-protein-snack-177"><p class="article-paragraph">I really love egg muffin cups because they’re the ultimate versatile protein snack.</p></div><div class="article-block" id="enjoy-a-few-for-breakfast-keep-a-few-in-your-fridge-for-a-pre-lunch-snack-or-have-a-couple-on-the-side-for-dinner-178"><p class="article-paragraph">Enjoy a few for breakfast, keep a few in your fridge for a pre-lunch snack, or have a couple on the side for dinner.</p></div><div class="article-block" id="go-wild-with-any-vegetables-you-like-for-this-recipe-this-is-a-great-way-to-clean-out-the-vegetable-drawer-before-your-next-grocery-trip-179"><p class="article-paragraph">Go wild with any vegetables you like for this recipe! This is a great way to clean out the vegetable drawer before your next grocery trip.</p></div><div class="article-block" id="per-serving-180"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="27-egg-muffin-cups-with-veggies-181"><ul><li>Calories: 81</li><li>Fats: 3.7g</li><li>Protein: 6g</li><li>Carbs: 6.1g</li><li>Fiber: 1.6g</li><li>Sugar: 2.9g</li></ul></div>
+                </div>
 
-        <div class="cta-box">
-            <h3>Ready for more?</h3>
-            <p>Keep exploring the blog for more wellness and healthy eating ideas.</p>
-            <a class="cta-link" href="/blog/">Browse more posts</a>
+                <div class="cta-box">
+                    <h3>Ready for more?</h3>
+                    <p>Keep exploring the blog for more wellness and healthy eating ideas.</p>
+                    <a class="cta-link" href="/blog/">Browse more posts</a>
+                </div>
+            </div>
+
+            <aside class="post-sidebar">
+                
+        <div class="author-box">
+            <div class="author-avatar author-avatar-fallback">M</div>
+            <h3 class="author-greeting">Hi, I'm Maya</h3>
+            <p class="author-bio">A certified nutritionist and recipe developer behind Glow From Inside, turning classic recipes into healthier versions.</p>
+            <div class="author-socials">
+                <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+            </div>
+        </div>
+        
+            </aside>
         </div>
     </section>
 </main>
@@ -400,5 +763,29 @@
         <p>&copy; 2026 Glow From Inside. All rights reserved.</p>
     </div>
 </footer>
+<script>
+        (function () {
+            var buttons = document.querySelectorAll('[data-pin-btn]');
+            var origin = window.location.origin;
+            var pageUrl = window.location.href;
+            var pageTitle = document.title;
+            Array.prototype.forEach.call(buttons, function (btn) {
+                var wrap = btn.closest('.img-wrap');
+                var img = wrap ? wrap.querySelector('img') : null;
+                if (!img) return;
+                var media = origin + img.getAttribute('src');
+                var url = 'https://www.pinterest.com/pin/create/button/?url=' +
+                    encodeURIComponent(pageUrl) + '&media=' + encodeURIComponent(media) +
+                    '&description=' + encodeURIComponent(pageTitle);
+                var link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
+                link.rel = 'noopener';
+                link.className = 'pin-it-btn';
+                link.textContent = 'Pin it';
+                btn.parentNode.replaceChild(link, btn);
+            });
+        })();
+        </script>
 </body>
 </html>

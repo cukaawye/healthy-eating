@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>21 Lazy High Protein Clean Eating Meals With 30G+ Protein | Glow From Inside</title>
     <meta name="description" content="This post may contain affiliate links. Please read our disclosure policy.">
+    <link rel="icon" type="image/png" href="/assets/images/blog/favicon.png"><link rel="apple-touch-icon" href="/assets/images/blog/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,6 +26,18 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: radial-gradient(circle at top, rgba(212, 163, 115, 0.08), transparent 28%), var(--bg);
@@ -35,7 +48,7 @@
         a { color: inherit; }
 
         .container {
-            max-width: 980px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -124,6 +137,33 @@
             margin-bottom: 16px;
         }
 
+        .jump-recipe {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px 0 6px;
+            padding: 10px 18px;
+            background: var(--white);
+            color: #212121;
+            border: 1px solid #212121;
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .jump-recipe:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        html { scroll-behavior: smooth; }
+
         .excerpt {
             max-width: 64ch;
             font-size: 1.08rem;
@@ -172,6 +212,87 @@
             padding: 8px 0 60px;
         }
 
+        .post-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 336px;
+            gap: 40px;
+            align-items: start;
+            margin-top: 26px;
+        }
+
+        .post-sidebar {
+            position: sticky;
+            top: 96px;
+        }
+
+        .author-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            padding: 26px 22px;
+            background: #fdfbf2;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .author-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            background: var(--bg-alt);
+            box-shadow: 0 8px 24px rgba(45, 74, 34, 0.12);
+        }
+
+        .author-avatar-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary);
+            background: var(--cream);
+        }
+
+        .author-box .author-greeting {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+        }
+
+        .author-box .author-bio {
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        .author-socials {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .author-socials a {
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 5px 14px;
+            background: #fff;
+        }
+
+        .author-socials a:hover {
+            color: var(--white);
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
         .article-content {
             margin-top: 18px;
             display: grid;
@@ -188,6 +309,7 @@
             color: var(--primary);
             line-height: 1.15;
             margin: 0 0 12px;
+            scroll-margin-top: 100px;
         }
 
         .article-heading[data-level="2"] { font-size: 1.9rem; }
@@ -233,11 +355,223 @@
             color: var(--text-light);
         }
 
+        .img-wrap {
+            position: relative;
+            display: block;
+        }
+
+        .pin-it-btn {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 5;
+            display: none;
+            align-items: center;
+            gap: 6px;
+            background: #e60023;
+            color: #fff;
+            border: 0;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-family: inherit;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            text-decoration: none;
+        }
+
+        .pin-it-btn::before {
+            content: "📌";
+            font-size: 0.9rem;
+        }
+
+        .img-wrap:hover .pin-it-btn,
+        .pin-it-btn:focus {
+            display: inline-flex;
+        }
+
         .article-cta {
             padding: 20px 22px;
             border-radius: 20px;
             background: rgba(45, 74, 34, 0.06);
             border: 1px solid var(--border);
+        }
+
+        .recipe-card {
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(45, 74, 34, 0.06);
+            scroll-margin-top: 100px;
+        }
+
+        .recipe-card .recipe-img-wrap {
+            margin: 0;
+            position: relative;
+            text-align: center;
+            padding: 28px 28px 0;
+        }
+
+        .recipe-card .recipe-img {
+            width: 320px;
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: inline-block;
+            border-radius: 48px;
+            border: 1px solid var(--border);
+            background: var(--bg-alt);
+            box-shadow: 0 16px 40px rgba(45, 74, 34, 0.12);
+        }
+
+        .recipe-card .recipe-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 2rem;
+            text-align: center;
+            margin: 22px 24px 8px;
+        }
+
+        .recipe-card .recipe-summary {
+            margin: 0 24px 14px;
+            color: var(--text-light);
+            font-size: 1.02rem;
+            text-align: center;
+        }
+
+        .recipe-macros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+            gap: 10px;
+            margin: 0 24px 18px;
+        }
+
+        .recipe-macro {
+            text-align: center;
+            background: var(--bg-alt);
+            border-radius: 14px;
+            padding: 10px 6px;
+            border: 1px solid var(--border);
+        }
+
+        .recipe-macro-value {
+            display: block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .recipe-macro-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        .recipe-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 10px;
+            margin: 0 24px 20px;
+        }
+
+        .recipe-time {
+            text-align: center;
+            background: var(--cream);
+            border-radius: 14px;
+            padding: 10px 8px;
+        }
+
+        .recipe-time-label {
+            display: block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-light);
+        }
+
+        .recipe-time-value {
+            display: block;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        .recipe-section {
+            padding: 0 24px 22px;
+        }
+
+        .recipe-section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .recipe-ing-group {
+            color: var(--primary-light);
+            font-size: 1rem;
+            margin: 12px 0 6px;
+        }
+
+        .recipe-ing-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .recipe-ing-item {
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            padding: 6px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .recipe-ing-check {
+            color: var(--accent);
+            min-width: 14px;
+        }
+
+        .recipe-ing-text {
+            color: var(--text);
+        }
+
+        .recipe-steps {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .recipe-step {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .recipe-nutrition {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 8px 18px;
+        }
+
+        .recipe-nutrition-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            border-bottom: 1px dashed var(--border);
+            padding: 4px 0;
+            font-size: 0.95rem;
+        }
+
+        .recipe-nutrition-value {
+            font-weight: 600;
+            color: var(--primary);
         }
 
         .article-divider {
@@ -277,7 +611,7 @@
         .cta-link {
             display: inline-block;
             text-decoration: none;
-            background: var(--accent);
+            background: var(--primary);
             color: var(--white);
             padding: 12px 22px;
             border-radius: 999px;
@@ -296,11 +630,22 @@
             font-size: 0.9rem;
         }
 
+        @media (max-width: 900px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .post-sidebar {
+                position: static;
+            }
+        }
+
         @media (max-width: 700px) {
             .hero { padding-top: 28px; }
             .hero-card, .toc, .cta-box { padding: 20px; }
             .nav-inner { min-height: 68px; }
             .hero h1 { max-width: none; }
+            .recipe-card .recipe-img { width: 260px; }
         }
         </style>
 </head>
@@ -324,61 +669,79 @@
                 <span>by Glow From Inside</span>
             </div>
             <h1>21 Lazy High Protein Clean Eating Meals With 30G+ Protein</h1>
+            
             <div class="hero-media"><div class="placeholder">Featured image will appear here</div></div>
         </div>
     </section>
 
     <section class="content-wrap">
-        <div class="article-content">
-            <div class="article-block" id="this-post-may-contain-affiliate-links-please-read-our-disclosure-policy-1"><p class="article-paragraph">This post may contain affiliate links. Please read our disclosure policy.</p></div><div class="article-block" id="if-you-re-trying-to-eat-a-clean-diet-that-s-also-high-protein-i-ve-got-you-with-these-high-protein-clean-eating-recipes-with-30g-protein-and-more-2"><p class="article-paragraph">If you’re trying to eat a clean diet that’s also high protein. I’ve got you with these high protein clean eating recipes with 30G+ protein and more.</p></div><div class="article-block" id="they-are-easy-to-make-delicious-and-full-of-protein-and-most-importantly-have-all-the-clean-nutirtious-filling-ingredients-that-will-feel-good-on-your-gut-3"><p class="article-paragraph">They are easy to make, delicious, and full of protein. And most importantly, have all the clean, nutirtious, filling ingredients that will feel good on your gut.</p></div><div class="article-block" id="introduction-4"><h2 class="article-heading" data-level="2">Never Wonder What to Cook Again</h2></div><div class="article-block" id="get-printable-meal-plans-grocery-lists-ad-free-access-to-500-recipes-5"><p class="article-paragraph">Get printable meal plans, grocery lists, ad free access to 500+ recipes.</p></div><div class="article-block" id="i-especially-love-salsa-fresca-chicken-at-9-it-received-a-lot-of-awesome-comments-on-facebook-and-has-gone-viral-many-times-on-pinterest-enjoy-6"><p class="article-paragraph">I especially love salsa fresca chicken at #9. It received a lot of awesome comments on Facebook and has gone viral many times on Pinterest. Enjoy!</p></div><div class="article-block" id="my-latest-videos-7"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-07.jpg" alt="21 Lazy High Protein Clean Eating Meals With 30G+ Protein"><figcaption>21 Lazy High Protein Clean Eating Meals With 30G+ Protein</figcaption></figure></div><div class="article-block" id="my-latest-videos-8"><h2 class="article-heading" data-level="2"><ol>
+        <div class="post-layout">
+            <div class="post-main">
+                <div class="article-content">
+                    <div class="article-block" id="this-post-may-contain-affiliate-links-please-read-our-disclosure-policy-1"><p class="article-paragraph">This post may contain affiliate links. Please read our disclosure policy.</p></div><div class="article-block" id="if-you-re-trying-to-eat-a-clean-diet-that-s-also-high-protein-i-ve-got-you-with-these-high-protein-clean-eating-recipes-with-30g-protein-and-more-2"><p class="article-paragraph">If you’re trying to eat a clean diet that’s also high protein. I’ve got you with these high protein clean eating recipes with 30G+ protein and more.</p></div><div class="article-block" id="they-are-easy-to-make-delicious-and-full-of-protein-and-most-importantly-have-all-the-clean-nutirtious-filling-ingredients-that-will-feel-good-on-your-gut-3"><p class="article-paragraph">They are easy to make, delicious, and full of protein. And most importantly, have all the clean, nutirtious, filling ingredients that will feel good on your gut.</p></div><div class="article-block" id="introduction-4"><h2 class="article-heading" data-level="2">Never Wonder What to Cook Again</h2></div><div class="article-block" id="get-printable-meal-plans-grocery-lists-ad-free-access-to-500-recipes-5"><p class="article-paragraph">Get printable meal plans, grocery lists, ad free access to 500+ recipes.</p></div><div class="article-block" id="i-especially-love-salsa-fresca-chicken-at-9-it-received-a-lot-of-awesome-comments-on-facebook-and-has-gone-viral-many-times-on-pinterest-enjoy-6"><p class="article-paragraph">I especially love salsa fresca chicken at #9. It received a lot of awesome comments on Facebook and has gone viral many times on Pinterest. Enjoy!</p></div><div class="article-block" id="my-latest-videos-7"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-07.jpg" alt="21 Lazy High Protein Clean Eating Meals With 30G+ Protein" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">21 Lazy High Protein Clean Eating Meals With 30G+ Protein</figcaption></figure></div><div class="article-block" id="my-latest-videos-8"><h2 class="article-heading" data-level="2"><ol>
 <li>Sweet Potato Taco Bowls</li>
-</ol></h2></div><div class="article-block" id="1-sweet-potato-taco-bowls-9"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-09.jpg" alt="Sweet Potato Taco Bowls"><figcaption>Sweet Potato Taco Bowls</figcaption></figure></div><div class="article-block" id="these-taco-bowls-are-made-out-of-all-the-most-nutritious-ingredients-in-tacos-so-it-packs-protein-and-fiber-10"><p class="article-paragraph">These taco bowls are made out of all the most nutritious ingredients in tacos, so it packs protein and fiber.</p></div><div class="article-block" id="and-it-s-just-worth-495-calories-now-that-s-the-kind-of-lunch-that-will-actually-keep-you-full-for-a-little-bit-so-that-you-re-fueled-for-workout-after-work-11"><p class="article-paragraph">And it’s just worth 495 calories. Now that’s the kind of lunch that will actually keep you full for a little bit, so that you’re fueled for workout after work.</p></div><div class="article-block" id="needless-to-say-your-gut-will-love-it-too-the-only-problem-12"><p class="article-paragraph">Needless to say, your gut will love it too. The only problem</p></div><div class="article-block" id="per-serving-13"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="1-sweet-potato-taco-bowls-14"><ul><li>Calories: 495</li><li>Fats: 18g</li><li>Protein: 34g</li><li>Carbs: 52g</li><li>Fiber: 13g</li><li>Sugar: 9g</li></ul></div><div class="article-block" id="1-sweet-potato-taco-bowls-15"><h2 class="article-heading" data-level="2"><ol start="2">
+</ol></h2></div><div class="article-block" id="1-sweet-potato-taco-bowls-9"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-09.jpg" alt="Sweet Potato Taco Bowls" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Sweet Potato Taco Bowls</figcaption></figure></div><div class="article-block" id="these-taco-bowls-are-made-out-of-all-the-most-nutritious-ingredients-in-tacos-so-it-packs-protein-and-fiber-10"><p class="article-paragraph">These taco bowls are made out of all the most nutritious ingredients in tacos, so it packs protein and fiber.</p></div><div class="article-block" id="and-it-s-just-worth-495-calories-now-that-s-the-kind-of-lunch-that-will-actually-keep-you-full-for-a-little-bit-so-that-you-re-fueled-for-workout-after-work-11"><p class="article-paragraph">And it’s just worth 495 calories. Now that’s the kind of lunch that will actually keep you full for a little bit, so that you’re fueled for workout after work.</p></div><div class="article-block" id="needless-to-say-your-gut-will-love-it-too-the-only-problem-12"><p class="article-paragraph">Needless to say, your gut will love it too. The only problem</p></div><div class="article-block" id="per-serving-13"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="1-sweet-potato-taco-bowls-14"><ul><li>Calories: 495</li><li>Fats: 18g</li><li>Protein: 34g</li><li>Carbs: 52g</li><li>Fiber: 13g</li><li>Sugar: 9g</li></ul></div><div class="article-block" id="1-sweet-potato-taco-bowls-15"><h2 class="article-heading" data-level="2"><ol start="2">
 <li>Mediterranean Chicken Bake</li>
-</ol></h2></div><div class="article-block" id="2-mediterranean-chicken-bake-16"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-16.jpg" alt="Mediterranean Chicken Bake"><figcaption>Mediterranean Chicken Bake</figcaption></figure></div><div class="article-block" id="we-all-know-mediterranean-cuisine-is-one-of-the-healthiest-in-the-world-at-the-end-of-the-day-people-who-live-around-the-sea-tend-to-live-longer-17"><p class="article-paragraph">We all know Mediterranean cuisine is one of the healthiest in the world. At the end of the day, people who live around the sea tend to live longer.</p></div><div class="article-block" id="as-i-m-writing-this-from-spain-i-definitely-think-the-food-here-is-truly-magnificent-and-healing-so-i-wanted-to-incorporate-something-that-reminds-me-of-the-mediterranean-cuisine-into-this-clean-eating-recipe-list-18"><p class="article-paragraph">As I’m writing this from Spain, I definitely think the food here is truly magnificent and healing. So, I wanted to incorporate something that reminds me of the Mediterranean cuisine into this clean eating recipe list.</p></div><div class="article-block" id="this-chicken-bake-is-high-protein-flavorful-oily-a-little-citrusy-and-purely-just-delicious-19"><p class="article-paragraph">This chicken bake is high protein, flavorful, oily, a little citrusy, and purely just delicious.</p></div><div class="article-block" id="per-serving-20"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="2-mediterranean-chicken-bake-21"><ul><li>Calories: 555</li><li>Fats: 35.8g</li><li>Protein: 56.8g</li><li>Carbs: 12.6g</li><li>Fiber: 3.1g</li><li>Sugar: 6.4g</li></ul></div><div class="article-block" id="2-mediterranean-chicken-bake-22"><h2 class="article-heading" data-level="2"><ol start="3">
+</ol></h2></div><div class="article-block" id="2-mediterranean-chicken-bake-16"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-16.jpg" alt="Mediterranean Chicken Bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Mediterranean Chicken Bake</figcaption></figure></div><div class="article-block" id="we-all-know-mediterranean-cuisine-is-one-of-the-healthiest-in-the-world-at-the-end-of-the-day-people-who-live-around-the-sea-tend-to-live-longer-17"><p class="article-paragraph">We all know Mediterranean cuisine is one of the healthiest in the world. At the end of the day, people who live around the sea tend to live longer.</p></div><div class="article-block" id="as-i-m-writing-this-from-spain-i-definitely-think-the-food-here-is-truly-magnificent-and-healing-so-i-wanted-to-incorporate-something-that-reminds-me-of-the-mediterranean-cuisine-into-this-clean-eating-recipe-list-18"><p class="article-paragraph">As I’m writing this from Spain, I definitely think the food here is truly magnificent and healing. So, I wanted to incorporate something that reminds me of the Mediterranean cuisine into this clean eating recipe list.</p></div><div class="article-block" id="this-chicken-bake-is-high-protein-flavorful-oily-a-little-citrusy-and-purely-just-delicious-19"><p class="article-paragraph">This chicken bake is high protein, flavorful, oily, a little citrusy, and purely just delicious.</p></div><div class="article-block" id="per-serving-20"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="2-mediterranean-chicken-bake-21"><ul><li>Calories: 555</li><li>Fats: 35.8g</li><li>Protein: 56.8g</li><li>Carbs: 12.6g</li><li>Fiber: 3.1g</li><li>Sugar: 6.4g</li></ul></div><div class="article-block" id="2-mediterranean-chicken-bake-22"><h2 class="article-heading" data-level="2"><ol start="3">
 <li>Salsa Chicken Bake</li>
-</ol></h2></div><div class="article-block" id="3-salsa-chicken-bake-23"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-23.jpg" alt="Salsa Chicken Bake"><figcaption>Salsa Chicken Bake</figcaption></figure></div><div class="article-block" id="following-a-high-protein-diet-can-get-boring-if-you-run-out-of-new-ways-to-make-chicken-here-s-a-great-idea-to-spice-up-chicken-breasts-in-an-easy-to-make-bake-24"><p class="article-paragraph">Following a high protein diet can get boring if you run out of new ways to make chicken. Here’s a great idea to spice up chicken breasts in an easy-to-make bake.</p></div><div class="article-block" id="simply-dump-black-beans-sweet-corn-diced-tomatoes-chicken-breasts-and-salsa-into-a-baking-dish-and-dinner-will-take-care-of-itself-25"><p class="article-paragraph">Simply dump black beans, sweet corn, diced tomatoes, chicken breasts, and salsa into a baking dish, and dinner will take care of itself.</p></div><div class="article-block" id="if-you-luv-cheese-add-a-generous-amount-of-shredded-monterey-jack-during-the-last-10-minutes-of-baking-26"><p class="article-paragraph">If you LUV cheese, add a generous amount of shredded Monterey Jack during the last 10 minutes of baking.</p></div><div class="article-block" id="per-serving-27"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="3-salsa-chicken-bake-28"><ul><li>Calories: 435</li><li>Fats: 6.8g</li><li>Protein: 52.4g</li><li>Carbs: 41.6g</li><li>Fiber: 10.8g</li><li>Sugar: 8.6g</li></ul></div><div class="article-block" id="3-salsa-chicken-bake-29"><h2 class="article-heading" data-level="2"><ol start="4">
+</ol></h2></div><div class="article-block" id="3-salsa-chicken-bake-23"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-23.jpg" alt="Salsa Chicken Bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Salsa Chicken Bake</figcaption></figure></div><div class="article-block" id="following-a-high-protein-diet-can-get-boring-if-you-run-out-of-new-ways-to-make-chicken-here-s-a-great-idea-to-spice-up-chicken-breasts-in-an-easy-to-make-bake-24"><p class="article-paragraph">Following a high protein diet can get boring if you run out of new ways to make chicken. Here’s a great idea to spice up chicken breasts in an easy-to-make bake.</p></div><div class="article-block" id="simply-dump-black-beans-sweet-corn-diced-tomatoes-chicken-breasts-and-salsa-into-a-baking-dish-and-dinner-will-take-care-of-itself-25"><p class="article-paragraph">Simply dump black beans, sweet corn, diced tomatoes, chicken breasts, and salsa into a baking dish, and dinner will take care of itself.</p></div><div class="article-block" id="if-you-luv-cheese-add-a-generous-amount-of-shredded-monterey-jack-during-the-last-10-minutes-of-baking-26"><p class="article-paragraph">If you LUV cheese, add a generous amount of shredded Monterey Jack during the last 10 minutes of baking.</p></div><div class="article-block" id="per-serving-27"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="3-salsa-chicken-bake-28"><ul><li>Calories: 435</li><li>Fats: 6.8g</li><li>Protein: 52.4g</li><li>Carbs: 41.6g</li><li>Fiber: 10.8g</li><li>Sugar: 8.6g</li></ul></div><div class="article-block" id="3-salsa-chicken-bake-29"><h2 class="article-heading" data-level="2"><ol start="4">
 <li>Chicken Fajita Bake</li>
-</ol></h2></div><div class="article-block" id="4-chicken-fajita-bake-30"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-30.jpg" alt="Chicken Fajita Bake"><figcaption>Chicken Fajita Bake</figcaption></figure></div><div class="article-block" id="i-have-made-this-chicken-fajita-dinner-many-times-now-it-s-a-nice-substitute-for-your-regular-chicken-fajitas-31"><p class="article-paragraph">I have made this chicken fajita dinner many times now, it’s a nice substitute for your regular chicken fajitas.</p></div><div class="article-block" id="mostly-because-it-s-extra-clean-packing-protein-and-veggies-but-doesn-t-have-any-of-the-processed-carbs-that-perhaps-we-don-t-want-to-have-all-the-time-32"><p class="article-paragraph">Mostly because it’s extra clean, packing protein and veggies. But doesn’t have any of the processed carbs that perhaps we don’t want to have all the time.</p></div><div class="article-block" id="especially-if-our-goal-is-to-eat-a-cleaner-diet-this-dinner-is-just-for-you-33"><p class="article-paragraph">Especially if our goal is to eat a cleaner diet. This dinner is just for you.</p></div><div class="article-block" id="per-serving-34"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="4-chicken-fajita-bake-35"><ul><li>Calories: 560</li><li>Fats: 27.9g</li><li>Protein: 63.4g</li><li>Carbs: 9.6g</li><li>Fiber: 2.3g</li><li>Sugar: 4.8g</li></ul></div><div class="article-block" id="4-chicken-fajita-bake-36"><h2 class="article-heading" data-level="2"><ol start="5">
+</ol></h2></div><div class="article-block" id="4-chicken-fajita-bake-30"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-30.jpg" alt="Chicken Fajita Bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Chicken Fajita Bake</figcaption></figure></div><div class="article-block" id="i-have-made-this-chicken-fajita-dinner-many-times-now-it-s-a-nice-substitute-for-your-regular-chicken-fajitas-31"><p class="article-paragraph">I have made this chicken fajita dinner many times now, it’s a nice substitute for your regular chicken fajitas.</p></div><div class="article-block" id="mostly-because-it-s-extra-clean-packing-protein-and-veggies-but-doesn-t-have-any-of-the-processed-carbs-that-perhaps-we-don-t-want-to-have-all-the-time-32"><p class="article-paragraph">Mostly because it’s extra clean, packing protein and veggies. But doesn’t have any of the processed carbs that perhaps we don’t want to have all the time.</p></div><div class="article-block" id="especially-if-our-goal-is-to-eat-a-cleaner-diet-this-dinner-is-just-for-you-33"><p class="article-paragraph">Especially if our goal is to eat a cleaner diet. This dinner is just for you.</p></div><div class="article-block" id="per-serving-34"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="4-chicken-fajita-bake-35"><ul><li>Calories: 560</li><li>Fats: 27.9g</li><li>Protein: 63.4g</li><li>Carbs: 9.6g</li><li>Fiber: 2.3g</li><li>Sugar: 4.8g</li></ul></div><div class="article-block" id="4-chicken-fajita-bake-36"><h2 class="article-heading" data-level="2"><ol start="5">
 <li>Bang Bang Chicken Bowls</li>
-</ol></h2></div><div class="article-block" id="5-bang-bang-chicken-bowls-37"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-37.jpg" alt="Bang Bang Chicken Bowls"><figcaption>Bang Bang Chicken Bowls</figcaption></figure></div><div class="article-block" id="a-tasty-meal-that-keeps-you-full-and-energized-this-irresistible-dish-offers-sweet-spicy-and-creamy-flavors-ideal-for-the-whole-family-38"><p class="article-paragraph">A tasty meal that keeps you full and energized. This irresistible dish offers sweet, spicy, and creamy flavors, ideal for the whole family.</p></div><div class="article-block" id="enjoy-the-iconic-flavor-of-bang-bang-sauce-paired-with-tender-baked-chicken-basmati-rice-sweet-corn-english-cucumber-carrots-and-scallions-39"><p class="article-paragraph">Enjoy the iconic flavor of Bang Bang sauce paired with tender baked chicken, basmati rice, sweet corn, English cucumber, carrots, and scallions.</p></div><div class="article-block" id="for-extra-crunch-toss-in-some-toasted-sesame-seeds-or-crispy-fried-onions-just-before-serving-40"><p class="article-paragraph">For extra crunch, toss in some toasted sesame seeds or crispy fried onions just before serving.</p></div><div class="article-block" id="per-serving-41"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="5-bang-bang-chicken-bowls-42"><ul><li>Calories: 650</li><li>Fats: 28.4g</li><li>Protein: 46.8g</li><li>Carbs: 60.8g</li><li>Fiber: 4.2g</li><li>Sugar: 14.2g</li></ul></div><div class="article-block" id="5-bang-bang-chicken-bowls-43"><h2 class="article-heading" data-level="2"><ol start="6">
+</ol></h2></div><div class="article-block" id="5-bang-bang-chicken-bowls-37"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-37.jpg" alt="Bang Bang Chicken Bowls" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Bang Bang Chicken Bowls</figcaption></figure></div><div class="article-block" id="a-tasty-meal-that-keeps-you-full-and-energized-this-irresistible-dish-offers-sweet-spicy-and-creamy-flavors-ideal-for-the-whole-family-38"><p class="article-paragraph">A tasty meal that keeps you full and energized. This irresistible dish offers sweet, spicy, and creamy flavors, ideal for the whole family.</p></div><div class="article-block" id="enjoy-the-iconic-flavor-of-bang-bang-sauce-paired-with-tender-baked-chicken-basmati-rice-sweet-corn-english-cucumber-carrots-and-scallions-39"><p class="article-paragraph">Enjoy the iconic flavor of Bang Bang sauce paired with tender baked chicken, basmati rice, sweet corn, English cucumber, carrots, and scallions.</p></div><div class="article-block" id="for-extra-crunch-toss-in-some-toasted-sesame-seeds-or-crispy-fried-onions-just-before-serving-40"><p class="article-paragraph">For extra crunch, toss in some toasted sesame seeds or crispy fried onions just before serving.</p></div><div class="article-block" id="per-serving-41"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="5-bang-bang-chicken-bowls-42"><ul><li>Calories: 650</li><li>Fats: 28.4g</li><li>Protein: 46.8g</li><li>Carbs: 60.8g</li><li>Fiber: 4.2g</li><li>Sugar: 14.2g</li></ul></div><div class="article-block" id="5-bang-bang-chicken-bowls-43"><h2 class="article-heading" data-level="2"><ol start="6">
 <li>Chicken Tzatziki and Rice</li>
-</ol></h2></div><div class="article-block" id="6-chicken-tzatziki-and-rice-44"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-44.jpg" alt="Dump and Bake Chicken Tzatziki and Rice"><figcaption>Dump and Bake Chicken Tzatziki and Rice</figcaption></figure></div><div class="article-block" id="packed-with-flavor-and-turmeric-this-chicken-tzatziki-meal-is-one-of-the-best-anti-inflammatory-recipes-you-can-make-packing-protein-and-flavor-45"><p class="article-paragraph">Packed with flavor and turmeric, this chicken tzatziki meal is one of the best anti-inflammatory recipes you can make. Packing protein and flavor.</p></div><div class="article-block" id="it-s-also-perfect-for-a-high-protein-lunch-i-love-to-meal-prep-it-whenever-i-m-craving-flavors-but-want-to-stay-on-top-of-my-gut-46"><p class="article-paragraph">It’s also perfect for a high-protein lunch. I love to meal prep it whenever I’m craving flavors but want to stay on top of my gut.</p></div><div class="article-block" id="per-serving-47"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="6-chicken-tzatziki-and-rice-48"><ul><li>Calories: 520</li><li>Fats: 17.9g</li><li>Protein: 48.2g</li><li>Carbs: 40.6g</li><li>Fiber: 3.4g</li><li>Sugar: 6.1g</li></ul></div><div class="article-block" id="6-chicken-tzatziki-and-rice-49"><h2 class="article-heading" data-level="2"><ol start="7">
+</ol></h2></div><div class="article-block" id="6-chicken-tzatziki-and-rice-44"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-44.jpg" alt="Dump and Bake Chicken Tzatziki and Rice" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Dump and Bake Chicken Tzatziki and Rice</figcaption></figure></div><div class="article-block" id="packed-with-flavor-and-turmeric-this-chicken-tzatziki-meal-is-one-of-the-best-anti-inflammatory-recipes-you-can-make-packing-protein-and-flavor-45"><p class="article-paragraph">Packed with flavor and turmeric, this chicken tzatziki meal is one of the best anti-inflammatory recipes you can make. Packing protein and flavor.</p></div><div class="article-block" id="it-s-also-perfect-for-a-high-protein-lunch-i-love-to-meal-prep-it-whenever-i-m-craving-flavors-but-want-to-stay-on-top-of-my-gut-46"><p class="article-paragraph">It’s also perfect for a high-protein lunch. I love to meal prep it whenever I’m craving flavors but want to stay on top of my gut.</p></div><div class="article-block" id="per-serving-47"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="6-chicken-tzatziki-and-rice-48"><ul><li>Calories: 520</li><li>Fats: 17.9g</li><li>Protein: 48.2g</li><li>Carbs: 40.6g</li><li>Fiber: 3.4g</li><li>Sugar: 6.1g</li></ul></div><div class="article-block" id="6-chicken-tzatziki-and-rice-49"><h2 class="article-heading" data-level="2"><ol start="7">
 <li>One Pan Balsamic Chicken</li>
-</ol></h2></div><div class="article-block" id="7-one-pan-balsamic-chicken-50"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-50.jpg" alt="One Pan Balsamic Chicken"><figcaption>One Pan Balsamic Chicken</figcaption></figure></div><div class="article-block" id="this-is-another-of-my-great-one-pan-meals-there-is-something-special-about-this-honey-balsamic-sauce-mixed-with-the-chicken-and-veggies-51"><p class="article-paragraph">This is another of my great one-pan meals. There is something special about this honey-balsamic sauce mixed with the chicken and veggies.</p></div><div class="article-block" id="if-you-feel-like-experimenting-but-without-having-to-spend-hours-cleaning-after-this-is-a-recipe-you-need-to-try-52"><p class="article-paragraph">If you feel like experimenting, but without having to spend hours cleaning after, this is a recipe you need to try.</p></div><div class="article-block" id="per-serving-53"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="7-one-pan-balsamic-chicken-54"><h2 class="article-heading" data-level="2">Tired of Ads?</h2></div><div class="article-block" id="you-ve-just-looked-at-8-different-ads-never-look-at-an-ad-again-get-exclusive-recipes-meal-plans-ad-free-experience-on-the-entire-website-500-recipes-and-a-free-cookbook-55"><p class="article-paragraph">You've just looked at 8 different ads. Never look at an ad again. Get exclusive recipes, meal plans, ad-free experience on the entire website (500+ recipes), and a FREE Cookbook!</p></div><div class="article-block" id="tired-of-ads-56"><ul><li>Calories: 608</li><li>Fats: 30g</li><li>Protein: 63g</li><li>Carbs: 19g</li><li>Fiber: 1.5g</li><li>Sugar: 14g</li></ul></div><div class="article-block" id="tired-of-ads-57"><h2 class="article-heading" data-level="2"><ol start="8">
+</ol></h2></div><div class="article-block" id="7-one-pan-balsamic-chicken-50"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-50.jpg" alt="One Pan Balsamic Chicken" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">One Pan Balsamic Chicken</figcaption></figure></div><div class="article-block" id="this-is-another-of-my-great-one-pan-meals-there-is-something-special-about-this-honey-balsamic-sauce-mixed-with-the-chicken-and-veggies-51"><p class="article-paragraph">This is another of my great one-pan meals. There is something special about this honey-balsamic sauce mixed with the chicken and veggies.</p></div><div class="article-block" id="if-you-feel-like-experimenting-but-without-having-to-spend-hours-cleaning-after-this-is-a-recipe-you-need-to-try-52"><p class="article-paragraph">If you feel like experimenting, but without having to spend hours cleaning after, this is a recipe you need to try.</p></div><div class="article-block" id="per-serving-53"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="7-one-pan-balsamic-chicken-54"><h2 class="article-heading" data-level="2">Tired of Ads?</h2></div><div class="article-block" id="you-ve-just-looked-at-8-different-ads-never-look-at-an-ad-again-get-exclusive-recipes-meal-plans-ad-free-experience-on-the-entire-website-500-recipes-and-a-free-cookbook-55"><p class="article-paragraph">You've just looked at 8 different ads. Never look at an ad again. Get exclusive recipes, meal plans, ad-free experience on the entire website (500+ recipes), and a FREE Cookbook!</p></div><div class="article-block" id="tired-of-ads-56"><ul><li>Calories: 608</li><li>Fats: 30g</li><li>Protein: 63g</li><li>Carbs: 19g</li><li>Fiber: 1.5g</li><li>Sugar: 14g</li></ul></div><div class="article-block" id="tired-of-ads-57"><h2 class="article-heading" data-level="2"><ol start="8">
 <li>Caprese Chicken Bake</li>
-</ol></h2></div><div class="article-block" id="8-caprese-chicken-bake-58"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-58.jpg" alt="Caprese Chicken Bake"><figcaption>Caprese Chicken Bake</figcaption></figure></div><div class="article-block" id="for-me-the-combination-of-tomatoes-mozzarella-and-basil-is-irresistible-59"><p class="article-paragraph">For me, the combination of tomatoes, mozzarella, and basil is irresistible.</p></div><div class="article-block" id="so-i-created-this-recipe-that-takes-those-fresh-simple-flavors-and-pairs-them-with-juicy-baked-chicken-to-create-a-dish-that-s-light-packed-with-over-35g-of-protein-and-satisfying-60"><p class="article-paragraph">So, I created this recipe that takes those fresh, simple flavors and pairs them with juicy baked chicken to create a dish that’s light, packed with over 35g of protein, and satisfying.</p></div><div class="article-block" id="if-you-prefer-a-dairy-free-option-swap-the-mozzarella-with-a-high-quality-plant-based-cheese-alternative-61"><p class="article-paragraph">If you prefer a dairy-free option, swap the mozzarella with a high-quality plant-based cheese alternative.</p></div><div class="article-block" id="per-serving-62"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="8-caprese-chicken-bake-63"><ul><li>Calories: 445</li><li>Fats: 18.9g</li><li>Protein: 58.6g</li><li>Carbs: 9.2g</li><li>Fiber: 1.3g</li><li>Sugar: 6.8g</li></ul></div><div class="article-block" id="8-caprese-chicken-bake-64"><h2 class="article-heading" data-level="2"><ol start="9">
+</ol></h2></div><div class="article-block" id="8-caprese-chicken-bake-58"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-58.jpg" alt="Caprese Chicken Bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Caprese Chicken Bake</figcaption></figure></div><div class="article-block" id="for-me-the-combination-of-tomatoes-mozzarella-and-basil-is-irresistible-59"><p class="article-paragraph">For me, the combination of tomatoes, mozzarella, and basil is irresistible.</p></div><div class="article-block" id="so-i-created-this-recipe-that-takes-those-fresh-simple-flavors-and-pairs-them-with-juicy-baked-chicken-to-create-a-dish-that-s-light-packed-with-over-35g-of-protein-and-satisfying-60"><p class="article-paragraph">So, I created this recipe that takes those fresh, simple flavors and pairs them with juicy baked chicken to create a dish that’s light, packed with over 35g of protein, and satisfying.</p></div><div class="article-block" id="if-you-prefer-a-dairy-free-option-swap-the-mozzarella-with-a-high-quality-plant-based-cheese-alternative-61"><p class="article-paragraph">If you prefer a dairy-free option, swap the mozzarella with a high-quality plant-based cheese alternative.</p></div><div class="article-block" id="per-serving-62"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="8-caprese-chicken-bake-63"><ul><li>Calories: 445</li><li>Fats: 18.9g</li><li>Protein: 58.6g</li><li>Carbs: 9.2g</li><li>Fiber: 1.3g</li><li>Sugar: 6.8g</li></ul></div><div class="article-block" id="8-caprese-chicken-bake-64"><h2 class="article-heading" data-level="2"><ol start="9">
 <li>Salsa Fresca Chicken Bake</li>
-</ol></h2></div><div class="article-block" id="9-salsa-fresca-chicken-bake-65"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-65.jpg" alt="Salsa Fresca Chicken Bake"><figcaption>Salsa Fresca Chicken Bake</figcaption></figure></div><div class="article-block" id="let-s-go-mexican-with-this-30-minute-bake-featuring-tender-seasoned-chicken-a-fresh-zing-of-salsa-fresca-made-from-cherry-tomatoes-onion-jalapeno-and-lime-all-under-a-delish-topping-of-gooey-melted-mozzarella-66"><p class="article-paragraph">Let’s go Mexican with this 30-minute bake featuring tender seasoned chicken, a fresh zing of salsa fresca made from cherry tomatoes, onion, jalapeno, and lime, all under a delish topping of gooey, melted mozzarella.</p></div><div class="article-block" id="it-is-packed-with-58g-of-protein-and-fewer-than-450-kcal-perfect-for-those-focused-on-high-protein-while-keeping-calories-in-check-67"><p class="article-paragraph">It is packed with 58g of protein and fewer than 450 Kcal, perfect for those focused on high protein while keeping calories in check.</p></div><div class="article-block" id="per-serving-68"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="9-salsa-fresca-chicken-bake-69"><ul><li>Calories: 377</li><li>Fats: 11g</li><li>Protein: 58g</li><li>Carbs: 10g</li></ul></div><div class="article-block" id="9-salsa-fresca-chicken-bake-70"><h2 class="article-heading" data-level="2"><ol start="10">
+</ol></h2></div><div class="article-block" id="9-salsa-fresca-chicken-bake-65"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-65.jpg" alt="Salsa Fresca Chicken Bake" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Salsa Fresca Chicken Bake</figcaption></figure></div><div class="article-block" id="let-s-go-mexican-with-this-30-minute-bake-featuring-tender-seasoned-chicken-a-fresh-zing-of-salsa-fresca-made-from-cherry-tomatoes-onion-jalapeno-and-lime-all-under-a-delish-topping-of-gooey-melted-mozzarella-66"><p class="article-paragraph">Let’s go Mexican with this 30-minute bake featuring tender seasoned chicken, a fresh zing of salsa fresca made from cherry tomatoes, onion, jalapeno, and lime, all under a delish topping of gooey, melted mozzarella.</p></div><div class="article-block" id="it-is-packed-with-58g-of-protein-and-fewer-than-450-kcal-perfect-for-those-focused-on-high-protein-while-keeping-calories-in-check-67"><p class="article-paragraph">It is packed with 58g of protein and fewer than 450 Kcal, perfect for those focused on high protein while keeping calories in check.</p></div><div class="article-block" id="per-serving-68"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="9-salsa-fresca-chicken-bake-69"><ul><li>Calories: 377</li><li>Fats: 11g</li><li>Protein: 58g</li><li>Carbs: 10g</li></ul></div><div class="article-block" id="9-salsa-fresca-chicken-bake-70"><h2 class="article-heading" data-level="2"><ol start="10">
 <li>Greek Chicken with Lemon Rice and Tomatoes</li>
-</ol></h2></div><div class="article-block" id="10-greek-chicken-with-lemon-rice-and-tomatoes-71"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-71.jpg" alt="Greek Chicken with Lemon Rice and Tomatoes"><figcaption>Greek Chicken with Lemon Rice and Tomatoes</figcaption></figure></div><div class="article-block" id="my-take-on-a-classic-greek-dish-delivers-a-whopping-53g-of-protein-and-7g-of-fiber-72"><p class="article-paragraph">My take on a classic Greek dish delivers a whopping 53g of protein and 7g of fiber.</p></div><div class="article-block" id="it-s-a-delicious-meal-of-juicy-seasoned-chicken-zesty-lemon-infused-rice-fresh-vegetables-and-creamy-feta-cheese-this-is-your-midweek-getaway-to-a-mediterranean-island-in-your-own-home-73"><p class="article-paragraph">It’s a delicious meal of juicy, seasoned chicken, zesty lemon-infused rice, fresh vegetables, and creamy feta cheese. This is your midweek getaway to a Mediterranean island in your own home.</p></div><div class="article-block" id="per-serving-74"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="10-greek-chicken-with-lemon-rice-and-tomatoes-75"><ul><li>Calories: 660</li><li>Fats: 29.0g</li><li>Protein: 53.0g</li><li>Carbs: 48.0g</li><li>Fiber: 7.7g</li><li>Sugar: 3.8g</li></ul></div><div class="article-block" id="10-greek-chicken-with-lemon-rice-and-tomatoes-76"><h2 class="article-heading" data-level="2"><ol start="11">
+</ol></h2></div><div class="article-block" id="10-greek-chicken-with-lemon-rice-and-tomatoes-71"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-71.jpg" alt="Greek Chicken with Lemon Rice and Tomatoes" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Greek Chicken with Lemon Rice and Tomatoes</figcaption></figure></div><div class="article-block" id="my-take-on-a-classic-greek-dish-delivers-a-whopping-53g-of-protein-and-7g-of-fiber-72"><p class="article-paragraph">My take on a classic Greek dish delivers a whopping 53g of protein and 7g of fiber.</p></div><div class="article-block" id="it-s-a-delicious-meal-of-juicy-seasoned-chicken-zesty-lemon-infused-rice-fresh-vegetables-and-creamy-feta-cheese-this-is-your-midweek-getaway-to-a-mediterranean-island-in-your-own-home-73"><p class="article-paragraph">It’s a delicious meal of juicy, seasoned chicken, zesty lemon-infused rice, fresh vegetables, and creamy feta cheese. This is your midweek getaway to a Mediterranean island in your own home.</p></div><div class="article-block" id="per-serving-74"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="10-greek-chicken-with-lemon-rice-and-tomatoes-75"><ul><li>Calories: 660</li><li>Fats: 29.0g</li><li>Protein: 53.0g</li><li>Carbs: 48.0g</li><li>Fiber: 7.7g</li><li>Sugar: 3.8g</li></ul></div><div class="article-block" id="10-greek-chicken-with-lemon-rice-and-tomatoes-76"><h2 class="article-heading" data-level="2"><ol start="11">
 <li>Salmon Stir Fry</li>
-</ol></h2></div><div class="article-block" id="11-salmon-stir-fry-77"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-77.jpg" alt="Easy Salmon Stir Fry"><figcaption>Easy Salmon Stir Fry</figcaption></figure></div><div class="article-block" id="stir-fries-are-a-great-lazy-meal-and-this-salmon-one-is-so-yummy-it-comes-together-in-just-30-minutes-and-is-packed-with-veggies-bold-asian-flavor-78"><p class="article-paragraph">Stir-fries are a great “lazy,” meal, and this salmon one is so yummy! It comes together in just 30 minutes and is packed with veggies &amp; bold Asian flavor.</p></div><div class="article-block" id="per-serving-79"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="11-salmon-stir-fry-80"><ul><li>Calories: 488</li><li>Fats: 29g</li><li>Protein: 30g</li><li>Carbs: 31g</li><li>Fiber: 4.6g</li><li>Sugar: 19g</li></ul></div><div class="article-block" id="11-salmon-stir-fry-81"><h2 class="article-heading" data-level="2"><ol start="12">
+</ol></h2></div><div class="article-block" id="11-salmon-stir-fry-77"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-77.jpg" alt="Easy Salmon Stir Fry" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Easy Salmon Stir Fry</figcaption></figure></div><div class="article-block" id="stir-fries-are-a-great-lazy-meal-and-this-salmon-one-is-so-yummy-it-comes-together-in-just-30-minutes-and-is-packed-with-veggies-bold-asian-flavor-78"><p class="article-paragraph">Stir-fries are a great “lazy,” meal, and this salmon one is so yummy! It comes together in just 30 minutes and is packed with veggies &amp; bold Asian flavor.</p></div><div class="article-block" id="per-serving-79"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="11-salmon-stir-fry-80"><ul><li>Calories: 488</li><li>Fats: 29g</li><li>Protein: 30g</li><li>Carbs: 31g</li><li>Fiber: 4.6g</li><li>Sugar: 19g</li></ul></div><div class="article-block" id="11-salmon-stir-fry-81"><h2 class="article-heading" data-level="2"><ol start="12">
 <li>Hawaiian Chicken Sheet Pan</li>
-</ol></h2></div><div class="article-block" id="12-hawaiian-chicken-sheet-pan-82"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-82.jpg" alt="Hawaiian Chicken Sheet Pan"><figcaption>Hawaiian Chicken Sheet Pan</figcaption></figure></div><div class="article-block" id="love-hawaiian-flavors-if-so-this-hawaiian-chicken-sheet-pan-meal-is-a-must-try-83"><p class="article-paragraph">Love Hawaiian flavors? If so, this Hawaiian Chicken Sheet Pan meal is a must-try.</p></div><div class="article-block" id="it-has-the-perfect-touch-of-sweetness-for-a-nutritious-filling-and-oh-so-yummy-meal-the-best-part-is-that-it-is-a-breeze-to-make-on-one-sheet-pan-84"><p class="article-paragraph">It has the perfect touch of sweetness for a nutritious, filling, and oh-so-yummy meal! The best part is that it is a breeze to make on one sheet pan.</p></div><div class="article-block" id="per-serving-85"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="12-hawaiian-chicken-sheet-pan-86"><ul><li>Calories: 399</li><li>Fats: 11.7g</li><li>Protein: 43.05g</li><li>Carbs: 24g</li><li>Fiber: 4.2g</li><li>Sugar: 18g</li></ul></div><div class="article-block" id="12-hawaiian-chicken-sheet-pan-87"><h2 class="article-heading" data-level="2"><ol start="13">
+</ol></h2></div><div class="article-block" id="12-hawaiian-chicken-sheet-pan-82"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-82.jpg" alt="Hawaiian Chicken Sheet Pan" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Hawaiian Chicken Sheet Pan</figcaption></figure></div><div class="article-block" id="love-hawaiian-flavors-if-so-this-hawaiian-chicken-sheet-pan-meal-is-a-must-try-83"><p class="article-paragraph">Love Hawaiian flavors? If so, this Hawaiian Chicken Sheet Pan meal is a must-try.</p></div><div class="article-block" id="it-has-the-perfect-touch-of-sweetness-for-a-nutritious-filling-and-oh-so-yummy-meal-the-best-part-is-that-it-is-a-breeze-to-make-on-one-sheet-pan-84"><p class="article-paragraph">It has the perfect touch of sweetness for a nutritious, filling, and oh-so-yummy meal! The best part is that it is a breeze to make on one sheet pan.</p></div><div class="article-block" id="per-serving-85"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="12-hawaiian-chicken-sheet-pan-86"><ul><li>Calories: 399</li><li>Fats: 11.7g</li><li>Protein: 43.05g</li><li>Carbs: 24g</li><li>Fiber: 4.2g</li><li>Sugar: 18g</li></ul></div><div class="article-block" id="12-hawaiian-chicken-sheet-pan-87"><h2 class="article-heading" data-level="2"><ol start="13">
 <li>Baked Shrimp and Broccoli Foil Packs</li>
-</ol></h2></div><div class="article-block" id="13-baked-shrimp-and-broccoli-foil-packs-88"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-88.jpg" alt="Baked Shrimp and Broccoli Foil Packs"><figcaption>Baked Shrimp and Broccoli Foil Packs</figcaption></figure></div><div class="article-block" id="source-cushyspa-com-89"><p class="article-paragraph">Source: cushyspa.com</p></div><div class="article-block" id="these-baked-shrimp-and-broccoli-foil-packs-are-one-of-my-go-to-weeknight-recipes-they-are-baked-in-foil-packs-for-super-easy-clean-up-and-are-packed-with-flavor-90"><p class="article-paragraph">These Baked Shrimp and Broccoli Foil Packs are one of my go-to weeknight recipes. They are baked in foil packs for super easy clean-up and are packed with flavor.</p></div><div class="article-block" id="if-you-don-t-like-broccoli-or-don-t-have-any-in-the-fridge-you-can-easily-substitute-other-veggies-like-zucchini-peppers-or-mushrooms-91"><p class="article-paragraph">If you don’t like broccoli, or don’t have any in the fridge, you can easily substitute other veggies like zucchini, peppers, or mushrooms.</p></div><div class="article-block" id="per-serving-92"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="13-baked-shrimp-and-broccoli-foil-packs-93"><ul><li>Calories: 385</li><li>Fats: 15g</li><li>Protein: 40g</li><li>Carbs: 27g</li><li>Fiber: 8.9g</li><li>Sugar: 5.8g</li></ul></div><div class="article-block" id="13-baked-shrimp-and-broccoli-foil-packs-94"><h2 class="article-heading" data-level="2"><ol start="14">
+</ol></h2></div><div class="article-block" id="13-baked-shrimp-and-broccoli-foil-packs-88"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-88.jpg" alt="Baked Shrimp and Broccoli Foil Packs" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Baked Shrimp and Broccoli Foil Packs</figcaption></figure></div><div class="article-block" id="source-cushyspa-com-89"><p class="article-paragraph">Source: cushyspa.com</p></div><div class="article-block" id="these-baked-shrimp-and-broccoli-foil-packs-are-one-of-my-go-to-weeknight-recipes-they-are-baked-in-foil-packs-for-super-easy-clean-up-and-are-packed-with-flavor-90"><p class="article-paragraph">These Baked Shrimp and Broccoli Foil Packs are one of my go-to weeknight recipes. They are baked in foil packs for super easy clean-up and are packed with flavor.</p></div><div class="article-block" id="if-you-don-t-like-broccoli-or-don-t-have-any-in-the-fridge-you-can-easily-substitute-other-veggies-like-zucchini-peppers-or-mushrooms-91"><p class="article-paragraph">If you don’t like broccoli, or don’t have any in the fridge, you can easily substitute other veggies like zucchini, peppers, or mushrooms.</p></div><div class="article-block" id="per-serving-92"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="13-baked-shrimp-and-broccoli-foil-packs-93"><ul><li>Calories: 385</li><li>Fats: 15g</li><li>Protein: 40g</li><li>Carbs: 27g</li><li>Fiber: 8.9g</li><li>Sugar: 5.8g</li></ul></div><div class="article-block" id="13-baked-shrimp-and-broccoli-foil-packs-94"><h2 class="article-heading" data-level="2"><ol start="14">
 <li>Baked Pesto Mozzarella Chicken</li>
-</ol></h2></div><div class="article-block" id="14-baked-pesto-mozzarella-chicken-95"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-95.jpg" alt="Baked Pesto Mozzarella Chicken"><figcaption>Baked Pesto Mozzarella Chicken</figcaption></figure></div><div class="article-block" id="need-quick-and-easy-chicken-recipe-this-baked-pesto-mozzarella-chicken-won-t-disappoint-96"><p class="article-paragraph">Need quick and easy chicken recipe? This Baked Pesto Mozzarella Chicken won’t disappoint.</p></div><div class="article-block" id="it-is-cheesy-and-comforting-plus-your-oven-does-most-of-the-work-97"><p class="article-paragraph">It is cheesy and comforting. Plus, your oven does most of the work!</p></div><div class="article-block" id="per-serving-98"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="14-baked-pesto-mozzarella-chicken-99"><ul><li>Calories: 549</li><li>Fats: 31g</li><li>Protein: 57g</li><li>Carbs: 9.1g</li><li>Fiber: 2.2g</li><li>Sugar: 3.7g</li></ul></div><div class="article-block" id="14-baked-pesto-mozzarella-chicken-100"><h2 class="article-heading" data-level="2"><ol start="15">
+</ol></h2></div><div class="article-block" id="14-baked-pesto-mozzarella-chicken-95"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-95.jpg" alt="Baked Pesto Mozzarella Chicken" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Baked Pesto Mozzarella Chicken</figcaption></figure></div><div class="article-block" id="need-quick-and-easy-chicken-recipe-this-baked-pesto-mozzarella-chicken-won-t-disappoint-96"><p class="article-paragraph">Need quick and easy chicken recipe? This Baked Pesto Mozzarella Chicken won’t disappoint.</p></div><div class="article-block" id="it-is-cheesy-and-comforting-plus-your-oven-does-most-of-the-work-97"><p class="article-paragraph">It is cheesy and comforting. Plus, your oven does most of the work!</p></div><div class="article-block" id="per-serving-98"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="14-baked-pesto-mozzarella-chicken-99"><ul><li>Calories: 549</li><li>Fats: 31g</li><li>Protein: 57g</li><li>Carbs: 9.1g</li><li>Fiber: 2.2g</li><li>Sugar: 3.7g</li></ul></div><div class="article-block" id="14-baked-pesto-mozzarella-chicken-100"><h2 class="article-heading" data-level="2"><ol start="15">
 <li>Cheeseburger Bowls</li>
-</ol></h2></div><div class="article-block" id="15-cheeseburger-bowls-101"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-101.jpg" alt="Cheeseburger Bowls"><figcaption>Cheeseburger Bowls</figcaption></figure></div><div class="article-block" id="cheeseburgers-are-a-weakness-of-mine-they-are-so-good-but-don-t-always-help-me-meet-my-nutrition-goals-102"><p class="article-paragraph">Cheeseburgers are a weakness of mine. They are so good, but don’t always help me meet my nutrition goals!</p></div><div class="article-block" id="luckily-these-yummy-cheeseburger-bowls-hit-the-spot-every-time-and-are-so-easy-to-make-103"><p class="article-paragraph">Luckily, these yummy cheeseburger bowls hit the spot every time and are so easy to make!</p></div><div class="article-block" id="per-serving-104"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="15-cheeseburger-bowls-105"><ul><li>Calories: 516</li><li>Fats: 35g</li><li>Protein: 35g</li><li>Carbs: 15g</li><li>Fiber: 3.7g</li><li>Sugar: 7.1g</li></ul></div><div class="article-block" id="15-cheeseburger-bowls-106"><h2 class="article-heading" data-level="2"><ol start="16">
+</ol></h2></div><div class="article-block" id="15-cheeseburger-bowls-101"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-101.jpg" alt="Cheeseburger Bowls" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Cheeseburger Bowls</figcaption></figure></div><div class="article-block" id="cheeseburgers-are-a-weakness-of-mine-they-are-so-good-but-don-t-always-help-me-meet-my-nutrition-goals-102"><p class="article-paragraph">Cheeseburgers are a weakness of mine. They are so good, but don’t always help me meet my nutrition goals!</p></div><div class="article-block" id="luckily-these-yummy-cheeseburger-bowls-hit-the-spot-every-time-and-are-so-easy-to-make-103"><p class="article-paragraph">Luckily, these yummy cheeseburger bowls hit the spot every time and are so easy to make!</p></div><div class="article-block" id="per-serving-104"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="15-cheeseburger-bowls-105"><ul><li>Calories: 516</li><li>Fats: 35g</li><li>Protein: 35g</li><li>Carbs: 15g</li><li>Fiber: 3.7g</li><li>Sugar: 7.1g</li></ul></div><div class="article-block" id="15-cheeseburger-bowls-106"><h2 class="article-heading" data-level="2"><ol start="16">
 <li>Garlic Butter Chicken Bites with Asparagus</li>
-</ol></h2></div><div class="article-block" id="16-garlic-butter-chicken-bites-with-asparagus-107"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-107.jpg" alt="Garlic Butter Chicken Bites with Asparagus"><figcaption>Garlic Butter Chicken Bites with Asparagus</figcaption></figure></div><div class="article-block" id="i-love-an-easy-meal-that-tastes-like-it-took-hours-to-prepare-this-garlic-butter-chicken-bite-recipe-with-asparagus-fits-the-bill-perfectly-108"><p class="article-paragraph">I love an easy meal that tastes like it took hours to prepare. This Garlic Butter Chicken Bite recipe with Asparagus fits the bill perfectly.</p></div><div class="article-block" id="it-is-a-simple-and-tasty-one-skillet-meal-perfect-for-family-dinners-or-dinner-parties-if-you-are-looking-for-a-good-set-of-skillets-to-make-this-yummy-recipe-i-love-this-one-109"><p class="article-paragraph">It is a simple and tasty one-skillet meal perfect for family dinners or dinner parties. If you are looking for a good set of skillets to make this yummy recipe, I love this one!</p></div><div class="article-block" id="per-serving-110"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="16-garlic-butter-chicken-bites-with-asparagus-111"><ul><li>Calories: 402</li><li>Fats: 27g</li><li>Protein: 34g</li><li>Carbs: 6.2g</li><li>Fiber: 1.2g</li><li>Sugar: 2.3g</li></ul></div><div class="article-block" id="16-garlic-butter-chicken-bites-with-asparagus-112"><h2 class="article-heading" data-level="2"><ol start="17">
+</ol></h2></div><div class="article-block" id="16-garlic-butter-chicken-bites-with-asparagus-107"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-107.jpg" alt="Garlic Butter Chicken Bites with Asparagus" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Garlic Butter Chicken Bites with Asparagus</figcaption></figure></div><div class="article-block" id="i-love-an-easy-meal-that-tastes-like-it-took-hours-to-prepare-this-garlic-butter-chicken-bite-recipe-with-asparagus-fits-the-bill-perfectly-108"><p class="article-paragraph">I love an easy meal that tastes like it took hours to prepare. This Garlic Butter Chicken Bite recipe with Asparagus fits the bill perfectly.</p></div><div class="article-block" id="it-is-a-simple-and-tasty-one-skillet-meal-perfect-for-family-dinners-or-dinner-parties-if-you-are-looking-for-a-good-set-of-skillets-to-make-this-yummy-recipe-i-love-this-one-109"><p class="article-paragraph">It is a simple and tasty one-skillet meal perfect for family dinners or dinner parties. If you are looking for a good set of skillets to make this yummy recipe, I love this one!</p></div><div class="article-block" id="per-serving-110"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="16-garlic-butter-chicken-bites-with-asparagus-111"><ul><li>Calories: 402</li><li>Fats: 27g</li><li>Protein: 34g</li><li>Carbs: 6.2g</li><li>Fiber: 1.2g</li><li>Sugar: 2.3g</li></ul></div><div class="article-block" id="16-garlic-butter-chicken-bites-with-asparagus-112"><h2 class="article-heading" data-level="2"><ol start="17">
 <li>Buffalo Chicken Cottage Cheese Bowl</li>
-</ol></h2></div><div class="article-block" id="17-buffalo-chicken-cottage-cheese-bowl-113"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-113.jpg" alt="buffalo chicken cottage cheese bowl"><figcaption>buffalo chicken cottage cheese bowl</figcaption></figure></div><div class="article-block" id="source-cushyspa-com-114"><p class="article-paragraph">Source: cushyspa.com</p></div><div class="article-block" id="these-buffalo-chicken-cottage-cheese-bowls-are-ready-in-just-15-minutes-but-taste-oh-so-good-they-are-seriously-packed-with-protein-and-give-you-tons-of-nutrition-from-carrots-and-celery-115"><p class="article-paragraph">These Buffalo Chicken Cottage Cheese Bowls are ready in just 15 minutes but taste oh-so-good! They are seriously packed with protein and give you tons of nutrition from carrots and celery.</p></div><div class="article-block" id="you-will-need-a-tasty-buffalo-sauce-like-this-to-make-these-bowls-116"><p class="article-paragraph">You will need a tasty buffalo sauce like this to make these bowls.</p></div><div class="article-block" id="per-serving-117"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="17-buffalo-chicken-cottage-cheese-bowl-118"><ul><li>Calories: 483</li><li>Fats: 23g</li><li>Protein: 56g</li><li>Carbs: 9.9g</li><li>Fiber: 1.4g</li><li>Sugar: 6.5g</li></ul></div><div class="article-block" id="17-buffalo-chicken-cottage-cheese-bowl-119"><h2 class="article-heading" data-level="2"><ol start="18">
+</ol></h2></div><div class="article-block" id="17-buffalo-chicken-cottage-cheese-bowl-113"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-113.jpg" alt="buffalo chicken cottage cheese bowl" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">buffalo chicken cottage cheese bowl</figcaption></figure></div><div class="article-block" id="source-cushyspa-com-114"><p class="article-paragraph">Source: cushyspa.com</p></div><div class="article-block" id="these-buffalo-chicken-cottage-cheese-bowls-are-ready-in-just-15-minutes-but-taste-oh-so-good-they-are-seriously-packed-with-protein-and-give-you-tons-of-nutrition-from-carrots-and-celery-115"><p class="article-paragraph">These Buffalo Chicken Cottage Cheese Bowls are ready in just 15 minutes but taste oh-so-good! They are seriously packed with protein and give you tons of nutrition from carrots and celery.</p></div><div class="article-block" id="you-will-need-a-tasty-buffalo-sauce-like-this-to-make-these-bowls-116"><p class="article-paragraph">You will need a tasty buffalo sauce like this to make these bowls.</p></div><div class="article-block" id="per-serving-117"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="17-buffalo-chicken-cottage-cheese-bowl-118"><ul><li>Calories: 483</li><li>Fats: 23g</li><li>Protein: 56g</li><li>Carbs: 9.9g</li><li>Fiber: 1.4g</li><li>Sugar: 6.5g</li></ul></div><div class="article-block" id="17-buffalo-chicken-cottage-cheese-bowl-119"><h2 class="article-heading" data-level="2"><ol start="18">
 <li>Slow Cooker Protein Chili</li>
-</ol></h2></div><div class="article-block" id="18-slow-cooker-protein-chili-120"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-120.jpg" alt="High Protein Chili"><figcaption>High Protein Chili</figcaption></figure></div><div class="article-block" id="chili-is-one-of-my-favorite-protein-packed-meals-this-one-is-super-easy-to-make-in-the-slow-cooker-121"><p class="article-paragraph">Chili is one of my favorite protein-packed meals. This one is super easy to make in the slow cooker.</p></div><div class="article-block" id="it-is-sure-to-delight-the-tastebuds-of-everyone-in-your-family-122"><p class="article-paragraph">It is sure to delight the tastebuds of everyone in your family!</p></div><div class="article-block" id="per-serving-123"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="18-slow-cooker-protein-chili-124"><ul><li>Calories: 471</li><li>Fats: 15g</li><li>Protein: 39g</li><li>Carbs: 50g</li><li>Fiber: 17g</li><li>Sugar: 12g</li></ul></div><div class="article-block" id="18-slow-cooker-protein-chili-125"><h2 class="article-heading" data-level="2"><ol start="19">
+</ol></h2></div><div class="article-block" id="18-slow-cooker-protein-chili-120"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-120.jpg" alt="High Protein Chili" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">High Protein Chili</figcaption></figure></div><div class="article-block" id="chili-is-one-of-my-favorite-protein-packed-meals-this-one-is-super-easy-to-make-in-the-slow-cooker-121"><p class="article-paragraph">Chili is one of my favorite protein-packed meals. This one is super easy to make in the slow cooker.</p></div><div class="article-block" id="it-is-sure-to-delight-the-tastebuds-of-everyone-in-your-family-122"><p class="article-paragraph">It is sure to delight the tastebuds of everyone in your family!</p></div><div class="article-block" id="per-serving-123"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="18-slow-cooker-protein-chili-124"><ul><li>Calories: 471</li><li>Fats: 15g</li><li>Protein: 39g</li><li>Carbs: 50g</li><li>Fiber: 17g</li><li>Sugar: 12g</li></ul></div><div class="article-block" id="18-slow-cooker-protein-chili-125"><h2 class="article-heading" data-level="2"><ol start="19">
 <li>Buttered Cod</li>
-</ol></h2></div><div class="article-block" id="19-buttered-cod-126"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-126.jpg" alt="buttered cod"><figcaption>buttered cod</figcaption></figure></div><div class="article-block" id="cod-is-a-favorite-fish-of-mine-if-you-like-it-too-this-buttered-cod-recipe-will-allow-you-to-have-a-healthy-meal-on-the-table-in-less-than-20-minutes-127"><p class="article-paragraph">Cod is a favorite fish of mine. If you like it too, this Buttered Cod recipe will allow you to have a healthy meal on the table in less than 20 minutes.</p></div><div class="article-block" id="per-serving-128"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="19-buttered-cod-129"><ul><li>Calories: 297</li><li>Fats: 19g</li><li>Protein: 31g</li><li>Carbs: 1.2g</li><li>Fiber: 0.3g</li><li>Sugar: 0.3g</li></ul></div><div class="article-block" id="19-buttered-cod-130"><h2 class="article-heading" data-level="2"><ol start="20">
+</ol></h2></div><div class="article-block" id="19-buttered-cod-126"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-126.jpg" alt="buttered cod" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">buttered cod</figcaption></figure></div><div class="article-block" id="cod-is-a-favorite-fish-of-mine-if-you-like-it-too-this-buttered-cod-recipe-will-allow-you-to-have-a-healthy-meal-on-the-table-in-less-than-20-minutes-127"><p class="article-paragraph">Cod is a favorite fish of mine. If you like it too, this Buttered Cod recipe will allow you to have a healthy meal on the table in less than 20 minutes.</p></div><div class="article-block" id="per-serving-128"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="19-buttered-cod-129"><ul><li>Calories: 297</li><li>Fats: 19g</li><li>Protein: 31g</li><li>Carbs: 1.2g</li><li>Fiber: 0.3g</li><li>Sugar: 0.3g</li></ul></div><div class="article-block" id="19-buttered-cod-130"><h2 class="article-heading" data-level="2"><ol start="20">
 <li>Salmon Bowl</li>
-</ol></h2></div><div class="article-block" id="20-salmon-bowl-131"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-131.jpg" alt="Salmon Bowl"><figcaption>Salmon Bowl</figcaption></figure></div><div class="article-block" id="another-lazy-bowl-recipe-that-i-adore-is-this-salmon-bowl-it-is-an-effortless-full-meal-with-rice-salmon-veggies-and-a-scrumptious-sauce-132"><p class="article-paragraph">Another “lazy” bowl recipe that I adore is this Salmon Bowl. It is an effortless full meal with rice, salmon, veggies, and a scrumptious sauce.</p></div><div class="article-block" id="these-other-clean-eating-meal-prep-ideas-will-help-plan-your-week-133"><p class="article-paragraph">These other clean eating meal prep ideas will help plan your week!</p></div><div class="article-block" id="per-serving-134"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="20-salmon-bowl-135"><ul><li>Calories: 906</li><li>Fats: 41g</li><li>Protein: 32g</li><li>Carbs: 105g</li><li>Fiber: 13g</li><li>Sugar: 13g</li></ul></div><div class="article-block" id="20-salmon-bowl-136"><h2 class="article-heading" data-level="2"><ol start="21">
+</ol></h2></div><div class="article-block" id="20-salmon-bowl-131"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-131.jpg" alt="Salmon Bowl" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Salmon Bowl</figcaption></figure></div><div class="article-block" id="another-lazy-bowl-recipe-that-i-adore-is-this-salmon-bowl-it-is-an-effortless-full-meal-with-rice-salmon-veggies-and-a-scrumptious-sauce-132"><p class="article-paragraph">Another “lazy” bowl recipe that I adore is this Salmon Bowl. It is an effortless full meal with rice, salmon, veggies, and a scrumptious sauce.</p></div><div class="article-block" id="these-other-clean-eating-meal-prep-ideas-will-help-plan-your-week-133"><p class="article-paragraph">These other clean eating meal prep ideas will help plan your week!</p></div><div class="article-block" id="per-serving-134"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="20-salmon-bowl-135"><ul><li>Calories: 906</li><li>Fats: 41g</li><li>Protein: 32g</li><li>Carbs: 105g</li><li>Fiber: 13g</li><li>Sugar: 13g</li></ul></div><div class="article-block" id="20-salmon-bowl-136"><h2 class="article-heading" data-level="2"><ol start="21">
 <li>Cottage Cheese Chicken Salad</li>
-</ol></h2></div><div class="article-block" id="21-cottage-cheese-chicken-salad-137"><figure class="article-image"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-137.jpg" alt="Cottage Cheese Chicken Salad"><figcaption>Cottage Cheese Chicken Salad</figcaption></figure></div><div class="article-block" id="in-my-opinion-chicken-salad-is-a-perfect-lunch-food-this-high-protein-lunch-recipe-adds-extra-protein-with-cottage-cheese-for-a-meal-that-is-yummy-healthy-and-guilt-free-138"><p class="article-paragraph">In my opinion, chicken salad is a perfect lunch food. This high protein lunch recipe adds extra protein with cottage cheese for a meal that is yummy, healthy, and guilt-free!</p></div><div class="article-block" id="per-serving-139"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="21-cottage-cheese-chicken-salad-140"><ul><li>Calories: 316</li><li>Fats: 15g</li><li>Protein: 38g</li><li>Carbs: 9.1g</li><li>Fiber: 2.2g</li><li>Sugar: 4.1</li></ul></div>
-        </div>
+</ol></h2></div><div class="article-block" id="21-cottage-cheese-chicken-salad-137"><figure class="article-image"><div class="img-wrap"><img src="/assets/images/blog/21-lazy-high-protein-clean-eating-meals-with-30g-protein/block-image-137.jpg" alt="Cottage Cheese Chicken Salad" loading="lazy" data-pin-img><button type="button" class="pin-it-btn" data-pin-btn>Pin it</button></div><figcaption class="visually-hidden">Cottage Cheese Chicken Salad</figcaption></figure></div><div class="article-block" id="in-my-opinion-chicken-salad-is-a-perfect-lunch-food-this-high-protein-lunch-recipe-adds-extra-protein-with-cottage-cheese-for-a-meal-that-is-yummy-healthy-and-guilt-free-138"><p class="article-paragraph">In my opinion, chicken salad is a perfect lunch food. This high protein lunch recipe adds extra protein with cottage cheese for a meal that is yummy, healthy, and guilt-free!</p></div><div class="article-block" id="per-serving-139"><p class="article-paragraph">Per Serving:</p></div><div class="article-block" id="21-cottage-cheese-chicken-salad-140"><ul><li>Calories: 316</li><li>Fats: 15g</li><li>Protein: 38g</li><li>Carbs: 9.1g</li><li>Fiber: 2.2g</li><li>Sugar: 4.1</li></ul></div>
+                </div>
 
-        <div class="cta-box">
-            <h3>Ready for more?</h3>
-            <p>Keep exploring the blog for more wellness and healthy eating ideas.</p>
-            <a class="cta-link" href="/blog/">Browse more posts</a>
+                <div class="cta-box">
+                    <h3>Ready for more?</h3>
+                    <p>Keep exploring the blog for more wellness and healthy eating ideas.</p>
+                    <a class="cta-link" href="/blog/">Browse more posts</a>
+                </div>
+            </div>
+
+            <aside class="post-sidebar">
+                
+        <div class="author-box">
+            <div class="author-avatar author-avatar-fallback">M</div>
+            <h3 class="author-greeting">Hi, I'm Maya</h3>
+            <p class="author-bio">A certified nutritionist and recipe developer behind Glow From Inside, turning classic recipes into healthier versions.</p>
+            <div class="author-socials">
+                <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+            </div>
+        </div>
+        
+            </aside>
         </div>
     </section>
 </main>
@@ -388,5 +751,29 @@
         <p>&copy; 2026 Glow From Inside. All rights reserved.</p>
     </div>
 </footer>
+<script>
+        (function () {
+            var buttons = document.querySelectorAll('[data-pin-btn]');
+            var origin = window.location.origin;
+            var pageUrl = window.location.href;
+            var pageTitle = document.title;
+            Array.prototype.forEach.call(buttons, function (btn) {
+                var wrap = btn.closest('.img-wrap');
+                var img = wrap ? wrap.querySelector('img') : null;
+                if (!img) return;
+                var media = origin + img.getAttribute('src');
+                var url = 'https://www.pinterest.com/pin/create/button/?url=' +
+                    encodeURIComponent(pageUrl) + '&media=' + encodeURIComponent(media) +
+                    '&description=' + encodeURIComponent(pageTitle);
+                var link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
+                link.rel = 'noopener';
+                link.className = 'pin-it-btn';
+                link.textContent = 'Pin it';
+                btn.parentNode.replaceChild(link, btn);
+            });
+        })();
+        </script>
 </body>
 </html>
