@@ -211,6 +211,10 @@
   #systeme-embed-target input[type="submit"]:hover {
     background: var(--coral-dark);
   }
+  .hero .form-card {
+    max-width: 470px;
+    margin-top: 30px;
+  }
 
   .trust-line {
     display: flex;
@@ -232,25 +236,6 @@
   .inside .cover-wrap {
     max-width: 340px;
     margin: 56px auto 0;
-  }
-
-  .cover-mini {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 22px;
-  }
-  .cover-mini img {
-    width: 92px;
-    border-radius: 8px;
-    box-shadow: 0 18px 40px -20px rgba(13, 51, 60, 0.5);
-  }
-  .cover-mini span {
-    font-size: 0.82rem;
-    color: #6b7369;
-    max-width: 160px;
-    line-height: 1.35;
   }
 
   /* ---------- Proof strip ---------- */
@@ -369,8 +354,10 @@
   }
 
   @media (max-width: 860px) {
+    .hero { padding-top: 24px; }
     .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
-    .cover-mini { margin-top: 18px; }
+    .hero .cover-wrap { max-width: 360px; margin: 0 auto; }
+    .hero .form-card { margin-top: 22px; }
     .cat-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 520px) {
@@ -402,15 +389,6 @@
       <h1>100+ high‑protein recipes that don't taste like a meal plan.</h1>
       <p class="lede">Breakfast, lunch, dinner, treats and smoothies — every recipe tagged for calories, carbs and protein, so you always know what you're eating.</p>
 
-      <ul class="recipe-list">
-        <li>Salmon Tartar with Avocado &amp; Mango</li>
-        <li>High-Protein Blueberry Pancakes</li>
-        <li>One-Pot Turkey Chili with Rice</li>
-        <li>Chicken &amp; Mango Stir Fry</li>
-      </ul>
-    </div>
-
-    <div>
       <div class="form-card">
         <div class="kicker">Instant Download</div>
         <h3>Send me the free ebook</h3>
@@ -426,9 +404,17 @@
         </div>
       </div>
 
-      <div class="cover-mini">
-        <img src="cover-preview.png" alt="100+ High Protein Recipes ebook cover">
-        <span>Instant PDF — sent to your inbox</span>
+      <ul class="recipe-list">
+        <li>Salmon Tartar with Avocado &amp; Mango</li>
+        <li>High-Protein Blueberry Pancakes</li>
+        <li>One-Pot Turkey Chili with Rice</li>
+        <li>Chicken &amp; Mango Stir Fry</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="cover-wrap">
+        <img src="cover.jpg" alt="100+ High Protein Recipes ebook cover">
       </div>
     </div>
   </div>
