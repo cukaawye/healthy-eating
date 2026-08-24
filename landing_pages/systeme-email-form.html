@@ -1,0 +1,71 @@
+<!-- ============================================================
+  Custom email capture - Glow From Inside theme
+  WHERE TO PASTE: systeme.io page editor > drag "Raw HTML" element
+  > Edit code > paste this whole block > Save.
+  (Docs: help.systeme.io/article/306)
+
+  IMPORTANT: this posts to systeme.io's own opt-in API using a
+  relative URL, so it only submits on pages hosted by systeme.io
+  (your funnel pages). It will NOT submit if pasted into an
+  external site such as glowfrominside.site.
+============================================================ -->
+<div style="max-width:420px;margin:0 auto;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+  <input id="gfi-email" type="email" placeholder="Enter your best email"
+    style="width:100%;padding:13px 14px;border-radius:8px;border:1.5px solid #d8cfbd;background:#fffdf9;color:#1c2521;font-size:1rem;font-family:inherit;margin-bottom:10px;box-sizing:border-box;outline:none;" />
+
+  <button id="gfi-btn" type="button"
+    style="display:block;width:100%;padding:14px 16px;border-radius:8px;border:none;cursor:pointer;background:#e2653c;color:#ffffff;font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;font-size:1rem;transition:background .15s ease;"
+    onmouseover="this.style.background='#c94f29'" onmouseout="this.style.background='#e2653c'">
+    Send me the free ebook
+  </button>
+
+  <p id="gfi-msg" style="font-size:.82rem;color:#6b7369;margin:10px 0 0;text-align:center;">No spam. Unsubscribe anytime.</p>
+</div>
+
+<script>
+(function () {
+  var THANK_YOU_URL = 'https://pinkypinkponkey.systeme.io/default-funnel-step-thank-you-page/7537033';
+  var FORM_ID = 43848992;
+
+  var btn = document.getElementById('gfi-btn');
+  var input = document.getElementById('gfi-email');
+  var msg = document.getElementById('gfi-msg');
+
+  function fail(text) {
+    btn.disabled = false;
+    btn.textContent = 'Send me the free ebook';
+    msg.style.color = '#c94f29';
+    msg.textContent = text;
+  }
+
+  function submit() {
+    var email = (input.value || '').trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      fail('Please enter a valid email address.');
+      return;
+    }
+    var off = -new Date().getTimezoneOffset() / 60;
+    var tz = 'GMT' + (off < 0 ? '-' : '+') + Math.abs(off);
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    msg.style.color = '#6b7369';
+    msg.textContent = 'No spam. Unsubscribe anytime.';
+
+    fetch('/api/monolith-opt-in/open/global/opt-in', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fields: [{ slug: 'email', value: email }],
+        formId: FORM_ID,
+        timezone: tz
+      })
+    })
+      .then(function (r) { if (!r.ok) throw new Error('bad status'); window.location.href = THANK_YOU_URL; })
+      .catch(function () { fail('Something went wrong. Please try again.'); });
+  }
+
+  btn.addEventListener('click', submit);
+  input.addEventListener('keydown', function (e) { if (e.key === 'Enter') submit(); });
+})();
+</script>
