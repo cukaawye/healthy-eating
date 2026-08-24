@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100+ High-Protein Recipes — Free Ebook</title>
+<meta name="description" content="Download 100+ high-protein recipes free — breakfast, lunch, dinner, treats and smoothies, every one tagged for your goals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+<!--
+  =====================================================================
+  BEFORE YOU PUBLISH — swap these placeholders:
+  1. Line ~40  data-form-id / script src — already your real systeme.io
+     script, leave as-is.
+  2. Search "cover-preview.png" — replace with your rebranded ebook
+     cover (once you've stripped the Beaconsfield/myfitnesspal branding
+     from the PDF).
+  3. Search "Glow From Inside" — replace with your actual name/brand.
+  4. Update the <title> and meta description above.
+  =====================================================================
+-->
+
+<style>
+  :root {
+    --teal-950: #0d333c;
+    --teal-800: #12414b;
+    --teal-700: #1a5c6b;
+    --cream: #f5eee1;
+    --cream-dim: #ece2d0;
+    --coral: #e2653c;
+    --coral-dark: #c94f29;
+    --ink: #1c2521;
+    --paper: #fffdf9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    color: var(--teal-950);
+  }
+
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    padding: 20px 0;
+  }
+  .topbar .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--teal-950);
+    letter-spacing: -0.01em;
+  }
+  .brand span { color: var(--coral); }
+
+  /* ---------- Badge chips (signature motif, echoes the book's nutrition tags) ---------- */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--teal-950);
+    color: var(--cream);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 5px 9px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip.coral { background: var(--coral); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 36px 0 72px;
+  }
+  .hero .wrap {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .eyebrow-row {
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(2.3rem, 4.6vw, 3.6rem);
+    line-height: 1.04;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--coral);
+  }
+  .hero p.lede {
+    font-size: 1.13rem;
+    color: #3c453f;
+    max-width: 46ch;
+    margin-bottom: 30px;
+  }
+
+  .recipe-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 32px;
+  }
+  .recipe-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 0.98rem;
+    color: var(--teal-950);
+  }
+  .recipe-list li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--coral);
+    flex: none;
+    transform: translateY(-2px);
+  }
+
+  /* ---------- Form card ---------- */
+  .form-card {
+    background: var(--paper);
+    border: 1px solid var(--cream-dim);
+    border-radius: 14px;
+    padding: 30px 28px 26px;
+    box-shadow: 0 24px 60px -30px rgba(13, 51, 60, 0.35);
+  }
+  .form-card .kicker {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--coral-dark);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 10px;
+  }
+  .form-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  .form-card .sub {
+    font-size: 0.95rem;
+    color: #55605a;
+    margin-bottom: 20px;
+  }
+
+  #systeme-embed-target {
+    min-height: 64px;
+  }
+  /* Loose styling fallback in case systeme.io's inline form doesn't carry its own styles */
+  #systeme-embed-target input[type="email"],
+  #systeme-embed-target input[type="text"] {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #d8cfbd;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: inherit;
+  }
+  #systeme-embed-target button,
+  #systeme-embed-target input[type="submit"] {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: none;
+    background: var(--coral);
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  #systeme-embed-target button:hover,
+  #systeme-embed-target input[type="submit"]:hover {
+    background: var(--coral-dark);
+  }
+
+  .trust-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: #6b7369;
+  }
+  .trust-line svg { flex: none; }
+
+  .cover-wrap {
+    position: relative;
+  }
+  .cover-wrap img {
+    border-radius: 10px;
+    box-shadow: 0 40px 80px -30px rgba(13, 51, 60, 0.45);
+  }
+
+  /* ---------- Proof strip ---------- */
+  .proof {
+    background: var(--teal-950);
+    color: var(--cream);
+    padding: 34px 0;
+  }
+  .proof .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 48px;
+    justify-content: center;
+    text-align: center;
+  }
+  .proof .stat b {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.7rem;
+    color: #fff;
+  }
+  .proof .stat span {
+    font-size: 0.82rem;
+    color: #a9c1c3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ---------- What's inside ---------- */
+  .inside {
+    padding: 84px 0 70px;
+  }
+  .inside h2 {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 14px;
+  }
+  .inside > .wrap > p {
+    color: #4a544e;
+    max-width: 56ch;
+    margin-bottom: 46px;
+    font-size: 1.05rem;
+  }
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .cat-card {
+    background: var(--paper);
+    border: 1px solid var(--cream-dim);
+    border-radius: 12px;
+    padding: 22px 20px;
+  }
+  .cat-card .n {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    color: var(--coral-dark);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .cat-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .cat-card p { font-size: 0.88rem; color: #5a655e; }
+
+  /* ---------- Tag key ---------- */
+  .keys {
+    padding: 20px 0 84px;
+  }
+  .keys .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .keys .label {
+    font-size: 0.85rem;
+    color: #5a655e;
+    margin-right: 6px;
+  }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta {
+    background: var(--coral);
+    padding: 64px 0 70px;
+    text-align: center;
+  }
+  .final-cta h2 {
+    color: #fff8f2;
+    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+    margin-bottom: 14px;
+  }
+  .final-cta p {
+    color: #fde4d8;
+    max-width: 48ch;
+    margin: 0 auto 28px;
+    font-size: 1.05rem;
+  }
+  .btn-light {
+    display: inline-block;
+    background: var(--teal-950);
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 30px 0 50px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #7a8279;
+  }
+
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+    .cover-wrap { order: -1; max-width: 340px; margin: 0 auto; }
+    .cat-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .cat-grid { grid-template-columns: 1fr; }
+    .proof .wrap { gap: 22px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">Glow From Inside<span>.</span></div>
+    <div class="chip-row">
+      <span class="chip">100+ Recipes</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow-row chip-row">
+        <span class="chip coral">Free Download</span>
+        <span class="chip">HP</span>
+        <span class="chip">GF</span>
+        <span class="chip">Under 30 Min</span>
+      </div>
+      <h1>100+ high‑protein recipes that don't taste like a meal plan.</h1>
+      <p class="lede">Breakfast, lunch, dinner, treats and smoothies — every recipe tagged for calories, carbs and protein, so you always know what you're eating.</p>
+
+      <ul class="recipe-list">
+        <li>Salmon Tartar with Avocado &amp; Mango</li>
+        <li>High-Protein Blueberry Pancakes</li>
+        <li>One-Pot Turkey Chili with Rice</li>
+        <li>Chicken &amp; Mango Stir Fry</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="cover-wrap">
+        <img src="cover-preview.png" alt="100+ High Protein Recipes ebook cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="stat"><b>100+</b><span>Recipes</span></div>
+    <div class="stat"><b>5</b><span>Categories</span></div>
+    <div class="stat"><b>&lt;30 min</b><span>Most recipes</span></div>
+    <div class="stat"><b>100%</b><span>Free</span></div>
+  </div>
+</section>
+
+<section class="inside" id="get-it">
+  <div class="wrap">
+    <h2>Get the full ebook sent to your inbox</h2>
+    <p>Enter your email and it lands straight in your inbox — no account, no app, nothing to buy.</p>
+
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="n">Breakfast</div>
+        <h3>Start high-protein</h3>
+        <p>Pancakes, omelets, shakshuka &amp; smoothie bowls.</p>
+      </div>
+      <div class="cat-card">
+        <div class="n">Lunch</div>
+        <h3>Fast &amp; portable</h3>
+        <p>Salads, wraps, and bowls built for meal prep.</p>
+      </div>
+      <div class="cat-card">
+        <div class="n">Dinner</div>
+        <h3>Family-sized mains</h3>
+        <p>Salmon, chicken, beef &amp; stir-fry favorites.</p>
+      </div>
+      <div class="cat-card">
+        <div class="n">Treats &amp; Smoothies</div>
+        <h3>Still on track</h3>
+        <p>Protein smoothies and better-for-you desserts.</p>
+      </div>
+    </div>
+
+    <div style="max-width:460px; margin:56px auto 0;">
+      <div class="form-card">
+        <div class="kicker">Instant Download</div>
+        <h3>Send me the free ebook</h3>
+        <p class="sub">Enter your best email — the recipes head your way immediately.</p>
+
+        <div id="systeme-embed-target">
+          <script id="form-script-tag-25211365" src="https://pinkypinkponkey.systeme.io/public/remote/page/438489925a8079b2e8147bf60dc89629adf312a5.js"></script>
+        </div>
+
+        <div class="trust-line">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          No spam. Unsubscribe anytime.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="keys">
+  <div class="wrap">
+    <span class="label">Every recipe is tagged:</span>
+    <span class="chip">GF — Gluten Free</span>
+    <span class="chip">DF — Dairy Free</span>
+    <span class="chip">HP — High Protein</span>
+    <span class="chip">Q — Quick (under 30 min)</span>
+    <span class="chip">MP — Meal Prep Friendly</span>
+    <span class="chip">V — Vegetarian</span>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>100+ recipes. Zero guesswork.</h2>
+    <p>Stop wondering what to cook. Get every recipe, every macro, in one free download.</p>
+    <a href="#get-it" class="btn-light">Get the free ebook →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> Glow From Inside. Your email is only used to send you this ebook and related updates.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
