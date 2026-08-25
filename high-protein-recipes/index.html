@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>100+ High-Protein Recipes — Free Ebook</title>
-<meta name="description" content="Download 100+ high-protein recipes free — breakfast, lunch, dinner, treats and smoothies, every one tagged for your goals.">
+<title>100+ High-Protein Recipes | Free Ebook</title>
+<meta name="description" content="Download 100+ high-protein recipes free: breakfast, lunch, dinner, treats and smoothies, every one tagged for your goals.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
@@ -63,24 +63,6 @@
     padding: 0 24px;
   }
 
-  /* ---------- Top bar ---------- */
-  .topbar {
-    padding: 20px 0;
-  }
-  .topbar .wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .brand {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--teal-950);
-    letter-spacing: -0.01em;
-  }
-  .brand span { color: var(--coral); }
-
   /* ---------- Badge chips (signature motif, echoes the book's nutrition tags) ---------- */
   .chip {
     display: inline-flex;
@@ -101,7 +83,7 @@
 
   /* ---------- Hero ---------- */
   .hero {
-    padding: 36px 0 72px;
+    padding: 22px 0 56px;
   }
   .hero .wrap {
     display: grid;
@@ -125,21 +107,21 @@
     font-size: 1.13rem;
     color: #3c453f;
     max-width: 46ch;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   .recipe-list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+    margin: 28px 0 0;
   }
   .recipe-list li {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    font-size: 0.98rem;
+    font-size: 1rem;
     color: var(--teal-950);
   }
   .recipe-list li::before {
@@ -312,35 +294,6 @@
     margin-right: 6px;
   }
 
-  /* ---------- Final CTA ---------- */
-  .final-cta {
-    background: var(--coral);
-    padding: 64px 0 70px;
-    text-align: center;
-  }
-  .final-cta h2 {
-    color: #fff8f2;
-    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
-    margin-bottom: 14px;
-  }
-  .final-cta p {
-    color: #fde4d8;
-    max-width: 48ch;
-    margin: 0 auto 28px;
-    font-size: 1.05rem;
-  }
-  .btn-light {
-    display: inline-block;
-    background: var(--teal-950);
-    color: #fff;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-
   footer {
     padding: 30px 0 50px;
     text-align: center;
@@ -349,10 +302,10 @@
   }
 
   @media (max-width: 860px) {
-    .hero { padding-top: 24px; }
+    .hero { padding-top: 16px; }
     .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
     .hero .cover-wrap { max-width: 360px; margin: 0 auto; }
-    .hero .form-card { margin-top: 22px; }
+    .recipe-list { grid-template-columns: 1fr; }
     .cat-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 520px) {
@@ -362,15 +315,6 @@
 </style>
 </head>
 <body>
-
-<header class="topbar">
-  <div class="wrap">
-    <div class="brand">Glow From Inside<span>.</span></div>
-    <div class="chip-row">
-      <span class="chip">100+ Recipes</span>
-    </div>
-  </div>
-</header>
 
 <section class="hero">
   <div class="wrap">
@@ -382,12 +326,12 @@
         <span class="chip">Under 30 Min</span>
       </div>
       <h1>100+ high‑protein recipes that don't taste like a meal plan.</h1>
-      <p class="lede">Breakfast, lunch, dinner, treats and smoothies — every recipe tagged for calories, carbs and protein, so you always know what you're eating.</p>
+      <p class="lede">Every recipe tagged for calories, carbs and protein. Free.</p>
 
       <div class="form-card">
         <div class="kicker">Instant Download</div>
         <h3>Send me the free ebook</h3>
-        <p class="sub">Enter your best email — the recipes head your way immediately.</p>
+        <p class="sub">Enter your best email and the recipes head your way instantly.</p>
 
         <div id="systeme-embed-target">
           <script id="form-script-tag-25211365" src="https://pinkypinkponkey.systeme.io/public/remote/page/438489925a8079b2e8147bf60dc89629adf312a5.js"></script>
@@ -427,7 +371,7 @@
 <section class="inside" id="get-it">
   <div class="wrap">
     <h2>Get the full ebook sent to your inbox</h2>
-    <p>Enter your email and it lands straight in your inbox — no account, no app, nothing to buy.</p>
+    <p>Enter your email and it lands straight in your inbox. No account, no app, nothing to buy.</p>
 
     <div class="cat-grid">
       <div class="cat-card">
@@ -457,20 +401,12 @@
 <section class="keys">
   <div class="wrap">
     <span class="label">Every recipe is tagged:</span>
-    <span class="chip">GF — Gluten Free</span>
-    <span class="chip">DF — Dairy Free</span>
-    <span class="chip">HP — High Protein</span>
-    <span class="chip">Q — Quick (under 30 min)</span>
-    <span class="chip">MP — Meal Prep Friendly</span>
-    <span class="chip">V — Vegetarian</span>
-  </div>
-</section>
-
-<section class="final-cta">
-  <div class="wrap">
-    <h2>100+ recipes. Zero guesswork.</h2>
-    <p>Stop wondering what to cook. Get every recipe, every macro, in one free download.</p>
-    <a href="#get-it" class="btn-light">Get the free ebook →</a>
+    <span class="chip">GF · Gluten Free</span>
+    <span class="chip">DF · Dairy Free</span>
+    <span class="chip">HP · High Protein</span>
+    <span class="chip">Q · Quick (under 30 min)</span>
+    <span class="chip">MP · Meal Prep Friendly</span>
+    <span class="chip">V · Vegetarian</span>
   </div>
 </section>
 
