@@ -112,10 +112,10 @@
 
   .recipe-list {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px 32px;
-    margin: 28px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 26px;
   }
   .recipe-list li {
     display: flex;
@@ -294,11 +294,65 @@
     margin-right: 6px;
   }
 
+  /* ---------- Interior preview strip ---------- */
+  .preview {
+    padding: 10px 0 70px;
+  }
+  .preview h2 {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .preview > .wrap > p {
+    text-align: center;
+    color: #5a655e;
+    max-width: 50ch;
+    margin: 0 auto 34px;
+  }
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .preview-grid img {
+    border-radius: 8px;
+    border: 1px solid var(--cream-dim);
+    box-shadow: 0 20px 40px -24px rgba(13, 51, 60, 0.35);
+  }
+
+  /* ---------- Second CTA ---------- */
+  .cta-repeat {
+    background: var(--teal-950);
+    padding: 50px 0;
+    text-align: center;
+  }
+  .cta-repeat h2 {
+    color: #fff;
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    margin-bottom: 20px;
+  }
+  .cta-repeat a.btn {
+    display: inline-block;
+    background: var(--coral);
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .cta-repeat a.btn:hover { background: var(--coral-dark); }
+
   footer {
     padding: 30px 0 50px;
     text-align: center;
     font-size: 0.82rem;
     color: #7a8279;
+  }
+
+  @media (max-width: 700px) {
+    .preview-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 860px) {
@@ -316,7 +370,7 @@
 </head>
 <body>
 
-<section class="hero">
+<section class="hero" id="top">
   <div class="wrap">
     <div>
       <div class="eyebrow-row chip-row">
@@ -325,13 +379,20 @@
         <span class="chip">GF</span>
         <span class="chip">Under 30 Min</span>
       </div>
-      <h1>100+ high‑protein recipes that don't taste like a meal plan.</h1>
-      <p class="lede">Every recipe tagged for calories, carbs and protein. Free.</p>
+      <h1>100+ High-Protein Recipes — Free</h1>
+      <p class="lede">A practical recipe collection for hitting your protein target without eating the same 3 meals on repeat.</p>
+
+      <ul class="recipe-list">
+        <li>100+ high-protein recipes</li>
+        <li>Breakfast, lunch, dinner, treats &amp; smoothies</li>
+        <li>Every recipe tagged with calories, carbs &amp; protein</li>
+        <li>Most recipes ready in under 30 minutes</li>
+      </ul>
 
       <div class="form-card">
         <div class="kicker">Instant Download</div>
-        <h3>Send me the free ebook</h3>
-        <p class="sub">Enter your best email and the recipes head your way instantly.</p>
+        <h3>Get the free recipe book</h3>
+        <p class="sub">Enter your best email and it lands in your inbox instantly.</p>
 
         <div id="systeme-embed-target">
           <script id="form-script-tag-25211365" src="https://pinkypinkponkey.systeme.io/public/remote/page/438489925a8079b2e8147bf60dc89629adf312a5.js"></script>
@@ -342,13 +403,6 @@
           No spam. Unsubscribe anytime.
         </div>
       </div>
-
-      <ul class="recipe-list">
-        <li>Salmon Tartar with Avocado &amp; Mango</li>
-        <li>High-Protein Blueberry Pancakes</li>
-        <li>One-Pot Turkey Chili with Rice</li>
-        <li>Chicken &amp; Mango Stir Fry</li>
-      </ul>
     </div>
 
     <div>
@@ -368,33 +422,52 @@
   </div>
 </section>
 
-<section class="inside" id="get-it">
+<section class="inside">
   <div class="wrap">
-    <h2>Get the full ebook sent to your inbox</h2>
-    <p>Enter your email and it lands straight in your inbox. No account, no app, nothing to buy.</p>
+    <h2>What's inside</h2>
+    <p>100+ recipes, organized so you always know what to cook next.</p>
 
     <div class="cat-grid">
       <div class="cat-card">
-        <div class="n">Breakfast</div>
-        <h3>Start high-protein</h3>
-        <p>Pancakes, omelets, shakshuka &amp; smoothie bowls.</p>
+        <div class="n">100+ Recipes</div>
+        <h3>Breakfast to dessert</h3>
+        <p>Breakfast, lunch, dinner, treats &amp; smoothies — five categories, always something that fits.</p>
       </div>
       <div class="cat-card">
-        <div class="n">Lunch</div>
-        <h3>Fast &amp; portable</h3>
-        <p>Salads, wraps, and bowls built for meal prep.</p>
+        <div class="n">Macro-Tagged</div>
+        <h3>Know before you cook</h3>
+        <p>Every recipe lists calories, carbs and protein — no separate app or lookup needed.</p>
       </div>
       <div class="cat-card">
-        <div class="n">Dinner</div>
-        <h3>Family-sized mains</h3>
-        <p>Salmon, chicken, beef &amp; stir-fry favorites.</p>
+        <div class="n">Diet Tags</div>
+        <h3>Filter at a glance</h3>
+        <p>GF, DF, HP, Quick, Meal-Prep-Friendly and Vegetarian tags on every recipe.</p>
       </div>
       <div class="cat-card">
-        <div class="n">Treats &amp; Smoothies</div>
-        <h3>Still on track</h3>
-        <p>Protein smoothies and better-for-you desserts.</p>
+        <div class="n">Under 30 Min</div>
+        <h3>Built for real life</h3>
+        <p>Most recipes are ready fast — no all-afternoon cooking projects.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="preview">
+  <div class="wrap">
+    <h2>A quick look inside</h2>
+    <p>Real pages from the actual book — recipe, method, and full nutrition breakdown every time.</p>
+    <div class="preview-grid">
+      <img src="preview-1.png" alt="Sample recipe page from the ebook">
+      <img src="preview-2.jpg" alt="Sample recipe page with nutrition table">
+      <img src="preview-3.png" alt="Sample recipe page showing diet tags">
+    </div>
+  </div>
+</section>
+
+<section class="cta-repeat">
+  <div class="wrap">
+    <h2>Your free copy is waiting</h2>
+    <a href="#top" class="btn">Get My Free Recipe Book →</a>
   </div>
 </section>
 
